@@ -129,12 +129,14 @@ header {
 
 #mainInfo{
  display: flex;
+ justify-content: space-between;
  height: 350px;
  margin-top: 20px;
 }
 
 .newsElements{
     display: flex;
+    gap: 10px;
 }
 
 #news{
@@ -142,7 +144,7 @@ header {
     height: 300px;
     width: 400px;
     background-color: #f3efeb;
-    margin-right: 10px;
+    
     border-radius: 4px;
 }
 
@@ -159,7 +161,7 @@ header {
 .linkIntern > a{
     display: block;   
     padding: 8px;
-    background-color: #0b334c;
+    background-color: #2fb4e9;
     margin-top: 4px;
     border-radius: 6px;
     color: #ffffff;
@@ -227,15 +229,30 @@ header {
     margin-right: 20px;
 }
 
-.linkIntern p {
+#topP {
     font-weight: bold;
     margin-bottom: 10px;
-    color: #0b334c;
+    color: #ffffff;
+    padding: 10px;
+    position: relative;
+    background-color: #f49600;
+    display: inline-block;
+    border-radius: 7px;
+    font-size: large;
+    top: -20px;
+    left: -30px;
+    transform: rotate(-20deg);
 }
 
-.linkIntern a {
-    display: block;
-    margin-bottom: 10px;
-    text-decoration: none;
+
+
+.snellinks{
+   margin-top: -30px; 
 }
 
+.snellinks > a{
+  display:flex ;
+  margin-top: 10px;
+  padding: 10px;
+
+ }
