@@ -1,3 +1,5 @@
+/* scaling en indeling is niet af tevens is de site atm niet responsive*/
+
 *{
     font-family:  Helvetica , Arial, sans-serif;
     margin: 0;
@@ -46,7 +48,7 @@ header {
 }
 
 .wrapper{
-    margin-top: 20px
+    margin-top: 7px /*subject to change */
 } 
 
 .shortcutPannel {
@@ -66,7 +68,7 @@ header {
     height: 200px;
     background-color: rgb(255, 115, 0);
     border-radius: 10px;
-    
+    justify-content: center;
     
 }
 
@@ -116,13 +118,21 @@ header {
 }
 
 #printen{
-    background-color: rgb(145, 68, 68);
+    background-color: rgb(134, 40, 40);
 }
 
 
+#intergrip{
+    background-color: #F99D1C;
+}
 
+#tijden{
+    background-color: #0b334c;
+}
 
-
+#mail{
+    background-color: #cc332d;
+}
 
 
 
@@ -130,7 +140,7 @@ header {
 #mainInfo{
  display: flex;
  justify-content: space-between;
- height: 350px;
+ height: 340px;
  margin-top: 20px;
 }
 
