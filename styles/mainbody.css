@@ -22,6 +22,7 @@ header {
     padding: 10px 20px;
     border-radius: 10px 10px 0 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
 }
 
 .branding > *{
@@ -32,21 +33,29 @@ header {
   float: inline-start;
 }
 
-#header{
-    margin-top: 25px; 
+.userName{
+    margin: auto;
+    padding-top: 10px;
 }
-/* text marging voor titel */
+
+.branding > p{
+    text-align: center;
+    padding-top: 25px;
+}
+/* Mijn hoofd werd autistisch van die div voor ALLEEN de p. dusss heb gewoon ff .brand > p gebruikt == minder moeite */
 
 
 .mainMenu {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     background-color: #0070ba;
     color: white;
     padding:  0;
     border-radius: 0 0 10px 10px; 
     gap: 2px;
-   
+    user-select: none;
+    font-size: 1.5vw;
+    /* heb vw gebruikt voor foon compatibility , maar wil waarschijnlijk maken dat ze vertical gaan op een lagere view-width */
 }
 
 .mainMenu :first-child{
