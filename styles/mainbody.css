@@ -115,9 +115,6 @@ body {
     background-color: #cc332d;
 }
 
-
-
-
 #mainInfo{
  display: flex;
  justify-content: space-between;
@@ -148,9 +145,6 @@ body {
     margin-right: 0 !important;
 }
 
-
-
-
 .linkIntern > a{
     display: block;   
     padding: 8px;
@@ -159,8 +153,6 @@ body {
     border-radius: 6px;
     color: #ffffff;
 }
-
-
 
 .latestNews {
     background-color: #ffffff;
@@ -185,13 +177,10 @@ body {
   z-index: 10;
 }
 
-
-
 .newsLink img {
     width: 20px;
     height: 20px;
 }
-
 
 .newsLink {
     position: relative;
@@ -209,10 +198,6 @@ body {
     font-weight: bold;
     font-size: large;
 }
-
-
-
-
 
 .linkIntern {
     background-color: #ffffff;
@@ -238,12 +223,9 @@ body {
     transform: rotate(-20deg);
 }
 
-
-
 .snellinks{
    margin-top: -30px; 
 }
-
 
 .snellinks > a{
     background-color: #f3efeb;
@@ -255,7 +237,6 @@ body {
     margin-top: 10px;
    
 }
-
 
 .wrapper{
     display: grid;

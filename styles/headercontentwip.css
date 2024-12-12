@@ -14,12 +14,9 @@ header {
     margin-right: 10vw;
 }
 
-
 .branding > *{
     float: inline-start;
 }
-
-
 
 .branding > p{
     text-align: center;
@@ -80,13 +77,9 @@ a{
     color: #0b334c;
 }
 
-
-
-
-  
 .userName{
   margin: auto;
- 
+  user-select: none;
 }
 
 .userOptions{
