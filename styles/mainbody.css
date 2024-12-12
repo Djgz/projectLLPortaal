@@ -18,12 +18,13 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 kolommen */
     grid-template-rows: repeat(3, auto); /* 3 rijen */
-    gap: 15px;
+    gap: 17px;
     justify-content: center;
     background-color: #ffffff;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 90.2%;
 }
 
 
@@ -66,6 +67,7 @@ body {
     color: #ffffff;
     border-color: #ffffff;
     border: solid;
+    margin-bottom: 1vh;
     
 }
 
@@ -244,6 +246,7 @@ body {
     grid-row: auto;
     gap: 40px;
     margin-top: 20px;
+    
 }
 
 .shortcutPannel{
