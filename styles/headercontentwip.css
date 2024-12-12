@@ -103,23 +103,6 @@ a{
     
 }
 
-.section1{
-    background-image: url(decal-banner.svg);
-    
-    min-width:  99.1vw;
-    height: 100px;
-    margin-top: 20px;
-    margin-bottom: -20px;
-}
 
-#copyright{
-    font-weight: bold;
-    font-size: 18px;
-    right: 20px;
-    bottom: -40px;
-    position: relative;
-    float: right;
-    color: #0b334c;
-}
 
 
