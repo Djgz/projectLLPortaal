@@ -1,0 +1,89 @@
+.shortcutPannel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 kolommen */
+    grid-template-rows: repeat(3, auto); /* 3 rijen */
+    gap: 17px;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 90.2%;
+}
+
+.shortcutPannel{
+    grid-area: 1 / 1 /4/4;
+}
+
+.shortcut{
+    
+    background-color: rgb(255, 115, 0);
+    border-radius: 10px;
+    justify-content: center;
+    min-width: 100%;
+  
+        
+}
+
+.shortcut > p{
+   padding: 10px;
+    background-color: rgba(83, 83, 83, 0.158);
+    border-radius: 7px;
+    font-size:medium;  
+    font-weight: bold;
+    text-align: center;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    color: #ffffff;
+    border-color: #ffffff;
+    border: solid;
+    margin-bottom: 1vh;
+    font-size: 90%;
+    width: 200px;
+    
+}
+
+.shortcut > img{
+    padding-top: 5px;
+    width: 100%
+}
+
+/*shortcut opmaak */
+#bully > p {
+    margin-left: 5px;
+    margin-right: 5px;
+    
+}
+
+#bully  {
+  background-color: #0070ba;
+}
+
+#Aura{ 
+    background-color: rgb(155, 81, 224);
+}
+
+#helpdesk{
+    background-color: #0b334c;
+}
+
+#onedrive{
+    background-color: #2fb4e9;
+}
+
+#printen{
+    background-color: rgb(134, 40, 40);
+}
+
+
+#intergrip{
+    background-color: #F99D1C;
+}
+
+#tijden{
+    background-color: #0b334c;
+}
+
+#mail{
+    background-color: #cc332d;
+}

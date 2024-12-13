@@ -35,16 +35,18 @@ header {
     gap: 2px;
     user-select: none;
     font-size: 1.5vw;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    
     /* heb vw gebruikt voor foon compatibility , maar wil waarschijnlijk maken dat ze vertical gaan op een lagere view-width */
 }
 
+#margin{
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
 
 .wrapper{
     margin-top: 7px; /*subject to change */
-    margin-left: 10vw;
-    margin-right: 10vw;
+   
 } 
 
 
