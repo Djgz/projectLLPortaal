@@ -135,7 +135,7 @@ header {
     background-color: rgb(255, 115, 0);
     border-radius: 10px;
     text-align: center;
-    width: 10vw;
+    min-width: 10vw;
     transition: transform 0.2s ease-in-out;
     aspect-ratio: 1 / 1; /* Zorgt ervoor dat de shortcuts minimaal vierkant blijven subject to change */
     /*min-height: 10vw; */
@@ -305,27 +305,48 @@ header {
     }
 
     .shortcutPannel {
-        grid-column: span 2;
+        grid-template-columns: repeat(3, 1fr);
+        justify-self: left;
+    }
+    
+    .shortcut{
+        max-height: 9rem;
     }
 }
 
-@media (max-width: 768px) {
+
+
+
+@media (max-width: 1080px) {
     #margin {
-        margin-left: 0vw;
-        margin-right: 0vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
     }
 
     .wrapper {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
     }
 
     .shortcutPannel {
-        grid-template-columns: repeat(2, 1fr);
+        padding: 4rem;
+        gap: 4rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-area: 1/1/1/4;
+        grid-template-rows: repeat(4, 0.79fr);
+    }
+
+    .mainMenu > a{
+        padding: 0.7rem;
+    }
+
+    .shortcut{
+        width: 1fr !important;
+        
     }
 
     .mainMenu {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         
     }
@@ -337,11 +358,15 @@ header {
     }
 
     .linkIntern {
-        grid-area: auto;
+        grid-area:2/1/2/1 ;
     }
 
     .latestNews {
-        grid-area: auto;
+        grid-area: 2/4/3/2 ;
+    }
+    
+    #news{
+        height: 20rem;
     }
 }
 
