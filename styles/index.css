@@ -116,22 +116,32 @@ header {
 .shortcutPannel {
     grid-area: 1 / 1 / 4 / 4;
     display: grid;
+    /*display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;*/
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     background-color: var(--secondary-color);
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-height: 92,1%;
+    align-items: center;
 }
+
+
 
 .shortcut {
     background-color: rgb(255, 115, 0);
     border-radius: 10px;
     text-align: center;
+    width: 10vw;
     transition: transform 0.2s ease-in-out;
     aspect-ratio: 1 / 1; /* Zorgt ervoor dat de shortcuts minimaal vierkant blijven subject to change */
-    min-height: 10rem;
+    /*min-height: 10vw; */
     overflow: hidden;
+   /* max-height: 10vh;*/
+    min-height: 10rem;
 }
 
 .shortcut:hover {
@@ -250,16 +260,6 @@ header {
     overflow: hidden; 
 }
 
-@media screen and (max-width: 1200px) { /*  gewenste breedte voor wijziging */
-    .newsElements {
-        grid-template-columns: 1fr; /* Verandert naar 1 kolom */
-    }
-
-    .news1{
-        display: none
-    }
-}
-
 
 #news{
     min-width: 250px;
@@ -358,3 +358,14 @@ header {
         font-size: var(--small-font-size);
     }
 }
+
+@media screen and (max-width: 1610px) { /*  gewenste breedte voor wijziging */
+    .newsElements {
+        grid-template-columns: 1fr; /* Verandert naar 1 kolom */
+    }
+
+    .news1{
+        display: none
+    }
+}
+
