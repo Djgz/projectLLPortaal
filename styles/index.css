@@ -136,8 +136,6 @@ header {
     background-color: var(--secondary-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-
-
 }
 
 
@@ -174,6 +172,18 @@ header {
     font-weight: bold;
     color: var(--light-text);
     font-size: small;
+}
+
+#bully {
+    background-color: var(--primary-light-color);
+}
+
+#Aura {
+    background-color: #97057c;
+}
+
+#onedrive {
+    background-color: #0174cd;
 }
 
 /* Internal Links */
