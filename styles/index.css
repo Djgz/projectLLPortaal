@@ -22,6 +22,7 @@
     padding: 0;
     text-decoration: none;
     color: var(--dark-text);
+    
 }
 
 body {
@@ -29,6 +30,7 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     margin: 0;
+    -webkit-font-smoothing: antialiased;
 }
 
 #margin {
@@ -106,42 +108,52 @@ header {
 /* Wrapper */
 .wrapper {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 30px;
     margin-top: 30px;
     margin-bottom: 2.65vh;
 }
 
 /* Shortcut Panel */
-.shortcutPannel {
-    grid-area: 1 / 1 / 4 / 4;
-    display: grid;
+.shortcutWrapper{
+    display: flex;
     /*display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;*/
+    grid-area: 1 / 1 / 3 / 5;
+    gap: 15px;
+    
+    
+    align-items: center;
+
+}
+
+.shortcutPannel {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
+    padding: 15px;
     gap: 15px;
     background-color: var(--secondary-color);
-    padding: 15px;
-    border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-height: 92,1%;
-    align-items: center;
+    border-radius: 10px;
+
+
 }
 
 
 
 .shortcut {
+    justify-content: center;
     background-color: rgb(255, 115, 0);
     border-radius: 10px;
     text-align: center;
     min-width: 10vw;
     transition: transform 0.2s ease-in-out;
-    aspect-ratio: 1 / 1; /* Zorgt ervoor dat de shortcuts minimaal vierkant blijven subject to change */
+    /* Zorgt ervoor dat de shortcuts minimaal vierkant blijven subject to change */
     /*min-height: 10vw; */
     overflow: hidden;
    /* max-height: 10vh;*/
-    min-height: 10rem;
+   aspect-ratio: 1/1;
 }
 
 .shortcut:hover {
@@ -161,11 +173,12 @@ header {
     border-radius: 7px;
     font-weight: bold;
     color: var(--light-text);
+    font-size: small;
 }
 
 /* Internal Links */
 .linkIntern {
-    grid-area: 1 / 4 / 2 / 6;
+    grid-area: 1 / 5 / 2 / 7;
     background-color: var(--secondary-color);
     padding: 15px;
     border-radius: 10px;
@@ -190,11 +203,13 @@ header {
 
 .snellinks{
     margin-top: -30px;
+    
 }
 
 .snellinks > a:hover{
-    transform: scale(1.1);
-    border: 3px solid white;
+    transform: scale(104%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.095);
+    background-color: #ebe6e3;
 }
 
 .snellinks > a {
@@ -207,11 +222,13 @@ header {
     font-size: 1.2rem;
     margin-top: 10px;
     gap: 10px;
+    border:  white;
+    transition: all 0.3s ease-in-out ;
 }
 
 /* News Section */
 .latestNews {
-    grid-area: 2 / 4 / 3 / 6;
+    grid-area: 2 / 5 / 3 / 7;
     background-color: var(--secondary-color);
     padding: 15px;
     border-radius: 10px;
@@ -320,6 +337,20 @@ header {
     }
 }
 
+@media (max-width: 1400px) {
+   
+    .shortcutPannel {
+        grid-template-columns: repeat(3, 1fr);
+        justify-self: center;
+    }
+    
+    .shortcut{
+        max-height: 10rem;
+    }
+    .wrapper{
+        grid-template-columns: 1fr 1fr 0.5fr 0px 1fr 1fr;
+    }
+}
 
 
 
@@ -399,4 +430,7 @@ header {
         display: none
     }
 }
-
+/*debug*/
+*:hover {
+    outline: 2px solid red;
+}
