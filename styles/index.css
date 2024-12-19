@@ -66,6 +66,7 @@ header {
     text-align: center;
     font-size: var(--large-font-size);
     color: var(--dark-text);
+  
 }
 
 .userContent {
@@ -147,11 +148,7 @@ header {
     text-align: center;
     min-width: 10vw;
     transition: transform 0.2s ease-in-out;
-    /* Zorgt ervoor dat de shortcuts minimaal vierkant blijven subject to change */
-    /*min-height: 10vw; */
-    overflow: hidden;
-   /* max-height: 10vh;*/
-   aspect-ratio: 1/1;
+    aspect-ratio: 1/1;
 }
 
 .shortcut:hover {
@@ -166,18 +163,24 @@ header {
 }
 
 .shortcut > p {
+    
     padding: 10px;
     background-color: rgba(83, 83, 83, 0.158);
     border-radius: 7px;
     font-weight: bold;
     color: var(--light-text);
-    font-size: small;
+    font-size: 0.9rem;
+
 }
 
 #bully {
     background-color: var(--primary-light-color);
 }
 
+#bully >p{
+    margin: 0;
+    overflow: hidden;
+}
 #Aura {
     background-color: #97057c;
 }
@@ -331,23 +334,9 @@ header {
 }
 
 /* Responsive Layout Help werkt half */
-@media (max-width: 1200px) {
-    .wrapper {
-        grid-template-columns: 2fr 1fr;
-        grid-auto-rows: auto;
-    }
 
-    .shortcutPannel {
-        grid-template-columns: repeat(3, 1fr);
-        justify-self: left;
-    }
-    
-    .shortcut{
-        max-height: 9rem;
-    }
-}
 
-@media (max-width: 1400px) {
+@media (max-width: 1420px) {
    
     .shortcutPannel {
         grid-template-columns: repeat(3, 1fr);
@@ -360,28 +349,50 @@ header {
     .wrapper{
         grid-template-columns: 1fr 1fr 0.5fr 0px 1fr 1fr;
     }
+
+    .shortcut > p{
+        font-size: small;
+    }
+    
 }
 
 
 
-@media (max-width: 1080px) {
+@media (max-width: 1155px) {
     #margin {
         margin-left: 5vw;
         margin-right: 5vw;
     }
 
     .wrapper {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
     }
 
-    .shortcutPannel {
-        padding: 4rem;
-        gap: 4rem;
-        grid-template-columns: repeat(3, 1fr);
+    .shortcutWrapper{
         grid-area: 1/1/1/4;
-        grid-template-rows: repeat(4, 0.79fr);
+        display: flex;
+        justify-content: center;
     }
+    .shortcutPannel {
+        grid-template-columns: repeat(4, 1fr);
+     
+    }
+
+    
+    .shortcut{
+        aspect-ratio: 1.5/1;
+    }
+    .shortcut > img{
+        width: 70%;
+        margin-bottom: -0.5rem;
+    }
+
+    .shortcut > p{
+        font-size: 0.8rem;
+
+    }
+
 
     .mainMenu > a{
         padding: 0.7rem;
@@ -417,17 +428,94 @@ header {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 800px) {
+    
+    .shortcutPannel {
+        grid-template-columns: repeat(3, 1fr);
+     
+    }
+    
+}
+
+@media (max-width: 600px) {
     body {
         font-size: 0.8rem;
     }
 
     .shortcutPannel {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .mainMenu > a {
+        font-size: var(--medium-font-size);
+        padding: 11.2px 0px 11.2px 0px ;
+    }
+
+    .mainMenu{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    
+    .linkIntern{
+        grid-area: 2/1/3/4;
+    }
+
+    .latestNews{
+        grid-area: 3/1/3/4;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.8rem;
+        
+    }
+    #margin {
+        margin-left: 0vw;
+        margin-right: 0vw;
+    }
+
+    header{
+        margin-top: 0px;
+    }
+
+    .shortcutPannel {
+        grid-template-columns: 1fr;
+        padding: 0px;
+        padding-top: 0.5rem;
+    }
+
+    .wrapper{
+        margin-top: 0.5rem;
+    }
+    .shortcut{
+        aspect-ratio:3 /1;
+    }
+
+    .shortcut > img {
+        width: 40%;
+    }
+    .mainMenu > a {
         font-size: var(--small-font-size);
+    }
+
+
+    .branding > p{
+        font-size: 1rem;
+        font-weight: 545;
+        padding-left: 0.1rem;
+    }
+    .branding > img{
+        width: 80%;
+ 
+    }
+
+    .branding{
+        display: flex;
+        max-width: 8rem;
+        gap: 0.1rem;
     }
 }
 
