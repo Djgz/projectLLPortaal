@@ -8,7 +8,7 @@
 
 body {
     background-color: #f3efeb;
-  
+    display: flex;
     transition: all 0.2 ease-out;
 
 }
