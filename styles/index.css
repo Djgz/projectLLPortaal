@@ -128,8 +128,8 @@ header {
     justify-content: space-evenly;*/
     grid-area: 1 / 1 / 3 / 5;
     gap: 15px;
-    
-    
+    display: flex;
+    justify-content: center;
     align-items: center;
 
 }
@@ -364,8 +364,36 @@ header {
     }
     
 }
+/*help*/
+@media (orientation: portrait) and (min-width:800px)  {
+    #margin {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
 
+    .shortcutPannel {
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 100%;
+    }
 
+    .shortcut{
+        aspect-ratio:none !important;
+                
+    }
+
+    .shortcut > img{
+        width: 100% !important;
+        margin-bottom: -0.5rem;
+    }
+
+    .shortcut > p{
+        font-size: 0.8rem;
+
+    }
+
+}
 
 @media (max-width: 1155px) {
     #margin {
@@ -380,8 +408,7 @@ header {
 
     .shortcutWrapper{
         grid-area: 1/1/1/4;
-        display: flex;
-        justify-content: center;
+  
     }
     .shortcutPannel {
         grid-template-columns: repeat(4, 1fr);
@@ -535,6 +562,10 @@ header {
 
 
 }
+
+
+
+
 
 @media screen and (max-width: 1610px) { /*  gewenste breedte voor wijziging */
     .newsElements {
