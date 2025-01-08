@@ -378,23 +378,30 @@ header {
         flex-wrap: wrap;
         justify-content: center;
         height: 100%;
+        margin-top: 0 !important;
     }
 
+
     .shortcut{
-        aspect-ratio:none !important;
-                
+        aspect-ratio:auto !important;
+        min-height: max-content !important;   
+        max-height: calc(10vw);     
     }
 
     .shortcut > img{
         width: 100% !important;
-        margin-bottom: -0.5rem;
+        
+        display: block !important;
     }
 
     .shortcut > p{
         font-size: 0.8rem;
-
+        display: block !important;
     }
 
+    .mainMenu > {
+        font-size: large;
+    }
 }
 
 @media (max-width: 1155px) {
