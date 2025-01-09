@@ -25,6 +25,7 @@
     
 }
 
+/*default styling van de pagina*/
 body {
     background-color: var(--background-color);
     font-size: 1rem;
@@ -36,11 +37,12 @@ body {
     flex-direction: column;
 }
 
+/*marging wrapper*/
 #margin {
     margin-left: var(--main-margin);
     margin-right: var(--main-margin);
 }
-
+/* headerstyling */
 header {
     display: flex;
     justify-content: space-between;
@@ -55,6 +57,7 @@ header {
     user-select: none; 
 }
 
+/*logo sectie in de header*/
 .branding {
     display: flex;
     align-items: center;
@@ -62,16 +65,16 @@ header {
     -webkit-user-select: none; 
     -ms-user-select: none; 
     user-select: none; 
-    
 }
 
+/*logo teskt*/
 .branding > p {
     text-align: center;
     font-size: var(--large-font-size);
     color: var(--dark-text);
-  
 }
 
+/* gebruikers sectie */
 .userContent {
     display: flex;
     align-items: center;
@@ -88,7 +91,7 @@ header {
     margin-top: 5px;
 }
 
-/* Main Menu */
+/* hoofdmenu onder de header */
 .mainMenu {
     display: flex;
     justify-content: center;
@@ -109,7 +112,7 @@ header {
     background-color: #74b6e2; /*subject to change*/
 }
 
-/* Wrapper */
+/* Wrapper van de pagina */
 .wrapper {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -120,21 +123,9 @@ header {
     flex: 1;
 }
 
-/* Shortcut Panel */
+/*Shortcut Panel */
 .shortcutWrapper{
-    display: flex;
-    /*display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;*/
     grid-area: 1 / 1 / 3 / 5;
-    gap: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.shortcutPannel {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 15px;
@@ -143,11 +134,14 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     will-change: transform;
-
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
 }
 
 
 
+/* selectie element in de shortcut panel*/
 .shortcut {
     justify-content: center;
     background-color: rgb(255, 115, 0);
@@ -170,16 +164,15 @@ header {
 }
 
 .shortcut > p {
-    
     padding: 10px;
     background-color: rgba(83, 83, 83, 0.158);
     border-radius: 7px;
     font-weight: bold;
     color: var(--light-text);
     font-size: 0.9rem;
-
 }
 
+/* aangepaste styles van de shortcuts */
 #bully {
     background-color: var(--primary-light-color);
 }
@@ -197,17 +190,16 @@ header {
 }
 
 /* Internal Links */
-.linkIntern {
+.snelNaarSection {
     grid-area: 1 / 5 / 2 / 7;
     background-color: var(--secondary-color);
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     max-height: 22rem;
-
 }
 
-.linkIntern::before{
+.snelNaarSection::before{
     content: 'Snel naar';
     display: inline-block;
     padding: 10px;
@@ -222,7 +214,7 @@ header {
     transform: rotate(-20deg);
 }
 
-
+/*link styling*/
 .snellinks{
     margin-top: -30px;
 }
@@ -248,7 +240,7 @@ header {
 }
 
 /* News Section */
-.latestNews {
+.nieuwsSectie {
     grid-area: 2 / 5 / 3 / 7;
     background-color: var(--secondary-color);
     padding: 15px;
@@ -258,7 +250,7 @@ header {
 
 }
 
-.latestNews::before{
+.nieuwsSectie::before{
     content:'Mededelingen';
     display: inline-block;
     background-color: var(--primary-color);
@@ -275,29 +267,28 @@ header {
 }
 
  
-.newsLink {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+.nieuwsSectie::after {
+    content: "Meer mededelingen";
     padding: 10px;
     font-weight: bold;
-    width: 11rem;
     color: #ffffff;
     position: relative;
     background-color: var(--highlight-color);
     color: var(--light-text);
     border-radius: 5px;
     font-size: var(--small-font-size);
-    font-size: 1rem;
-    justify-self: end;
-    top:10px;
-    left:10px;
-    
+    font-size: 1.2rem;
+    float: right;
+    bottom: -100%;
+    right: -1%;
 }
+
+
 .newsLink > img{
     width: 12%;
 }
 
+/*nieuws wrapper*/
 .newsElements{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -307,19 +298,16 @@ header {
     overflow: hidden; 
 }
 
-
+/*nieuws element*/
 #news{
     min-width: 250px;
     border-radius: 5px;
-    height: 300px;
     background-color: var(--background-color);
-    
-    
 }
 
 
 /* Footer */
-.section1 {
+section {
     background-image: url(decal-banner.svg);
     background-size:auto;
     background-repeat:repeat;
@@ -346,7 +334,7 @@ header {
 
 /* Responsive Layout Help werkt half */
 
-
+/*
 @media (max-width: 1420px) {
    
     .shortcutPannel {
@@ -366,7 +354,6 @@ header {
     }
     
 }
-/*help*/
 @media (orientation: portrait) and (min-width:800px)  {
     #margin {
         margin-left: 5vw;
@@ -584,7 +571,7 @@ header {
 
 
 
-
+*/
 
 @media screen and (max-width: 1610px) { /*  gewenste breedte voor wijziging */
     .newsElements {
