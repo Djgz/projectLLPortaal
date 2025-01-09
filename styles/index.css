@@ -31,8 +31,8 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     margin: 0;
-    -webkit-font-smoothing: antialiased;
     min-height: 100vh;
+
     display: flex;
     flex-direction: column;
 }
@@ -116,6 +116,7 @@ header {
 .wrapper {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    grid-template-rows:repeat(2, 1fr);
     gap: 30px;
     margin-top: 30px;
     margin-bottom: 2.65vh;
@@ -247,7 +248,8 @@ header {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
     max-height: 22rem;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .nieuwsSectie::before{
@@ -255,6 +257,7 @@ header {
     display: inline-block;
     background-color: var(--primary-color);
     padding: 10px;
+    width: 12ch;
     font-weight: bold;
     color: #ffffff;
     position: relative;
@@ -267,22 +270,28 @@ header {
 }
 
  
-.nieuwsSectie::after {
-    content: "Meer mededelingen";
+.newsLink {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     padding: 10px;
     font-weight: bold;
+    width: 20ch;
     color: #ffffff;
     position: relative;
     background-color: var(--highlight-color);
     color: var(--light-text);
     border-radius: 5px;
     font-size: var(--small-font-size);
-    font-size: 1.2rem;
-    float: right;
-    bottom: -100%;
-    right: -1%;
+    font-size: 1rem;
+    top: 10px;
+    right: -10px;
 }
 
+.newslinkWrapper{
+    display: flex;
+    flex-direction: row-reverse;
+}
 
 .newsLink > img{
     width: 12%;
@@ -290,17 +299,18 @@ header {
 
 /*nieuws wrapper*/
 .newsElements{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-top: -50px;
-    margin-bottom: -45px;
-    overflow: hidden; 
+ flex: 1;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ margin-top:-50px ;
+ margin-bottom: -45.6px;
+ background-color: #97057c;
 }
 
 /*nieuws element*/
 #news{
-    min-width: 250px;
+   
+    height: max-content;
     border-radius: 5px;
     background-color: var(--background-color);
 }
