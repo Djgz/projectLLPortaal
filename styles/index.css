@@ -142,6 +142,8 @@ header {
     background-color: var(--secondary-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    will-change: transform;
+
 }
 
 
@@ -376,23 +378,30 @@ header {
         flex-wrap: wrap;
         justify-content: center;
         height: 100%;
+        margin-top: 0 !important;
     }
 
+
     .shortcut{
-        aspect-ratio:none !important;
-                
+        aspect-ratio:auto !important;
+        min-height: max-content !important;   
+        max-height: calc(10vw);     
     }
 
     .shortcut > img{
         width: 100% !important;
-        margin-bottom: -0.5rem;
+        
+        display: block !important;
     }
 
     .shortcut > p{
         font-size: 0.8rem;
-
+        display: block !important;
     }
 
+    .mainMenu > {
+        font-size: large;
+    }
 }
 
 @media (max-width: 1155px) {
