@@ -301,16 +301,17 @@ header {
 .newsElements{
  flex: 1;
  display: grid;
+ gap: 10px;
  grid-template-columns: 1fr 1fr;
+ grid-template-rows: 1fr;
  margin-top:-50px ;
  margin-bottom: -45.6px;
- background-color: #97057c;
+ background-color: #2ea0af;
 }
 
 /*nieuws element*/
 #news{
-   
-    height: max-content;
+    
     border-radius: 5px;
     background-color: var(--background-color);
 }
