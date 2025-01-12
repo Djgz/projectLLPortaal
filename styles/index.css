@@ -8,12 +8,16 @@
     --highlight-color: #f49600;
     --dark-text: #0b334c;
     --light-text: #ffffff;
-    --main-margin: 10vw;
-    --small-font-size: 0.9rem;
-    --medium-font-size: 1.2rem;
-    --large-font-size: 1.2rem;
     --background-color: #f3efeb;
     --primary-light-color: #2fb4e9;
+    --main-margin: 10vw;
+    --small-font-size: 0.9vw;
+    --medium-font-size: 1vw;
+    --large-font-size: 1.5vw;
+    --small-radius:  0.4vw;
+    --medium-radius: 0.6vw;
+    --small-gap: 0.5vw;
+
 }
 
 * {
@@ -104,7 +108,7 @@ header {
 .mainMenu > a {
     color: var(--light-text);
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: var( --small-radius);
     transition: background-color 0.2s ease-in-out;
 }
 
@@ -133,7 +137,7 @@ header {
     gap: 15px;
     background-color: var(--secondary-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border-radius: var(--medium-radius);
     will-change: transform;
     gap: 15px;
     justify-content: center;
@@ -146,7 +150,7 @@ header {
 .shortcut {
     justify-content: center;
     background-color: rgb(255, 115, 0);
-    border-radius: 10px;
+    border-radius: var(--medium-radius);
     text-align: center;
     min-width: 10vw;
     transition: transform 0.2s ease-in-out;
@@ -194,30 +198,38 @@ header {
 .snelNaarSection {
     grid-area: 1 / 5 / 2 / 7;
     background-color: var(--secondary-color);
-    padding: 15px;
-    border-radius: 10px;
+    padding: var(--small-gap);
+    border-radius: var(--medium-radius);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-height: 22rem;
+    display: flex;
+    flex-direction: column;
+ 
 }
 
 .snelNaarSection::before{
     content: 'Snel naar';
     display: inline-block;
     padding: 10px;
+    width: 8.3ch;
     background-color: var(--highlight-color);
     color: var(--light-text);
     font-weight: bold;
-    font-size: 1.2rem;
     border-radius: 10px;
     position: relative;
     top: -30px;
     left: -40px;
     transform: rotate(-20deg);
+    font-size: var(--medium-font-size);
 }
 
 /*link styling*/
 .snellinks{
-    margin-top: -30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    display: grid;
+    gap: var(--small-gap);
+    justify-self: flex-end;
+    flex: 1;
 }
 
 .snellinks > a:hover{
@@ -230,12 +242,10 @@ header {
     display: flex;
     align-items: center;
     background-color: var(--background-color);
-    padding: 10px;
-    border-radius: 5px;
+    padding: 0.5vw;
+    border-radius: var(--small-radius);
     color: var(--dark-text);
-    font-size: 1.2rem;
-    margin-top: 10px;
-    gap: 10px;
+    font-size: var(--medium-font-size);
     border:  white;
     transition: all 0.3s ease-in-out ;
 }
@@ -245,9 +255,8 @@ header {
     grid-area: 2 / 5 / 3 / 7;
     background-color: var(--secondary-color);
     padding: 15px;
-    border-radius: 10px;
+    border-radius: var(--medium-radius);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-    max-height: 22rem;
     display: flex;
     flex-direction: column;
 }
@@ -261,7 +270,7 @@ header {
     font-weight: bold;
     color: #ffffff;
     position: relative;
-    border-radius: 10px;
+    border-radius: var(--medium-radius);
     font-size: var(--medium-font-size);
     top: -10px;
     left: -50px;
@@ -281,9 +290,8 @@ header {
     position: relative;
     background-color: var(--highlight-color);
     color: var(--light-text);
-    border-radius: 5px;
+    border-radius:var(--small-radius);
     font-size: var(--small-font-size);
-    font-size: 1rem;
     top: 10px;
     right: -10px;
 }
