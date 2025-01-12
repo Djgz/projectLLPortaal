@@ -17,7 +17,9 @@
     --small-radius:  0.4vw;
     --medium-radius: 0.6vw;
     --small-gap: 0.5vw;
-
+    --big-gap: 1vw;
+    --padding: 0.5vw;
+    --bigbig-gap: 1.5vw;
 }
 
 * {
@@ -36,7 +38,7 @@ body {
     line-height: 1.6;
     margin: 0;
     min-height: 100vh;
-
+    transition: all 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
 }
@@ -52,10 +54,9 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: var(--secondary-color);
-    padding: 10px 20px;
-    border-radius: 10px 10px 0 0;
+    padding: var(--padding) 2vw;
+    border-radius: var(--medium-radius) var(--medium-radius) 0 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 10px;
     -webkit-user-select: none; 
     -ms-user-select: none; 
     user-select: none; 
@@ -70,6 +71,11 @@ header {
     -ms-user-select: none; 
     user-select: none; 
 }
+
+.logo{
+    width:8vw;
+}
+
 
 /*logo teskt*/
 .branding > p {
@@ -91,8 +97,12 @@ header {
 }
 
 .userOptions {
-    width: 18px;
+    width: var(--medium-font-size);
     margin-top: 5px;
+}
+
+.profilePicture{
+    width: 1.9vw;
 }
 
 /* hoofdmenu onder de header */
@@ -100,14 +110,15 @@ header {
     display: flex;
     justify-content: center;
     background-color: var(--primary-color);
-    gap: 10px;
+    gap: var(--big-gap);
     font-size: var(--medium-font-size);
-    border-radius: 0px 0px 10px 10px ;
+    border-radius: 0px 0px var(--medium-radius) var(--medium-radius) ;
+    z-index: 5;
 }
 
 .mainMenu > a {
     color: var(--light-text);
-    padding: 10px 20px;
+    padding: var(--padding) 0.5vw;
     border-radius: var( --small-radius);
     transition: background-color 0.2s ease-in-out;
 }
@@ -121,9 +132,9 @@ header {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows:repeat(2, 1fr);
-    gap: 30px;
-    margin-top: 30px;
-    margin-bottom: 2.65vh;
+    gap: var(--bigbig-gap);
+    margin-top: 3vh;
+    margin-bottom: 2.2vh;
     justify-content: center;
     flex: 1;
 }
@@ -133,13 +144,12 @@ header {
     grid-area: 1 / 1 / 3 / 5;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 15px;
-    gap: 15px;
+    padding: var(--padding);
+    gap: var(--small-gap);
     background-color: var(--secondary-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: var(--medium-radius);
     will-change: transform;
-    gap: 15px;
     justify-content: center;
     align-items: center;
 }
@@ -158,7 +168,7 @@ header {
 }
 
 .shortcut:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
@@ -174,7 +184,7 @@ header {
     border-radius: 7px;
     font-weight: bold;
     color: var(--light-text);
-    font-size: 0.9rem;
+    font-size: var(--medium-font-size);
 }
 
 /* aangepaste styles van de shortcuts */
@@ -209,17 +219,19 @@ header {
 .snelNaarSection::before{
     content: 'Snel naar';
     display: inline-block;
-    padding: 10px;
+    padding: var(--padding);
     width: 8.3ch;
     background-color: var(--highlight-color);
     color: var(--light-text);
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: var(--small-radius);
     position: relative;
-    top: -30px;
-    left: -40px;
+    top: -3.2vh;
+    left: -2vw;
     transform: rotate(-20deg);
     font-size: var(--medium-font-size);
+    margin-bottom: -40px;
+    z-index: 4;
 }
 
 /*link styling*/
@@ -254,7 +266,7 @@ header {
 .nieuwsSectie {
     grid-area: 2 / 5 / 3 / 7;
     background-color: var(--secondary-color);
-    padding: 15px;
+    padding: var(--padding);
     border-radius: var(--medium-radius);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
     display: flex;
@@ -265,15 +277,15 @@ header {
     content:'Mededelingen';
     display: inline-block;
     background-color: var(--primary-color);
-    padding: 10px;
+    padding: var(--padding);
     width: 12ch;
     font-weight: bold;
     color: #ffffff;
     position: relative;
     border-radius: var(--medium-radius);
     font-size: var(--medium-font-size);
-    top: -10px;
-    left: -50px;
+    top: -1.9vh;
+    left: -2.2vw;
     transform: rotate(-20deg);
     margin: 0;
 }
@@ -283,7 +295,7 @@ header {
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding: 10px;
+    padding: var(--padding);
     font-weight: bold;
     width: 20ch;
     color: #ffffff;
@@ -309,7 +321,7 @@ header {
 .newsElements{
  flex: 1;
  display: grid;
- gap: 10px;
+ gap: var(--small-gap);
  grid-template-columns: 1fr 1fr;
  grid-template-rows: 1fr;
  margin-top:-50px ;
@@ -319,7 +331,6 @@ header {
 
 /*nieuws element*/
 #news{
-    
     border-radius: 5px;
     background-color: var(--background-color);
 }
@@ -331,23 +342,20 @@ section {
     background-size:auto;
     background-repeat:repeat;
     background-position: right ;
-    height: 120px;
-    margin-top: 20px;
+    height: 110px;
     margin-top: auto;
-    
 }
 
 #copyright:after {
     content: '©2024 Ichthus College';
     font-weight: bold;
-    font-size: 1rem;
+    font-size: var(--small-font-size);
     color: var(--dark-text);
     text-align: right;
     float: right;
     position: relative;
     top: 80px;
-    right: 7px;
-    padding: 5px;
+    right: 5px;
     border-radius: 5px;
 }
 
