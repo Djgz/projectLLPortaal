@@ -38,9 +38,9 @@ body {
     line-height: 1.6;
     margin: 0;
     min-height: 100vh;
-    transition: all 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
+    
 }
 
 /*marging wrapper*/
@@ -133,8 +133,8 @@ header {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows:repeat(2, 1fr);
     gap: var(--bigbig-gap);
-    margin-top: 3vh;
-    margin-bottom: 2.2vh;
+    margin-top: 4vh;
+    margin-bottom: 2vh;
     justify-content: center;
     flex: 1;
 }
@@ -213,6 +213,7 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    position: relative;
  
 }
 
@@ -225,7 +226,7 @@ header {
     color: var(--light-text);
     font-weight: bold;
     border-radius: var(--small-radius);
-    position: relative;
+    position: absolute;
     top: -3.2vh;
     left: -2vw;
     transform: rotate(-20deg);
@@ -271,6 +272,7 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .nieuwsSectie::before{
@@ -281,7 +283,7 @@ header {
     width: 12ch;
     font-weight: bold;
     color: #ffffff;
-    position: relative;
+    position: absolute;
     border-radius: var(--medium-radius);
     font-size: var(--medium-font-size);
     top: -1.9vh;
@@ -299,13 +301,13 @@ header {
     font-weight: bold;
     width: 20ch;
     color: #ffffff;
-    position: relative;
+    position: absolute;
     background-color: var(--highlight-color);
     color: var(--light-text);
     border-radius:var(--small-radius);
     font-size: var(--small-font-size);
-    top: 10px;
-    right: -10px;
+    bottom: -0.75vh;
+    right: -0.3vw;
 }
 
 .newslinkWrapper{
@@ -324,8 +326,6 @@ header {
  gap: var(--small-gap);
  grid-template-columns: 1fr 1fr;
  grid-template-rows: 1fr;
- margin-top:-50px ;
- margin-bottom: -45.6px;
  background-color: #2ea0af;
 }
 
@@ -339,24 +339,25 @@ header {
 /* Footer */
 section {
     background-image: url(decal-banner.svg);
-    background-size:auto;
-    background-repeat:repeat;
-    background-position: right ;
-    height: 110px;
-    margin-top: auto;
+    height: 9vh;
+    display: flex;
+    flex-direction:column-reverse;
+    background-size:cover;  
+    resize: both;
+    background-position: calc(-1vw) bottom; 
+    position: relative;
 }
 
-#copyright:after {
+#copyright::after {
     content: '©2024 Ichthus College';
     font-weight: bold;
     font-size: var(--small-font-size);
     color: var(--dark-text);
-    text-align: right;
-    float: right;
-    position: relative;
-    top: 80px;
-    right: 5px;
     border-radius: 5px;
+    position: absolute;
+    bottom: 1.5vh;
+    right: var(--small-gap);
+
 }
 
 /* Responsive Layout Help werkt half */
@@ -609,7 +610,7 @@ section {
         display: none
     }
 }
-/*debug*/
+/*debug
 *:hover {
     outline: 2px solid red;
-}
+}*/
