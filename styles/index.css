@@ -1,5 +1,5 @@
 /* complete herschrijving van de css , zelfde classes enz. maar nu 90% responsive*/
-/* Written by: David Zijlstra, Bart Beusekom*/
+/* Written by: David Zijlstra, Bart van Beusekom*/
 
 /* Globale Stijlen Die je kan oproepen met behulp van een var*/
 :root {
@@ -43,7 +43,7 @@ body {
     
 }
 
-/*marging wrapper*/
+/*margin wrapper*/
 #margin {
     margin-left: var(--main-margin);
     margin-right: var(--main-margin);
@@ -116,15 +116,16 @@ header {
     z-index: 5;
 }
 
-.mainMenu > a {
+.menuLink{
     color: var(--light-text);
     padding: var(--padding) 0.5vw;
     border-radius: var( --small-radius);
     transition: background-color 0.2s ease-in-out;
 }
 
-.mainMenu > a:hover {
+.menuLink:hover {
     background-color: #74b6e2; /*subject to change*/
+    cursor: pointer;
 }
 
 /* Wrapper van de pagina */
@@ -188,21 +189,60 @@ header {
 }
 
 /* aangepaste styles van de shortcuts */
-#bully {
-    background-color: var(--primary-light-color);
+#its{
+    background-color: var(--highlight-color);
 }
 
-#bully >p{
+#bully {
+    background-color: var(--dark-text);
+}
+#bully > p{
     margin: 0;
     overflow: hidden;
 }
-#Aura {
-    background-color: #97057c;
+
+#aura {
+    background-color: var(--primary-light-color);
 }
 
 #onedrive {
-    background-color: #0174cd;
+    background-color: var(--highlight-color);
 }
+
+#helpdesk{
+    background-color: var(--dark-text);
+}
+
+#intergrip{
+    background-color: var(--primary-light-color);
+}
+
+#printen{
+    background-color: var(--highlight-color);
+}
+
+#tijden{
+    background-color: var(--dark-text);
+}
+
+#mail{
+    background-color: var(--primary-light-color);
+}
+
+#mentoraat{
+    background-color: var(--highlight-color);
+}
+
+#office{
+    background-color: var(--dark-text);
+}
+
+#zerm{
+    background-color: var(--primary-light-color);
+}
+
+
+
 
 /* Internal Links */
 .snelNaarSection {
@@ -249,6 +289,7 @@ header {
     transform: scale(104%);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.095);
     background-color: #ebe6e3;
+    cursor: pointer;
 }
 
 .snellinks > a {
@@ -336,7 +377,7 @@ header {
 }
 
 
-/* Footer */
+/* footer */
 section {
     background-image: url(decal-banner.svg);
     height: 9vh;
