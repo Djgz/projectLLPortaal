@@ -66,7 +66,6 @@ header {
 .branding {
     display: flex;
     align-items: center;
-    gap: 10px;
     -webkit-user-select: none; 
     -ms-user-select: none; 
     user-select: none; 
@@ -85,25 +84,37 @@ header {
 }
 
 /* gebruikers sectie */
+
 .userContent {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    align-items: baseline; 
+    width: 8.5vw;
+    justify-content: space-between;
 }
 
 .userName {
     font-size: var(--medium-font-size);
     color: var(--dark-text);
+    display: flex;
+    flex-direction: column;
+    align-self: center;
 }
 
 .userOptions {
     width: var(--medium-font-size);
-    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 45%;
 }
 
-.profilePicture{
+.profilePicture {
     width: 1.9vw;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
 }
+
 
 /* hoofdmenu onder de header */
 .mainMenu {
@@ -165,7 +176,6 @@ header {
     text-align: center;
     min-width: 10vw;
     transition: transform 0.2s ease-in-out;
-    aspect-ratio: 1/1;
 }
 
 .shortcut:hover {
@@ -176,13 +186,13 @@ header {
 
 .shortcut img {
     width: 100%;
-    padding-top: 5px;
+    padding-top: 0.5vw;
 }
 
 .shortcut > p {
-    padding: 10px;
+    padding: 1vw;
     background-color: rgba(83, 83, 83, 0.158);
-    border-radius: 7px;
+    border-radius: var(--small-radius);
     font-weight: bold;
     color: var(--light-text);
     font-size: var(--medium-font-size);
@@ -268,8 +278,8 @@ header {
     border-radius: var(--small-radius);
     position: absolute;
     top: -3.2vh;
-    left: -2vw;
-    transform: rotate(-20deg);
+    left: -1.3vw;
+    transform: rotate(-10deg);
     font-size: var(--medium-font-size);
     margin-bottom: -40px;
     z-index: 4;
@@ -286,7 +296,7 @@ header {
 }
 
 .snellinks > a:hover{
-    transform: scale(104%);
+    transform: scale(102%);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.095);
     background-color: #ebe6e3;
     cursor: pointer;
@@ -301,7 +311,7 @@ header {
     color: var(--dark-text);
     font-size: var(--medium-font-size);
     border:  white;
-    transition: all 0.3s ease-in-out ;
+    transition: transform 0.3s ease-in-out ;
 }
 
 /* News Section */
@@ -327,9 +337,9 @@ header {
     position: absolute;
     border-radius: var(--medium-radius);
     font-size: var(--medium-font-size);
-    top: -1.9vh;
-    left: -2.2vw;
-    transform: rotate(-20deg);
+    top: -1.5vh;
+    left: -1.2vw;
+    transform: rotate(-15deg);
     margin: 0;
 }
 
