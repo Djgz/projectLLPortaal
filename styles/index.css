@@ -176,6 +176,9 @@ header {
     text-align: center;
     min-width: 10vw;
     transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-wrap: wrap;
+    aspect-ratio: 1/1;
 }
 
 .shortcut:hover {
@@ -186,11 +189,14 @@ header {
 
 .shortcut img {
     width: 100%;
-    padding-top: 0.5vw;
+    padding-top: 0.5vh;
 }
 
 .shortcut > p {
     padding: 1vw;
+    width: 100%;
+    margin-top: auto;
+    line-height: normal;
     background-color: rgba(83, 83, 83, 0.158);
     border-radius: var(--small-radius);
     font-weight: bold;
@@ -264,7 +270,6 @@ header {
     display: flex;
     flex-direction: column;
     position: relative;
- 
 }
 
 .snelNaarSection::before{
@@ -277,9 +282,9 @@ header {
     font-weight: bold;
     border-radius: var(--small-radius);
     position: absolute;
-    top: -3.2vh;
-    left: -1.3vw;
-    transform: rotate(-10deg);
+    top: -3.0vh;
+    left: -1.5vw;
+    transform: rotate(-15deg);
     font-size: var(--medium-font-size);
     margin-bottom: -40px;
     z-index: 4;
@@ -327,6 +332,7 @@ header {
 }
 
 .nieuwsSectie::before{
+    will-change: transform;
     content:'Mededelingen';
     display: inline-block;
     background-color: var(--primary-color);
@@ -337,9 +343,9 @@ header {
     position: absolute;
     border-radius: var(--medium-radius);
     font-size: var(--medium-font-size);
-    top: -1.5vh;
-    left: -1.2vw;
-    transform: rotate(-15deg);
+    top: -0.9vh;
+    left: -1.4vw;
+    transform: rotate(-16.5deg);
     margin: 0;
 }
 
@@ -347,7 +353,7 @@ header {
 .newsLink {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 0.5vw;
     padding: var(--padding);
     font-weight: bold;
     width: 20ch;
@@ -377,12 +383,11 @@ header {
  gap: var(--small-gap);
  grid-template-columns: 1fr 1fr;
  grid-template-rows: 1fr;
- background-color: #2ea0af;
 }
 
 /*nieuws element*/
 #news{
-    border-radius: 5px;
+    border-radius: var(--small-radius);
     background-color: var(--background-color);
 }
 
