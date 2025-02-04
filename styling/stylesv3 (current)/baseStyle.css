@@ -1,0 +1,172 @@
+/* Base css file, hier zit de default styling van een pagina/
+/* Written by: David Zijlstra, Bart van Beusekom*/
+
+/* Globale Stijlen Die je kan oproepen met behulp van een var*/
+
+:root {
+    --primary-color: #0070ba;
+    --secondary-color: #ffffff;
+    --highlight-color: #f49600;
+    --dark-text: #0b334c;
+    --light-text: #ffffff;
+    --background-color: #f3efeb;
+    --primary-light-color: #2fb4e9;
+    --main-margin: 10vw;
+    --small-font-size: 0.9vw;
+    --medium-font-size: 1vw;
+    --large-font-size: 1.5vw;
+    --small-radius:  0.4vw;
+    --medium-radius: 0.6vw;
+    --small-gap: 0.5vw;
+    --big-gap: 1vw;
+    --padding: 0.5vw;
+    --bigbig-gap: 1.5vw;
+}
+
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: var(--dark-text);
+    
+}
+
+/*default styling van de pagina*/
+body {
+    background-color: var(--background-color);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/*margin wrapper*/
+#margin {
+    margin-left: var(--main-margin);
+    margin-right: var(--main-margin);
+}
+/* headerstyling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: var(--padding) 2vw;
+    border-radius: var(--medium-radius) var(--medium-radius) 0 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+/*logo sectie in de header*/
+.branding {
+    display: flex;
+    align-items: center;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+.logo{
+    width:8vw;
+}
+
+
+/*logo teskt*/
+.branding > p {
+    text-align: center;
+    font-size: var(--large-font-size);
+    color: var(--dark-text);
+}
+
+/* gebruikers sectie */
+
+.userContent {
+    display: flex;
+    align-items: baseline; 
+    width: 8.5vw;
+    justify-content: space-between;
+}
+
+.userName {
+    font-size: var(--medium-font-size);
+    color: var(--dark-text);
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.userOptions {
+    width: var(--medium-font-size);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 45%;
+}
+
+.profilePicture {
+    width: 1.9vw;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+
+/* hoofdmenu onder de header */
+.mainMenu {
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-color);
+    gap: var(--big-gap);
+    font-size: var(--medium-font-size);
+    border-radius: 0px 0px var(--medium-radius) var(--medium-radius) ;
+    z-index: 5;
+}
+
+.menuLink{
+    color: var(--light-text);
+    padding: var(--padding) 0.5vw;
+    border-radius: var( --small-radius);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.menuLink:hover {
+    background-color: #74b6e2; /*subject to change*/
+    cursor: pointer;
+}
+
+
+
+/* footer */
+section {
+    background-image: url(decal-banner.svg);
+    height: 9vh;
+    display: flex;
+    flex-direction:column-reverse;
+    background-size:cover;  
+    resize: both;
+    background-position: calc(-1vw) bottom; 
+    position: relative;
+}
+
+#copyright::after {
+    content: '©2024 Ichthus College';
+    font-weight: bold;
+    font-size: var(--small-font-size);
+    color: var(--dark-text);
+    border-radius: 5px;
+    position: absolute;
+    bottom: 1.5vh;
+    right: var(--small-gap);
+
+}
+
+/*debug
+*:hover {
+    outline: 2px solid red;
+}*/
