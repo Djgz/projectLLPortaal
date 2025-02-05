@@ -70,6 +70,8 @@ header{
     font-size: 2vw;
 }
 
+
+
 @media (max-width: 1000px){
     .rightHeader, .userOptions, .profilePicture, .rightHeader .userName{
         margin: 0; 

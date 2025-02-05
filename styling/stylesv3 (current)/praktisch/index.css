@@ -1,0 +1,16 @@
+.wrapper{
+    width: 80%;
+    margin: auto;
+    border: 1px solid red;
+}
+
+.linkjes{
+    display: grid;
+    list-style-type: none;
+}
+
+.box{
+    background-color: aliceblue;
+    padding: 10rem 10rem;
+    border: 1px solid black;
+}

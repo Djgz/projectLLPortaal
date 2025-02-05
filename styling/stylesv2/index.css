@@ -29,7 +29,9 @@
     align-items: center;
 }
 
-
+.wrapper{
+    width: 80%;
+}
 
 /* selectie element in de shortcut panel*/
 .shortcut {
