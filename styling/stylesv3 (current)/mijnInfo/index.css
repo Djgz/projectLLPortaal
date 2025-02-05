@@ -1,3 +1,73 @@
 .wrapper{
-    height: 52rem;
+    background-color: white;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
+    border-radius: var(--medium-radius);
 }
+
+.profMenu{
+    background-color: var(--highlight-color) ;
+    display: flex;
+    justify-content: space-between;
+    border-radius: var(--medium-radius);
+}
+
+.profMenu >a{
+    padding: var(--padding);
+    font-size: calc(1rem + 0.5vw);
+    border-radius: var(--small-radius);
+    color: var(--light-text);
+    transition: background-color ease-in-out 0.25s;
+    padding-right: 1.5vw;
+    padding-left: 1.5vw;
+}
+
+.profMenu > a:hover{
+    background-color: #f3c170;
+}
+
+
+.wrapperContent{
+    display: flex;
+    flex-direction: column;
+    margin: 1vw;
+    
+}
+
+.wrapperContent > p{
+    font-size: var(--large-font-size);
+    font-weight: bold;
+    line-height: 3rem;
+}
+
+.profIframe{
+ background-color: blue;
+ height: 15vw;
+}
+
+.gegevensIframe{
+    background-color: green;
+    height: 15vw;
+}   
+
+.examenOpdracht{
+    background-color: red;
+    height: 15vw;
+}
+/*:root{--primary-color: #0070ba;
+    --secondary-color: #ffffff;
+    --highlight-color: #f49600;
+    --dark-text: #0b334c;
+    --light-text: #ffffff;
+    --background-color: #f3efeb;
+    --primary-light-color: #2fb4e9;
+    --main-margin: 10vw;
+    --small-font-size: 0.9vw;
+    --medium-font-size: 1vw;
+    --large-font-size: 1.5vw;
+    --small-radius:  0.4vw;
+    --medium-radius: 0.6vw;
+    --small-gap: 0.5vw;
+    --big-gap: 1vw;
+    --padding: 0.5vw;
+    --bigbig-gap: 1.5vw;} */
