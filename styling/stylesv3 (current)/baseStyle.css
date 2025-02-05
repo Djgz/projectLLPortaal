@@ -66,7 +66,7 @@ header {
 .userMenu{
     position: absolute;
     bottom: -90%;
-    z-index: 10;
+    z-index: 11;
     display: flex;
     visibility: hidden;
     flex-direction: column;
@@ -82,6 +82,12 @@ header {
 .userMenu.active, .userMenu.active a{
     visibility: visible;
 }
+
+.userMenu.active > img{
+    rotate: 180deg;
+}
+
+
 
 .userMenu > a{
     margin: 0.3vw;
@@ -146,78 +152,64 @@ header {
     align-self: center;
 }
 
-/* Zorg ervoor dat de parent div een relatieve position heeft */
-.mainMenu > div {
-    position: relative;
-}
 
-/* Verberg de dropdown standaard */
-.menuLinkDrop {
-    display: none;
-    position: absolute;
-    top: 100%; /* Plaatst het menu direct onder de knop */
-    left: 0;
-    background-color: gray;
-    z-index: 1;
-    flex-direction: column;
-}
-
-
-/* Laat de dropdown zien bij hover */
-.menuLink:hover + .menuLinkDrop, .menuLinkDrop:hover {
-    display: flex;
-}
-
-/* Styling voor de dropdown-items */
-.menuLinkDrop > a {
-    color: white;
-    padding: var(--padding);
-    border-radius: var(--small-radius);
-    display: inline-block;
-}
 
 
 /* hoofdmenu onder de header */
 .mainMenu {
     display: flex;
     justify-content: center;
-    background-color: var(--primary-color);
-    gap: var(--big-gap);
-    font-size: var(--medium-font-size);
     border-radius: 0px 0px var(--medium-radius) var(--medium-radius) ;
-    z-index: 5;
-    position: relative;
+    background-color: var(--primary-color);
+    z-index: 10
+
 }
 
-
-
-.menuLink{
-    color: var(--light-text);
-    padding: var(--padding) 0.5vw;
-    border-radius: var( --small-radius);
-    transition: background-color 0.2s ease-in-out;
+.menuLink {
+    display: block;
+    padding: 0.5vw;
+    width: 9.5vw;
+    text-align: center;
+    color: white;
+    border-radius: var(--small-radius);
 }
 
-.menuLink:hover {
-    background-color: #74b6e2; /*subject to change */
+.menuLink:hover , .menuLinkDrop > a:hover {
+    background-color: #74b6e2; 
     cursor: pointer;
 }
 
-.menuLinkDrop{
-    position: absolute;
-    background-color: gray;
-    z-index: 1;
-    bottom: -30px;
-    display: flex;
-    flex-direction: column;
+/* Dropdown menu styling */
+.dropmenuwrap {
+    position: relative;
+    width: max-content;
+    list-style-type: none;
 }
 
-.menuLinkDrop > a{
-    color: white;
+.menuLinkDrop {
+    display: flex; 
+    flex-direction: column;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: var(--primary-color);
+    border-radius: 0 0 var(--small-radius ) var(--small-radius);
+    box-shadow: 10px 6px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: 100%; 
+}
+
+.menuLinkDrop > a {
+    color: var(--light-text);
     padding: var(--padding);
     border-radius: var(--small-radius);
-    display: inline-block;
+    display: block;
+    transition: background-color 0.2s ease-in-out;
+    text-align: center;
 }
+
+
+
 
 /* footer */
 section {
