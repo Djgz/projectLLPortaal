@@ -68,10 +68,19 @@ header {
     bottom: -90%;
     z-index: 10;
     display: flex;
+    visibility: hidden;
     flex-direction: column;
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: var(--small-radius);
+}
+
+.userMenu a{
+    visibility: hidden;
+}
+
+.userMenu.active, .userMenu.active a{
+    visibility: visible;
 }
 
 .userMenu > a{
@@ -126,6 +135,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
     margin-bottom: 45%;
 }
 
@@ -151,6 +161,7 @@ header {
     z-index: 1;
     flex-direction: column;
 }
+
 
 /* Laat de dropdown zien bij hover */
 .menuLink:hover + .menuLinkDrop, .menuLinkDrop:hover {
