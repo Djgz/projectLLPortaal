@@ -3,23 +3,36 @@
     margin-top: 2.5vw;
     margin-bottom: 2.5vw;
     border-radius: var(--medium-radius);
+    display: grid;
+    grid-template-columns: calc(150px + 2vw) 1fr;
 }
 
 .profMenu{
     background-color: var(--highlight-color) ;
-    display: flex;
-    justify-content: space-between;
     border-radius: var(--medium-radius);
+    margin-bottom: 2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    max-width: calc(150px + 2vw);
+ 
+    
 }
 
 .profMenu >a{
     padding: var(--padding);
-    font-size: calc(1rem + 0.5vw);
+    font-size: var(--medium-font-size);
     border-radius: var(--small-radius);
     color: var(--light-text);
     transition: background-color ease-in-out 0.25s;
     padding-right: 1.5vw;
     padding-left: 1.5vw;
+    display: inline-block;
+    background-color: var(--dark-text);
+}
+
+.profMenu:first-child{
+    margin-top: 1vw;
 }
 
 .profMenu > a:hover{
@@ -28,46 +41,26 @@
 
 
 .wrapperContent{
+    grid-area: 1/2/2/2;
     display: flex;
     flex-direction: column;
     margin: 1vw;
-    
+    gap: 1vw;
 }
 
 .wrapperContent > p{
     font-size: var(--large-font-size);
     font-weight: bold;
-    line-height: 3rem;
 }
 
-.profIframe{
+.profIframe, .examenOpdracht , .gegevensIframe{
  background-color: blue;
  height: 15vw;
+ border-radius: var(--small-radius);
 }
 
-.gegevensIframe{
-    background-color: green;
-    height: 15vw;
-}   
-
-.examenOpdracht{
-    background-color: red;
-    height: 15vw;
+.huiswerkIframe{
+    height: 20vw;
+    background-color: gray;
 }
-/*:root{--primary-color: #0070ba;
-    --secondary-color: #ffffff;
-    --highlight-color: #f49600;
-    --dark-text: #0b334c;
-    --light-text: #ffffff;
-    --background-color: #f3efeb;
-    --primary-light-color: #2fb4e9;
-    --main-margin: 10vw;
-    --small-font-size: 0.9vw;
-    --medium-font-size: 1vw;
-    --large-font-size: 1.5vw;
-    --small-radius:  0.4vw;
-    --medium-radius: 0.6vw;
-    --small-gap: 0.5vw;
-    --big-gap: 1vw;
-    --padding: 0.5vw;
-    --bigbig-gap: 1.5vw;} */
+

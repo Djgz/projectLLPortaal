@@ -61,7 +61,27 @@ header {
     -webkit-user-select: none; 
     -ms-user-select: none; 
     user-select: none; 
+    position: relative;
 }
+.userMenu{
+    position: absolute;
+    bottom: -90%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: var(--small-radius);
+}
+
+.userMenu > a{
+    margin: 0.3vw;
+    padding: 0.4vw;
+    font-size:var(--medium-font-size);
+    border-radius: var(--small-radius);
+    background-color: var(--background-color);
+}
+
 
 /*logo sectie in de header*/
 .branding {
@@ -116,6 +136,35 @@ header {
     align-self: center;
 }
 
+/* Zorg ervoor dat de parent div een relatieve position heeft */
+.mainMenu > div {
+    position: relative;
+}
+
+/* Verberg de dropdown standaard */
+.menuLinkDrop {
+    display: none;
+    position: absolute;
+    top: 100%; /* Plaatst het menu direct onder de knop */
+    left: 0;
+    background-color: gray;
+    z-index: 1;
+    flex-direction: column;
+}
+
+/* Laat de dropdown zien bij hover */
+.menuLink:hover + .menuLinkDrop, .menuLinkDrop:hover {
+    display: flex;
+}
+
+/* Styling voor de dropdown-items */
+.menuLinkDrop > a {
+    color: white;
+    padding: var(--padding);
+    border-radius: var(--small-radius);
+    display: inline-block;
+}
+
 
 /* hoofdmenu onder de header */
 .mainMenu {
@@ -126,7 +175,10 @@ header {
     font-size: var(--medium-font-size);
     border-radius: 0px 0px var(--medium-radius) var(--medium-radius) ;
     z-index: 5;
+    position: relative;
 }
+
+
 
 .menuLink{
     color: var(--light-text);
@@ -136,11 +188,25 @@ header {
 }
 
 .menuLink:hover {
-    background-color: #74b6e2; /*subject to change*/
+    background-color: #74b6e2; /*subject to change
     cursor: pointer;
 }
 
+.menuLinkDrop{
+    position: absolute;
+    background-color: gray;
+    z-index: 1;
+    bottom: -30px;
+    display: flex;
+    flex-direction: column;
+}
 
+.menuLinkDrop > a{
+    color: white;
+    padding: var(--padding);
+    border-radius: var(--small-radius);
+    display: inline-block;
+}
 
 /* footer */
 section {
@@ -152,6 +218,7 @@ section {
     resize: both;
     background-position: calc(-1vw) bottom; 
     position: relative;
+    margin-top: auto;
 }
 
 #copyright::after {
