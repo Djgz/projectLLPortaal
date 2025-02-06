@@ -192,6 +192,7 @@ header {
     position: absolute;
     top: 100%; 
     left: 0;
+    visibility: hidden;
     background-color: var(--primary-color);
     border-radius: 0 0 var(--small-radius ) var(--small-radius);
     box-shadow: 10px 6px 10px rgba(0, 0, 0, 0.1);
@@ -199,7 +200,11 @@ header {
     width: 100%; 
 }
 
-.menuLinkDrop > a {
+.menuLinkDrop.active, .menuLinkDrop.active a{
+    visibility: visible;
+}
+
+.menuLinkDrop > a{
     color: var(--light-text);
     padding: var(--padding);
     border-radius: var(--small-radius);
