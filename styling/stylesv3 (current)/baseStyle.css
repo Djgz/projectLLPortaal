@@ -107,8 +107,8 @@ header {
     display: flex;
     flex-direction: column;
     align-self: center;
+    border-radius: 50%;
 }
-
 
 
 .userMenu{
@@ -186,13 +186,21 @@ header {
 
 }
 
+.Wdrop{
+  width: 11%;
+  height: 4%;
+  margin-top: 1%;
+  margin-right: 3%;
+}
+
 .menuLink {
-    display: block;
+    display: flex;
     padding: 0.5vw;
     width: 9.5vw;
     text-align: center;
     color: white;
     border-radius: var(--small-radius);
+    justify-content: space-between;
 }
 
 .menuLink:hover , .menuLinkDrop > a:hover {
