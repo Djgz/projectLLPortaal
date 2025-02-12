@@ -62,7 +62,7 @@ header {
     -ms-user-select: none; 
     user-select: none; 
     position: relative;
-
+    
 }
 
 
@@ -183,7 +183,6 @@ header {
     border-radius: 0px 0px var(--medium-radius) var(--medium-radius) ;
     background-color: var(--primary-color);
     z-index:5;
-
 }
 
 .Wdrop{
@@ -201,11 +200,16 @@ header {
     color: white;
     border-radius: var(--small-radius);
     justify-content: space-between;
+
 }
 
 .menuLink:hover , .menuLinkDrop > a:hover {
     background-color: #74b6e2; 
     cursor: pointer;
+}
+
+.lastlink{
+    justify-content: center;
 }
 
 /* Dropdown menu styling */
@@ -215,11 +219,19 @@ header {
     list-style-type: none;
 }
 
+.dropmenuwrap:hover > .menuLinkDrop{
+    visibility: visible;
+    transform: translateY(-100%);
+    transform: translateZ(100%);
+    transition: all ease 2s;
+}
+
+
 .menuLinkDrop {
     display: flex; 
     flex-direction: column;
     position: absolute;
-    top: 100%; 
+    top: -100%; 
     left: 0;
     visibility: hidden;
     background-color: var(--primary-color);
@@ -227,13 +239,9 @@ header {
     box-shadow: 10px 6px 10px rgba(0, 0, 0, 0.1);
     z-index: 2;
     width: 100%; 
-
+    transform: translateZ(-10%);
+    transition: all ease-in-out 2s;
 }
-
-.menuLinkDrop.active, .menuLinkDrop.active a{
-    visibility: visible;
-}
-
 
 
 .menuLinkDrop > a{
