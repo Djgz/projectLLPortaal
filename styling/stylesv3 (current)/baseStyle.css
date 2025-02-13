@@ -291,7 +291,9 @@ header {
 }
 
 
-
+.burger-menu{
+    display: none;
+}
 
 /* footer */
 section {
@@ -351,18 +353,43 @@ section {
     }
 }
 
-@media screen and (max-width: 865px){
+
+
+/* Initially hide the main menu items on small screens */
+
+
+
+
+/* Hide menu items by default on smaller screens */
+@media screen and (max-width: 865px) {
+    .mainMenu > li {
+        display: none; /* Hide the main menu links */
+        flex-direction: column; /* Stack them vertically when revealed */
+    }
+
+    .mainMenu.open > li{
+        display: block;
+    }
+    .burger-menu {
+        display: block; /* Show the burger menu icon on mobile */
+        cursor: pointer;
+    }
+
     .mainMenu{
-        flex-direction: row;
-        flex-wrap: wrap;
-        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menuLink{
+        font-size: var(--large-font-size);
+        display: flex;
+        justify-content: space-between;
+        min-width: 90vw !important;
     }
 
 
-    
 }
-
-
 
 /*debug
 *:hover {

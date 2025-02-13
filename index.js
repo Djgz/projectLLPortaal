@@ -6,3 +6,9 @@ dropdown1.onclick = function() {
     dropdown1.classList.toggle('active');
 }
 
+let burgerMenu = document.getElementById('burgerMenu');
+let mainMenu = document.querySelector('.mainMenu');
+
+burgerMenu.onclick = function() {
+    mainMenu.classList.toggle('open');
+}
