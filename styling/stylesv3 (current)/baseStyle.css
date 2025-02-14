@@ -25,7 +25,9 @@
 }
 
 * {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "Open Sans", serif;
+    font-optical-sizing: auto;
+
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -218,6 +220,7 @@ header {
 
 .Wdrop{
   width: 1.25rem;
+  height: 1.5rem;
   margin-right: 3%;
   transition: all ease-in-out 0.3s;
   transform: rotate(0deg);
@@ -235,7 +238,8 @@ header {
     border-radius: var(--small-radius);
     justify-content: space-between;
     background-color: var(--primary-color);
-
+    font-weight: bold;
+    font-size: var(--medium-font-size);
 }
 
 .menuLink:hover , .menuLinkDrop > a:hover {
@@ -277,6 +281,7 @@ header {
     transition: all ease-in-out 0.3s;
     z-index: -10 !important;
     transform: translateY(-100%);
+    font-size: var(--medium-font-size);
 }
 
 
@@ -293,17 +298,28 @@ header {
 
 .burger-menu{
     display: none;
+    width: 100vw;
+    font-weight: bold;
+}
+
+.burger-menu > img{
+    width: 2.2rem;
+}
+
+.burger-menu> p{
+    font-size: 1.5rem;
+    color: var(--light-text);
+
 }
 
 /* footer */
 section {
     background-image: url(decal-banner.svg);
-    height: 9vh;
+    min-height: 4rem;
     display: flex;
     flex-direction:column-reverse;
-    background-size:cover;  
-    resize: both;
-    background-position: calc(-1vw) bottom; 
+    background-size: cover;
+    background-position:-100px; 
     position: relative;
     margin-top: auto;
 }
@@ -336,43 +352,86 @@ section {
     }
     
     .mainMenu >* {
-        font-size: var(--small-font-size);
+        font-size: var(--medium-font-size);
     }
 
     .menuLink{
         border-radius: 0.5vw;
     }
 
-    body{
-        background-color: red;
+    
+    section{
+        min-height: 2.5rem;
+        background-position:-50px; 
+
+    }
+
+    #copyright::after {
+        font-size: var(--small-font-size);
+    }
+
+
+    #copyright::after {
+        font-size: 0.5rem;
     }
 
     :root{
         --medium-radius : 1vw;
         --small-radius  : 0.75vw;
+        --medium-font-size : 0.82rem;
+    }
+}
+
+/*groote schermen*/
+@media  screen and (min-width: 2560px) {
+    :root{
+        --medium-font-size : 2rem;
+        --small-font-size :1.5rem ;
+        --large-font-size : 3rem;
+    }
+
+    .Wdrop{
+        height: 3.6rem;
+        width: 3rem;
+    }
+    
+    .userContent{
+        min-width: 11vw;
+    }
+    
+    .userContent{
+        align-self: center;
+    }
+
+    .profilePicture{
+        width: 4rem;
+    }
+
+    section{
+        min-height: 8rem;
+    }
+
+    #copyright::after {
+        font-size: var(--small-font-size);
     }
 }
 
 
 
-/* Initially hide the main menu items on small screens */
 
-
-
-
-/* Hide menu items by default on smaller screens */
 @media screen and (max-width: 865px) {
     .mainMenu > li {
-        display: none; /* Hide the main menu links */
-        flex-direction: column; /* Stack them vertically when revealed */
+        display: none; 
+        flex-direction: column; 
     }
 
     .mainMenu.open > li{
         display: block;
     }
     .burger-menu {
-        display: block; /* Show the burger menu icon on mobile */
+        display: flex; 
         cursor: pointer;
+
     }
 
     .mainMenu{
@@ -383,13 +442,82 @@ section {
 
     .menuLink{
         font-size: var(--large-font-size);
-        display: flex;
-        justify-content: space-between;
         min-width: 90vw !important;
+        z-index: 100;
+        padding: 0 2vw 0 7vw;
+        border-top: solid 1px rgba(0, 0, 0, 0.158);
     }
 
+    .Wdrop{
+        padding: 0 7vw;
+        max-height: 2rem;
+    }
+
+    .menuLinkDrop {
+        position: relative !important;
+        display: none;
+        font-size: var(--large-font-size);
+
+    }
+
+  
+    .dropmenuwrap:hover > .menuLinkDrop {
+        display: inline-flex; 
+        position: relative;
+        z-index: 100 !important;
+
+    }
+
+    
+
+    .menuLinkDrop{
+        box-shadow: none;
+        position: relative;
+    }   
+
+    .menuLinkDrop> a{
+        border-top: solid 1px rgba(0, 0, 0, 0.158);
+
+    }
+
+    .lastlink{
+      justify-content: start !important;
+    }
+}
+
+@media screen and (max-width: 865px){
+    .userMenu{
+        min-width: 14.5ch;
+        right: -1vw;
+    }
+
+    .branding > p {
+        font-size: 1.2rem;
+        margin-left: -2vw;
+    }
 
 }
+
+@media screen and (max-width: 520px){
+    .userName{
+        display: none;
+    }
+
+    .userContent{
+        min-width: 4.5rem;
+    }
+}
+
+
+@media screen and (max-width: 400px){
+    header{
+        display: block;
+    }
+
+}
+
+
+
 
 /*debug
 *:hover {

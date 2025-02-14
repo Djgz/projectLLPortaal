@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leerlingenportaal - Ichtus College Venendaal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"> 
     <link href="/styling/stylesv3 (current)/baseStyle.css" rel="stylesheet">
     <link href="/styling/stylesv3 (current)/index.css" rel="stylesheet">
 </head>
 <body>
     <header >
-        <a class="branding" href="/index.html">
-            <img src="styling/images/header/logo-ichthuscollege.png" alt="ichthuslogo" class="logo">
+        <a class="branding" href="../index.html">
+            <img src="/styling/images/header/logo-ichthuscollege.png" alt="ichthuslogo" class="logo">
             <p>Leerlingenportaal</p>
         </a>
         <div class="userContent" id="header">
@@ -18,66 +21,68 @@
                 <div class="userProfile">
                     <img class="profilePicture" src="/styling/images/header/no-image.png" alt="profile Picture">
              </div>
-            <div class="userName">Username
+            <div class="userName">
+                Username
              </div>
             <div class="userOptionsWrap">
-                <img class="userOptions" src="styling/images/dropdownMenu.png" alt="dropDownArrow">
+                <img class="userOptions" src="/styling/images/dropdownMenu.png" alt="dropDownArrow">
              </div>
          </div>
          <div class="userMenu">
-            <a>Ichthuscollege.nl</a>
-            <a>Uitloggen</a>
+            <a href="https://www.ichthuscollege.nl/">Ichthuscollege.nl</a>
+            <a href="uitloggen...">Uitloggen</a>
          </div>
         </div>
     </header>
 <div class="mainMenu" >
     <div class="burger-menu" id="burgerMenu">
-        <img src="styling/images/hamburger-icon.png" alt="Hamburger Menu">
+        <img src="/styling/images/burger.png" alt="Hamburger Menu">
+        <p> Menu</p>
     </div>
        
     <li class="dropmenuwrap">
             <a class="menuLink" href="/praktisch/">Praktisch   
-             <img class="Wdrop" src="styling/images/dropdownWitMenu.png">
+             <img class="Wdrop" src="/styling/images/dropdownWitMenu.png">
             </a>
             <div class="menuLinkDrop">
                 <a href="/praktisch/8.html">8+</a>
-                <a>Decanaat</a>
-                <a>Huiswerkklas</a>
-                <a>Privacy</a>
-                <a>Vertrouwenspersonen</a>
+                <a href="/praktisch/decanaat.html">Decanaat</a>
+                <a href="/praktisch/huiswerkklas.html">Huiswerkklas</a>
+                <a href="/praktisch/privacy.html">Privacy</a>
+                <a href="/praktisch/vertrouwenspersoonen.html">Vertrouwenspersonen</a>
             </div>
         </li> 
         <li class="dropmenuwrap">
             <a  class="menuLink" href="/mijninfo/">Mijn info
-                <img class="Wdrop" src="styling/images/dropdownWitMenu.png">
+                <img class="Wdrop" src="/styling/images/dropdownWitMenu.png">
             </a>
             <div class="menuLinkDrop" >
-                <a>Mijn profiel</a>
-                <a>Cijfers</a>
-                <a>Huiswerk</a>
-                <a>Klassenlijst</a>
-                <a>PTA en PTO</a>
-                <a>Docenten</a>
-                <a>Absentie</a>
-                <a>Toestemming en privacy</a>
+                <a href="/mijnInfo/index.html">Mijn profiel</a>
+                <a href="/mijnInfo/cijfers.html">Cijfers</a>
+                <a href="/mijnInfo/huiswerk.html">Huiswerk</a>
+                <a href="/mijnInfo/klassenlijst.html">Klassenlijst</a>
+                <a href="/mijnInfo/Pta-Pto.html">PTA en PTO</a>
+                <a href="/mijnInfo/docenten.html">Docenten</a>
+                <a href="mijnInfo/absentsie.html">Absentie</a>
+                <a href="mijnInfo/toestemming.html">Toestemming en privacy</a>
             </div>
         </li>
         <li class="dropmenuwrap">
             <a class="menuLink" href="/actueel/">Actuele Informatie           
-                 <img class="Wdrop" src="styling/images/dropdownWitMenu.png">
+                 <img class="Wdrop" src="/styling/images/dropdownWitMenu.png">
             </a>    
             <div class="menuLinkDrop">
-                <a>Nieuwsoverzicht</a>
-                <a>Jaaragenda</a>
+                <a href="/actueel/nieuws.html">Nieuwsoverzicht</a>
+                <a href="/actueel/index.html">Jaaragenda</a>
             </div>
         </li>
         <li class="dropmenuwrap">
             <a class="menuLink" href="/roostersentoetsen/">Roosters en toetsen
-                <img class="Wdrop" src="styling/images/dropdownWitMenu.png">
+                <img class="Wdrop" src="/styling/images/dropdownWitMenu.png">
             </a>
             <div class="menuLinkDrop">
-                <a>Lesrooster</a>
-                <a>Toetsrooster</a>
+                <a href="/roostersEnToetsen/index.html">Lesrooster</a>
+                <a href="/roostersEnToetsen/toetsen.html">Toetsrooster</a>
             </div>
         </li>
         <li class="dropmenuwrap">
@@ -86,99 +91,13 @@
     </div>
 
 
-    <div class="wrapper" id="margin" style="display: none;">
-     <div class="shortcutWrapper">
-            <a class="shortcut" id="its" href="https://ichthuscollege.itslearning.com/">
-                <img src="/styling/images/shortcuts/its.png" alt="Itslearning">
-                <p>Itslearning</p>
-            </a>
-            <a class="shortcut" id="bully" href="https://leerlingen.ichthuscollege.nl/Portaal/Praktisch/Stop-pesten-knop">
-                <img src="/styling/images/shortcuts/bully.png" alt="Stop pesten">
-                <p>Help! er wordt gepest</p>
-            </a>
-            <a class="shortcut" id="aura" href="https://ichthus.auralibrary.nl/auraicx.aspx">
-                <img src="/styling/images/shortcuts/aura.png" alt="Aura Library">
-                <p>Aura</p>
-            </a>
-            <a class="shortcut" id="onedrive" href="https://ichthuscollegenl-my.sharepoint.com/">
-                <img src="/styling/images/shortcuts/cloud.png" alt="Onedrive">
-                <p>Onedrive</p>
-            </a>
-            <a class="shortcut" id="helpdesk" href="https://helpdesk.ichthuscollege.nl/nl/Apparatuur/Digiborden">
-                <img src="/styling/images/shortcuts/helpdesk.png" alt="Helpdesk">
-                <p>ICT Helpdesk</p>
-            </a>
-            <a class="shortcut" id="intergrip" href="https://mijn.intergrip.nl/login">
-                <img src="/styling/images/shortcuts/intergrip.png" alt="Intergrip">
-                <p>Intergrip vmbo</p>
-            </a>
-            <a class="shortcut" id="printen" href="https://printer.ichthuscollege.nl/">
-                <img src="/styling/images/shortcuts/printen.png" alt="Printen">
-                <p>Printer</p>
-            </a>
-            <a class="shortcut" id="tijden" href="https://www.ichthuscollege.nl/praktische_info/lestijden_en_vakanties">
-                <img src="/styling/images/shortcuts/klokje.png" alt="Lestijden">
-                <p>Lestijden</p>
-            </a>
-            <a class="shortcut" id="mail" href="https://mail.google.com/a/ichthuscollege.net">
-                <img src="/styling/images/shortcuts/mail.png" alt="Mail">
-                <p>Google Mail</p>
-            </a>
-            <a class="shortcut" id="mentoraat" href="https://ichthuscollege.itslearning.com/index.aspx?SessionExpired=0">
-                <img src="/styling/images/shortcuts/mentoraat.png" alt="Mentoraat">
-                <p>Mentoraat</p>
-            </a>
-            <a class="shortcut" id="office" href="https://www.microsoft365.com/?auth=2">
-                <img src="/styling/images/shortcuts/ms.png" alt="Office 365">
-                <p>Microsoft 365</p>
-            </a>
-            <a class="shortcut" id="zerm" href="https://ichthus.zportal.nl">
-                <img src="/styling/images/shortcuts/zerm.png" alt="Zermelo">
-                <p>Zermelo</p>
-            </a>
-    </div>
-    <div class="snelNaarSection">
-        <div class="snellinks">
-            <a href="mijnInfo.html/cijfers">
-                <img>
-                <p>Cijfers en examendossier</p>
-            </a>
-            <a href="mijnInfo.html/cijfers">
-                <img>
-                <p>Absentie</p>
-            </a>
-            <a>
-                <img>
-                <p>Huiswerk</p>
-            </a>
-            <a>
-                <img>
-                <p>Mijn profiel</p>
-            </a>
-            <a>
-                <img>
-                <p>Telefoon beleid</p>
-            </a>
-        </div>
-    </div>
-    <div class="nieuwsSectie">
-        <div class="newsElements"> 
-            <div  class="news1" id="news">e</div>
-            <div  class="news2" id="news"></div> 
-                        
-        </div>   
-        <div class="newslinkWrapper">
-            <a class="newsLink" href="#" > 
-                Alle mededelingen
-                <img src="styling/images/shortcuts/linkout.png" alt="link">   
-            </a>     
-        </div>   
-        </div> 
-        
-    </div>
+    
     <section> 
         <a id="copyright" href="/copyright/#"></a>
     </section>
     <script src="index.js"></script>
 </body>
 </html>
+
+
+
