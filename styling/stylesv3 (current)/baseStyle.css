@@ -142,8 +142,8 @@ header {
     transition: all linear 0.2s;
     z-index: 6;
     width: 100%;
- 
-
+    padding: 0.3vw;
+    
 }
 
 
@@ -227,7 +227,9 @@ header {
   aspect-ratio: 1 / 1;
 }
 
-
+.Wdrop {
+    height: 1.5rem;
+}
 
 .menuLink {
     display: flex;
@@ -256,17 +258,10 @@ header {
     position: relative;
     width: max-content;
     list-style-type: none;
-}
+} /*
 
-.dropmenuwrap:hover > .menuLinkDrop{
-    visibility: visible;
-    transform: translateY(0%);
 
-}
-.dropmenuwrap:hover > .menuLink > .Wdrop > img{
-    transform: rotate(-180deg);
-}
-
+*/
 .menuLinkDrop {
     display: flex; 
     flex-direction: column;
@@ -336,6 +331,50 @@ section {
 
 }
 
+/*desktop Mainmenu behavior*/
+@media screen and (min-width: 866px) {
+    .dropmenuwrap:hover > .menuLinkDrop{
+    visibility: visible;
+    transform: translateY(0%);
+
+}
+.dropmenuwrap:hover > .menuLink > .Wdrop > img{
+    transform: rotate(-180deg);
+}
+
+}
+
+/*groote schermen*/
+@media  screen and (min-width: 2560px) {
+    :root{
+        --medium-font-size : 2rem;
+        --small-font-size :1.5rem ;
+        --large-font-size : 3rem;
+    }
+
+    .Wdrop > img{
+        height: 3.2rem;
+        width: 3rem;
+    }
+    
+    .userContent{
+        min-width: 11vw;
+        align-self: center;
+    }
+
+    .profilePicture{
+        width: 4rem;
+    }
+
+    section{
+        min-height: 8rem;
+    }
+
+    #copyright::after {
+        font-size: var(--small-font-size);
+    }
+}
+
 @media screen and (max-width: 1100px){
     header{
         min-width: 10px !important;
@@ -382,40 +421,6 @@ section {
     }
 }
 
-/*groote schermen*/
-@media  screen and (min-width: 2560px) {
-    :root{
-        --medium-font-size : 2rem;
-        --small-font-size :1.5rem ;
-        --large-font-size : 3rem;
-    }
-
-    .Wdrop > img{
-        height: 3.2rem;
-        width: 3rem;
-    }
-    
-    .userContent{
-        min-width: 11vw;
-    }
-    
-    .userContent{
-        align-self: center;
-    }
-
-    .profilePicture{
-        width: 4rem;
-    }
-
-    section{
-        min-height: 8rem;
-    }
-
-    #copyright::after {
-        font-size: var(--small-font-size);
-    }
-}
-
 @media screen and (max-width:400px) {
     .Wdrop{
         padding: 0 2vw !important;
@@ -423,40 +428,31 @@ section {
     }
 
 }
-@media screen and (min-width: 866px) {}
 
 
-
+/*telefoon interface*/
 @media screen and (max-width: 865px) {
-    .mainMenu > li {
-        display: none; 
-        flex-direction: column; 
-    }
 
-    .dropmenuwrap:hover > .menuLinkDrop{
-        visibility: visible;
-        transform: translateY(0%);
-    
-    }
-    .dropmenuwrap:hover > .menuLink > .Wdrop > img{
-        transform: none !important;
-    }
     .dropmenuwrap.active > .menuLink > .Wdrop > img{
         transform: rotate(-180deg);
     }
-
-    .dropmenuwrap:hover > .menuLinkDrop{
-        visibility: none;
-    
+    .userContent{
+        min-width: 8.5rem;
     }
-
     .mainMenu.open > li{
         display: block;
+        
     }
+
+    .mainMenu > li {
+        display: none;
+    }
+
     .burger-menu {
         display: flex; 
         cursor: pointer;
-
+        z-index: 12;
+        background-color: var(--primary-color);
     }
 
     .mainMenu{
@@ -464,7 +460,7 @@ section {
         flex-direction: column;
         align-items: center;
     }
-
+    
     .menuLink{
         font-size: var(--large-font-size);
         min-width: 90vw !important;
@@ -474,7 +470,7 @@ section {
         display: flex;
         justify-content: space-between;
     }
-
+    
     .Wdrop{
         padding: 0 7vw;
         max-height: 3rem;
@@ -509,11 +505,8 @@ section {
     }
 
   
-    .dropmenuwrap:hover > .menuLinkDrop {
-        display: inline-flex; 
-        position: relative;
-        z-index: 100 !important;
-
+    .menuLinkDrop {
+        z-index: 3 !important;
     }
 
     
@@ -524,11 +517,19 @@ section {
 
     .lastlink{
       justify-content: start !important;
+      padding-bottom: 0.2rem;
     }
 
     .userMenu{
         min-width: 14.5ch;
-        right: -1vw;
+        padding: 0.5vw;
+      
+    }
+
+    .userMenu > a {
+        font-size: var(--medium-font-size);
+        color: var(--dark-text);
+        padding-left: 1vw;
     }
 
     .branding > p {
@@ -536,27 +537,17 @@ section {
         margin-left: -2vw;
     }
 
-        .dropmenuwrap{
-            display: none;
-        }
+    .dropmenuwrap.active > .menuLinkDrop  {
+        display: inline-flex !important; 
+        pointer-events: none; 
+    }
 
-        /* Zorg dat een actieve dropdown zichtbaar is en pointer-events pas na 0.3s actief worden */
-        .dropmenuwrap.active > .menuLinkDrop  {
-          display: inline-flex !important; /* of block, afhankelijk van je layout */
-          pointer-events: none; /* tot we de 'enabled'-class toevoegen */
-        }
-
-        .dropmenuwrap.active > .menuLinkDrop.enabled {
-            display: none !important;
-            visibility: hidden;
-        }
-
-        .menuLinkDrop.enabled {
-          pointer-events: all !important;
-        }
-    
-        
-
+    .menuLinkDrop.enabled {
+        pointer-events: all !important;
+    }
+    header{
+        padding-top: 0.5rem;
+    }
 }
 
 @media screen and (max-width: 520px){
@@ -566,16 +557,36 @@ section {
 
     .userContent{
         min-width: 4.5rem;
+       
+    }
+
+    .userMenu{
+        right: 0;
+        padding: 1vw;
+    }
+    
+    header{
+        flex-wrap: wrap;
     }
 }
 
-
 @media screen and (max-width: 400px){
-    header{
+    .userMenu{
+        left: 0;
+    }
+
+    .userName{
         display: block;
     }
 
+    .userContent{
+        margin-bottom: 0.5rem;
+        min-width: 9rem;
+    }
+
+    
 }
+
 
 
 
