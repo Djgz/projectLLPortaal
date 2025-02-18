@@ -390,8 +390,8 @@ section {
         --large-font-size : 3rem;
     }
 
-    .Wdrop  img{
-        height: 3.6rem;
+    .Wdrop > img{
+        height: 3.2rem;
         width: 3rem;
     }
     
@@ -423,6 +423,7 @@ section {
     }
 
 }
+@media screen and (min-width: 866px) {}
 
 
 
@@ -430,6 +431,23 @@ section {
     .mainMenu > li {
         display: none; 
         flex-direction: column; 
+    }
+
+    .dropmenuwrap:hover > .menuLinkDrop{
+        visibility: visible;
+        transform: translateY(0%);
+    
+    }
+    .dropmenuwrap:hover > .menuLink > .Wdrop > img{
+        transform: none !important;
+    }
+    .dropmenuwrap.active > .menuLink > .Wdrop > img{
+        transform: rotate(-180deg);
+    }
+
+    .dropmenuwrap:hover > .menuLinkDrop{
+        visibility: none;
+    
     }
 
     .mainMenu.open > li{
@@ -464,15 +482,30 @@ section {
         height: 2.5rem;
         width: 1.8rem;
         background-color: none;
-    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .Wdrop > img{
+        max-height: 3rem;
+        margin-right: 0px; 
+        height: 2.5rem;
+        width: 1.8rem;
+        background-color: none;
       
     }
 
     .menuLinkDrop {
         position: relative !important;
         display: none;
+        visibility: visible;
         font-size: var(--large-font-size);
-
+        transform: translateY(0%) !important;
+        box-shadow: none;
+        position: relative;
     }
 
   
@@ -484,12 +517,6 @@ section {
     }
 
     
-
-    .menuLinkDrop{
-        box-shadow: none;
-        position: relative;
-    }   
-
     .menuLinkDrop> a{
         border-top: solid 1px rgba(0, 0, 0, 0.158);
 
@@ -509,11 +536,21 @@ section {
         margin-left: -2vw;
     }
 
+        .dropmenuwrap{
+            display: none;
+        }
+
         /* Zorg dat een actieve dropdown zichtbaar is en pointer-events pas na 0.3s actief worden */
-        .dropmenuwrap.active > .menuLinkDrop {
-          display: inline-flex; /* of block, afhankelijk van je layout */
+        .dropmenuwrap.active > .menuLinkDrop  {
+          display: inline-flex !important; /* of block, afhankelijk van je layout */
           pointer-events: none; /* tot we de 'enabled'-class toevoegen */
         }
+
+        .dropmenuwrap.active > .menuLinkDrop.enabled {
+            display: none !important;
+            visibility: hidden;
+        }
+
         .menuLinkDrop.enabled {
           pointer-events: all !important;
         }
