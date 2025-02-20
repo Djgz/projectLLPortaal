@@ -20,7 +20,7 @@
 /*Shortcut Panel */
 .shortcutWrapper{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns:  minmax(160px, 400px)  minmax(160px, 400px)  minmax(160px, 400px)  minmax(160px, 400px) ;
     padding: var(--padding);
     gap: var(--small-gap);
     background-color: var(--secondary-color);
@@ -42,6 +42,7 @@
     display: flex;
     flex-wrap: wrap;
     aspect-ratio: 1/1;
+    overflow: hidden;
 }
 
 .shortcut:hover {
@@ -59,13 +60,15 @@
     padding: 1vw;
     width: 100%;
     margin-top: auto;
+    min-height: 25px;
     line-height: normal;
     background-color: rgba(83, 83, 83, 0.158);
     border-radius: var(--small-radius);
     font-weight: bold;
     color: var(--light-text);
-    font-size: var(--medium-font-size);
 }
+
+
 
 /* aangepaste styles van de shortcuts */
 #its{
@@ -141,8 +144,8 @@
     font-weight: bold;
     border-radius: var(--small-radius);
     position: absolute;
-    top: -3.0vh;
-    left: -1.5vw;
+    top: -20px;
+    left: -20px;
     transform: rotate(-15deg);
     font-size: var(--medium-font-size);
     margin-bottom: -40px;
@@ -260,14 +263,73 @@
     }
 }
 
-@media screen and (max-width: 1333px) {
+@media screen and (max-width: 1630px)  {
     .wrapper{
         grid-template-areas: 
-        "MainShortcut MainShortcut MainShortcut MainShortcut " 
-        "MainShortcut MainShortcut MainShortcut MainShortcut"
-        "snelNaar snelNaar News News ";
+        "MainShortcut MainShortcut MainShortcut snelNaar snelNaar " 
+        "MainShortcut MainShortcut MainShortcut News News"
+    }
+
+    .shortcutWrapper{
+        grid-template-columns:1fr 1fr 1fr ;
     }
 }
+
+
+@media screen and (max-width: 1330px)  {
+    .wrapper{
+        grid-template-areas: 
+        "MainShortcut MainShortcut MainShortcut  MainShortcut  " 
+        "MainShortcut MainShortcut MainShortcut MainShortcut  "
+        "MainShortcut MainShortcut MainShortcut MainShortcut  "
+        "MainShortcut MainShortcut MainShortcut MainShortcut  "
+        "snelNaar snelNaar News News";
+        margin-top: 1em;
+    }
+
+    .shortcutWrapper{
+        grid-template-columns:1fr 1fr 1fr ;
+    }
+
+    .wrapper > div{
+        padding: 1em;
+    }
+    :root{
+        --main-margin:5vw;
+    }
+}
+
+
+@media screen  and (min-height: 1800px){
+    .wrapper{
+        grid-template-areas: 
+        "MainShortcut MainShortcut MainShortcut  MainShortcut  " 
+        "MainShortcut MainShortcut MainShortcut MainShortcut  "
+        "MainShortcut MainShortcut MainShortcut MainShortcut  "
+        "MainShortcut MainShortcut MainShortcut MainShortcut  "
+        "snelNaar snelNaar News News";
+        margin-top: 1em;
+    }
+
+    .shortcutWrapper{
+        grid-template-columns:1fr 1fr 1fr ;
+    }
+
+    .wrapper > div{
+        padding: 1em;
+    }
+    :root{
+        --main-margin:5vw;
+    }
+}
+/*
+.wrapper{
+    grid-template-areas: 
+    "MainShortcut MainShortcut MainShortcut MainShortcut " 
+    "MainShortcut MainShortcut MainShortcut MainShortcut"
+    "snelNaar snelNaar News News ";
+}
+*/
 
 @media  screen and (max-width:752px) {
     .wrapper{
@@ -275,9 +337,33 @@
         grid-template-areas: 
         "MainShortcut" 
         "MainShortcut"
+        "MainShortcut"
+        "MainShortcut"
+        "MainShortcut"
+        "MainShortcut"
+        "MainShortcut"
         "snelNaar"
         "News";
        
+    }
+
+    .shortcutWrapper{
+        grid-template-columns: 1fr;
+
+    }
+
+    .shortcut > img{
+        width:40%;
+        margin-bottom: -0.8em;
+    }
+
+    .shortcut{aspect-ratio: 3/1;}
+    #bully{
+        font-size: 0.8rem !important;
+
+    }
+    .snelNaarSection::before{
+        left: -10px;
     }
 
     :root{
