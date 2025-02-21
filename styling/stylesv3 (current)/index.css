@@ -198,14 +198,15 @@
     display: inline-block;
     background-color: var(--primary-color);
     padding: var(--padding);
-    width: 12ch;
+    width: 13ch;
     font-weight: bold;
     color: #ffffff;
     position: absolute;
+    text-align: center;
     border-radius: var(--medium-radius);
     font-size: var(--medium-font-size);
     top: -0.9vh;
-    left: -1.4vw;
+    left: -1.4em;
     transform: rotate(-16.5deg);
     margin: 0;
 }
@@ -300,28 +301,7 @@
 }
 
 
-@media screen  and (min-height: 1800px){
-    .wrapper{
-        grid-template-areas: 
-        "MainShortcut MainShortcut MainShortcut  MainShortcut  " 
-        "MainShortcut MainShortcut MainShortcut MainShortcut  "
-        "MainShortcut MainShortcut MainShortcut MainShortcut  "
-        "MainShortcut MainShortcut MainShortcut MainShortcut  "
-        "snelNaar snelNaar News News";
-        margin-top: 1em;
-    }
 
-    .shortcutWrapper{
-        grid-template-columns:1fr 1fr 1fr ;
-    }
-
-    .wrapper > div{
-        padding: 1em;
-    }
-    :root{
-        --main-margin:5vw;
-    }
-}
 /*
 .wrapper{
     grid-template-areas: 
@@ -331,10 +311,40 @@
 }
 */
 
+@media  screen and (max-width:1200px){
+    .wrapper{
+        gap: 1.25em;
+        grid-template-areas: 
+        "snelNaar"
+        "MainShortcut" 
+        "MainShortcut"
+        "MainShortcut"
+        "MainShortcut"
+        "MainShortcut"
+        "News";
+        margin-top: 1.2em;
+    }
+
+    .shortcutWrapper{
+        grid-template-columns: 1fr 1fr ;
+   }
+   .shortcut{
+    aspect-ratio: 3/2;
+   }
+
+   .shortcut > img {
+    width: 60%;
+   }
+   .wrapper > div{
+    padding: 0.5em;
+}
+}
+
 @media  screen and (max-width:752px) {
     .wrapper{
         gap: 1.25em;
         grid-template-areas: 
+        "snelNaar"
         "MainShortcut" 
         "MainShortcut"
         "MainShortcut"
@@ -342,11 +352,15 @@
         "MainShortcut"
         "MainShortcut"
         "MainShortcut"
-        "snelNaar"
         "News";
-       
+        margin-top: 1.2em;
     }
+   
 
+  /*  *{
+        font-weight: bold;
+    }
+*/
     .shortcutWrapper{
         grid-template-columns: 1fr;
 
@@ -363,7 +377,17 @@
 
     }
     .snelNaarSection::before{
-        left: -10px;
+        left: -0.9em;
+        top: -1.1em;
+        width: 9ch;
+        text-align: center;
+        padding: 0.4em;
+    }
+
+    .nieuwsSectie::before{
+        top: -0.55em;
+        left: -0.9em;
+        padding: 0.4em;
     }
 
     :root{
