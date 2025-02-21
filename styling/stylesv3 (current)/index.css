@@ -20,7 +20,7 @@
 /*Shortcut Panel */
 .shortcutWrapper{
     display: grid;
-    grid-template-columns:  minmax(160px, 400px)  minmax(160px, 400px)  minmax(160px, 400px)  minmax(160px, 400px) ;
+    grid-template-columns:  minmax(160px, 1fr)  minmax(160px, 1fr)  minmax(160px, 1fr)  minmax(160px, 1fr) ;
     padding: var(--padding);
     gap: var(--small-gap);
     background-color: var(--secondary-color);
