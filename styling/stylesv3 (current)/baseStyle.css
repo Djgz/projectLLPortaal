@@ -333,9 +333,14 @@ section {
 
 /*desktop Mainmenu behavior*/
 @media screen and (min-width: 866px) {
+    .dropmenuwrap > .menuLinkDrop{
+        filter: blur(1px);
+    }
+    
     .dropmenuwrap:hover > .menuLinkDrop{
     visibility: visible;
     transform: translateY(0%);
+    filter: none;
 
 }
 .dropmenuwrap:hover > .menuLink > .Wdrop > img{
