@@ -1,5 +1,4 @@
--copyright en footer scalen niet mooi, de copyright moet een vaste waarde hebben ipv een vw
--text moet een vaste waarde krijgen zodat inzomen goed werkt
+
 
 -font-size: clamp(1rem, 2.5vw, 2rem);
 
