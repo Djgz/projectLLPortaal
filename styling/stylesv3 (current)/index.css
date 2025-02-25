@@ -7,9 +7,9 @@
     display: grid;
     grid-auto-rows: 1fr;
     grid-auto-columns: 1fr;
+    margin: 4vh 0 4vh 0;
+    max-height: 705vh;
     gap: var(--bigbig-gap);
-    margin-top: 6vh;
-    margin-bottom: 6vh;
     justify-content: center;
     grid-template-areas: 
     "MainShortcut MainShortcut MainShortcut MainShortcut snelNaar snelNaar" 
@@ -21,7 +21,7 @@
     display: grid;
     grid-template-columns:  minmax(160px, 1fr)  minmax(160px, 1fr)  minmax(160px, 1fr)  minmax(160px, 1fr) ;
     padding: var(--padding);
-    gap: var(--small-gap);
+    gap: 0.75rem;
     background-color: var(--secondary-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: var(--medium-radius);
@@ -53,7 +53,6 @@
 .shortcut img {
     width: 100%;
     min-width: 100px;
-    max-width: 160px;
     padding-top: 0.5vh;
 }
 
@@ -144,12 +143,12 @@
     background-color: var(--highlight-color);
     color: var(--light-text);
     font-weight: bold;
+    font-size: 1rem;
     border-radius: var(--small-radius);
     position: absolute;
     top: -1.5em;
     left: -1.3em;
-    transform: rotate(-16.0deg);
-    font-size: var(--medium-font-size);
+    transform: rotate(-15.0deg);
     z-index: 4;
     text-align: center;
 }
@@ -207,7 +206,7 @@
     position: absolute;
     text-align: center;
     border-radius: var(--medium-radius);
-    font-size: var(--medium-font-size);
+    font-size: 1rem;
     top: -0.5em;
     left: -1.4em;
     transform: rotate(-16.0deg);
@@ -221,15 +220,15 @@
     gap: 0.5vw;
     padding: var(--padding);
     font-weight: bold;
-    width: 20ch;
+    width: 21ch;
     color: #ffffff;
     position: absolute;
     background-color: var(--highlight-color);
     color: var(--light-text);
     border-radius:var(--small-radius);
     font-size: var(--small-font-size);
-    bottom: -0.75vh;
-    right: -0.3vw;
+    bottom: -0.5rem;
+    right: -0.3rem;
 }
 
 .newslinkWrapper{
@@ -285,13 +284,26 @@
         grid-template-areas: 
         "MainShortcut MainShortcut MainShortcut MainShortcut  "
         "MainShortcut MainShortcut MainShortcut MainShortcut  "
-        "snelNaar snelNaar News News"
-       ;
+        "News News snelNaar snelNaar ";
         margin-top: 1em;
     }
 
     .shortcutWrapper{
         grid-template-columns:1fr 1fr 1fr 1fr ;
+    }
+    
+    .snelNaarSection, .nieuwsSectie{
+        margin-top: 1rem;
+    }
+
+    .snelNaarSection::before{
+        top: -1em;
+        left: -1em;
+    }
+
+    .nieuwsSectie::before{
+        top: -0.7em;
+        left: -1em;
     }
 
     .wrapper > div{
@@ -300,9 +312,32 @@
     :root{
         --main-margin:5vw;
     }
+
+    .newsLink{
+        font-size: 0.9rem;
+        padding: 0.4em;
+    }
 }
 
+@media screen and (min-width: 4000px){
+    *{font-size: 2rem !important;
 
+    }
+
+    .snelNaarSection::before{
+        font-size: 1.5rem ;
+    }
+
+    .nieuwsSectie::before{
+        font-size: 1.5rem;
+    }
+
+    .newsLink{
+        font-size: 1.5rem !important;
+    }
+    
+    
+}
 
 /*
 .wrapper{
@@ -333,7 +368,7 @@
 
    .shortcut > img {
     width: 60%;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
    }
    .wrapper > div{
     padding: 0.5em;
@@ -353,7 +388,7 @@
         "MainShortcut"
         "News"
         "News";
-        margin-top: 1.2em;
+        margin-top: 2em;
         max-height: 220rem;
     }
    
@@ -377,11 +412,13 @@
 
     }
     .snelNaarSection::before{
-        left: -0.9em;
-        top: -1.1em;
+        left: -1em;
+        top: -1.4em;
         width: 9ch;
         text-align: center;
         padding: 0.4em;
+        font-size: 1rem;
+
     }
 
     .snellinks > a{
@@ -397,12 +434,14 @@
     }
 
     .nieuwsSectie::before{
-        top: -0.55em;
+        top: -0.2em;
         left: -0.9em;
         padding: 0.4em;
+        font-size: 1rem;
     }
 
     :root{
         --main-margin: 0.6em;
     }
+
 }

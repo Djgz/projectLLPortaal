@@ -358,7 +358,9 @@ section {
     }
     
     .userContent{
-        min-width: 11vw;
+        min-width: 200px;
+        width: 11vw;
+        max-width: 600px;
         align-self: center;
     }
 
