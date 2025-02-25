@@ -298,6 +298,7 @@ header {
 
 .burger-menu > img{
     width: 2.2rem;
+    margin-left: 0.5rem;
 }
 
 .burger-menu> p{
