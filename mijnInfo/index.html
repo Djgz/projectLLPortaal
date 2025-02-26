@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"> 
     <link href="/styling/styles/baseStyle.css" rel="stylesheet">
-    <link href="/styling/styles/mijnInfo/" rel="stylesheet"> <!--place css stylesheet here-->
+    <link href="/styling/styles/mijnInfo/index.css" rel="stylesheet"> <!--place css stylesheet here-->
 </head>
 </head>
 <body>
@@ -54,7 +54,7 @@
             </div>
         </li> 
         <li class="dropmenuwrap">
-            <a  class="menuLink" href="/mijninfo/">Mijn info
+            <a  class="menuLink" id="currentpg" href="/mijninfo/">Mijn info
                 <div class="Wdrop"><img src="/styling/images/dropdownWitMenu.png"></div>
             </a>
             <div class="menuLinkDrop" >
@@ -89,10 +89,10 @@
         </li>
     </div>
     <div class="wrapper">
-        <div class="InfoMenu" style="grid-area: sideMenu ;">
+        <div class="InfoMenu" style="grid-area:sideMenu;">
             <ul>
-                <li>
-                    <a href="index.html">Mijn profiel</a>
+                <li id="thispage">
+                    <a href="/mijnInfo/index.html">Mijn profiel</a>
                 </li>
                 <li>
                     <a href="cijfers.html">Cijfers en examendossier</a>
@@ -117,12 +117,15 @@
                 </li>
             </ul>
         </div>
-        <div class="Maincontent" style="grid-area: content;">
-            <p>Mijn profiel</p>
-            <p>Let op! Gebruik bij het wijzigen van je mobiele nummer altijd een streepje tussen 06 en de rest van het nummer. Dus: 06-00000000.</p>
-            <div class="profIframe"></div>
-            <div class="gegevensIframe"></div>
-            <div class="examenOpdracht"></div>
+        <div class="mainContent" style="grid-area: maincontent;">
+                
+            <div class="contentWrap"> 
+                <div> jouw profiel</div>
+                <p class="disclaimer">Let op! Gebruik bij het wijzigen van je mobiele nummer altijd een streepje tussen 06 en de rest van het nummer. Dus: 06-00000000.</p>
+                <div> tel en email</div>
+                <div> examen opdracht</div>
+            </div>
+           
         </div>
     </div>
 <section> 

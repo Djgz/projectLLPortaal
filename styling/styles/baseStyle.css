@@ -244,7 +244,7 @@ header {
 }
 
 .menuLink:hover , .menuLinkDrop > a:hover {
-    background-color: #74b6e2; 
+    background-color: var(--primary-light-color); 
     cursor: pointer;
 }
 
