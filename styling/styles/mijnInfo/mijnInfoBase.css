@@ -1,17 +1,13 @@
 
 .wrapper{
-    width: 80%;
-    margin: 0 auto;
+    margin: 6vh auto  6vh auto ;
     font-size: 1rem;
-    display: flex ;
-    margin-top: 6vh;
-    margin-bottom: 6vh;
-    grid-auto-columns: 1fr;
-    grid-auto-rows: 1fr;
-    grid-template-areas: 
-    "sideMenu  maincontent maincontent maincontent sidemenu "
-    ;
-    gap: 1.5rem;
+    display: grid ;
+    gap: 1rem;
+    width: 80%;
+    grid-template-columns:  15vw 1fr  15vw;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'sideMenu maincontent .';
 }
 
 .wrapper > div{
@@ -24,23 +20,27 @@
     height: max-content;
     position: sticky;
     top: 1.7rem;
-    padding: 1rem 1rem 0.7rem 1rem !important;
+    padding: 1rem 1rem 1.3rem 1rem !important;
+}
+
+.InfoMenu > ul{
+    margin-top: 1rem;
 }
 
 .InfoMenu > ul > li {
     list-style-type: none;
     background-color: var(--background-color);
     border-radius: 0.4rem;
-    margin-bottom: 0.3rem;
+    margin-top: 0.3rem;
     transition: all ease-in-out 0.3s;
 }
 
 .InfoMenu > ul > li > a {
     display: inline-block;
-    width: 100%; 
+    width: 90%; 
     height: 100%; 
     padding: 0.8rem; 
-    color: inherit; 
+    font-size: 1vw !important;
 }
 
 /* Hover-effect voor de hele li */
@@ -72,19 +72,16 @@
     padding: 0.6rem 1.0rem;
     border-radius: 0.5rem;
     background-color: var(--dark-text);
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--secondary-color);
-    top: -1.3rem;
+    top: -1rem;
     left: -0.75rem;
     transform: rotate(-7deg);
     text-align: center;
     z-index: 4;
 }
-.contentWrap{
-    min-width: 55vw;
 
-}
 
 .contentWrap > div{
         margin-top: 1em;
