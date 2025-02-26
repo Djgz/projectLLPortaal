@@ -1,0 +1,115 @@
+
+.wrapper{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1rem;
+    display: flex ;
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-areas: 
+    "sideMenu  maincontent maincontent maincontent sidemenu "
+    ;
+    gap: 1.5rem;
+}
+
+.wrapper > div{
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.InfoMenu{
+    height: max-content;
+    position: sticky;
+    top: 1.7rem;
+    padding: 1rem 1rem 0.7rem 1rem !important;
+}
+
+.InfoMenu > ul > li {
+    list-style-type: none;
+    background-color: var(--background-color);
+    border-radius: 0.4rem;
+    margin-bottom: 0.3rem;
+    transition: all ease-in-out 0.3s;
+}
+
+.InfoMenu > ul > li > a {
+    display: inline-block;
+    width: 100%; 
+    height: 100%; 
+    padding: 0.8rem; 
+    color: inherit; 
+}
+
+/* Hover-effect voor de hele li */
+.InfoMenu > ul > li:hover {
+    background-color: #ebe6e3;
+    transform: scale(105%);
+}
+
+
+.InfoMenu > ul > li:hover{
+    background-color: #ebe6e3;
+    transform: scale(105%);
+}
+
+#thispage{
+    background-color: #c5c1bf;
+    transform: scale(100%);
+}
+.mainContent{
+    position: relative;
+    
+}
+
+
+
+.InfoMenu::before{
+    content: 'Mijn info';
+    position: absolute;
+    padding: 0.6rem 1.0rem;
+    border-radius: 0.5rem;
+    background-color: var(--dark-text);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    top: -1.3rem;
+    left: -0.75rem;
+    transform: rotate(-7deg);
+    text-align: center;
+    z-index: 4;
+}
+.contentWrap{
+    min-width: 55vw;
+
+}
+
+.contentWrap > div{
+        margin-top: 1em;
+        background-color: gray;
+        min-height: 400px;
+        width: 100%;
+        text-align: center;
+        color: #000;
+}
+
+
+.disclaimer{
+    background-color: var(--dark-text);
+    color: rgb(255, 255, 255);
+    border: solid 4px #166596;
+    padding: 0.2em 0.5em ;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+}
+
+
+
+@media screen and ( max-width: 865px){
+    .InfoMenu{display: none;}
+    .wrapper{
+        width: 95%;
+    }
+}

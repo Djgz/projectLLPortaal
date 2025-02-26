@@ -1,0 +1,15 @@
+.mainContent::before {
+    content: 'Cijfers en examendossier';
+    position: absolute;
+    padding: 0.4rem 1.0rem 0.6rem 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--primary-light-color);
+    font-size: 2rem;
+    color: var(--secondary-color);
+    top: -1rem;
+    left: -1rem;
+    transform: rotate(-5deg);
+    text-align: center;
+    font-weight: 600;
+    z-index: 4;
+   }
