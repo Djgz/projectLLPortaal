@@ -238,6 +238,7 @@ header {
     display: flex;
     padding: 0.5vw;
     min-width: 22ch;
+    height: max-content;
     text-align: center;
     color: white;
     border-radius: var(--small-radius);
@@ -414,7 +415,6 @@ section {
 
     .lastlink{
         height: 1.5rem;
-
     }
  
     
@@ -537,6 +537,7 @@ section {
     .lastlink{
       justify-content: start !important;
       padding-bottom: 0.2rem;
+      height: 100%;
     }
 
     .userMenu{
@@ -605,12 +606,3 @@ section {
 
     
 }
-
-
-
-
-
-/*debug
-*:hover {
-    outline: 2px solid red;
-} */
