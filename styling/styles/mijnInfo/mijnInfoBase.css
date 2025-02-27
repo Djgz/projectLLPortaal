@@ -3,9 +3,9 @@
     margin: 6vh auto  6vh auto ;
     font-size: 1rem;
     display: grid ;
-    gap: 1rem;
-    width: 80%;
-    grid-template-columns:  15vw 1fr  15vw;
+    gap: 1.5rem;
+    width: 85%;
+    grid-template-columns:  250px 1fr  250px;
     grid-template-rows: 1fr;
     grid-template-areas: 'sideMenu maincontent .';
 }
@@ -40,7 +40,6 @@
     width: 90%; 
     height: 100%; 
     padding: 0.8rem; 
-    font-size: 1vw !important;
 }
 
 /* Hover-effect voor de hele li */
@@ -93,14 +92,6 @@
 }
 
 
-.disclaimer{
-    background-color: var(--dark-text);
-    color: rgb(255, 255, 255);
-    border: solid 4px #166596;
-    padding: 0.2em 0.5em ;
-    margin-top: 1rem;
-    border-radius: 0.5rem;
-}
 
 
 
@@ -108,5 +99,16 @@
     .InfoMenu{display: none;}
     .wrapper{
         width: 95%;
+    }
+}
+
+@media screen and ( max-width: 1400px){
+    .wrapper{
+        width: 90%;
+        display: flex;
+    }
+
+    .mainContent{
+        flex: 1;
     }
 }

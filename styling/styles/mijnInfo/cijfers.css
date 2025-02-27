@@ -13,3 +13,22 @@
     font-weight: 600;
     z-index: 4;
    }
+
+
+   .disclaimer{
+    background-color: var(--dark-text);
+    color: rgb(255, 255, 255);
+    border: solid 4px #166596;
+    padding: 0.2em 0.5em ;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    position: absolute;
+    left: 1rem;
+    top: 3.4rem;
+}
+
+
+.mainContent:nth-child(2)> div{
+    margin-top: 10rem;
+}

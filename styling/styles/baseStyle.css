@@ -254,6 +254,8 @@ header {
 
 .lastlink{
     justify-content: center;
+    height: 1.6rem;
+    
 }
 
 /* Dropdown menu styling */
@@ -407,8 +409,14 @@ section {
 
     .menuLink{
         border-radius: 0.5vw;
+        align-items: center;
     }
 
+    .lastlink{
+        height: 1.5rem;
+
+    }
+ 
     
     section{
         min-height: 2.5rem;
@@ -428,7 +436,7 @@ section {
     :root{
         --medium-radius : 1vw;
         --small-radius  : 0.75vw;
-        --medium-font-size : 0.82rem;
+        --medium-font-size : 0.8rem;
     }
 }
 
