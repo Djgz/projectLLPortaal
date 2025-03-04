@@ -264,10 +264,7 @@ header {
     position: relative;
     width: max-content;
     list-style-type: none;
-} /*
-
-
-*/
+} 
 .menuLinkDrop {
     display: flex; 
     flex-direction: column;
