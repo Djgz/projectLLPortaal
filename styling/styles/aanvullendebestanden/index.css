@@ -1,0 +1,72 @@
+
+.wrapper{
+    margin: 6vh auto  6vh auto ;
+    font-size: 1rem;
+    display: grid ;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 75%;
+   /* prevalue*/ height: 500px;
+}
+
+.wrapper > div{
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+}
+
+.mainContent{
+    position: relative;
+    
+}
+
+
+
+.mainContent::before{
+    content: 'Aanvullende bestanden';
+    position: absolute;
+    padding: 0.6rem 1.0rem;
+    border-radius: 0.5rem;
+    background-color: var(--highlight-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    top: -1rem;
+    left: -1rem;
+    transform: rotate(-7deg);
+    text-align: center;
+    z-index: 4;
+}
+
+
+.mainContent > div{
+        margin-top: 2.2em;
+        background-color: gray;
+        min-height: 400px;
+        width: 100%;
+        text-align: center;
+        color: #000;
+}
+
+
+
+
+@media screen and ( max-width: 865px){
+    .InfoMenu{display: none;}
+    .wrapper{
+        width: 95%;
+    }
+}
+
+@media screen and ( max-width: 1400px){
+    .wrapper{
+        width: 90%;
+        display: flex;
+    }
+
+    .mainContent{
+        flex: 1;
+    }
+}

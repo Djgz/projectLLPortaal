@@ -184,6 +184,87 @@ header {
 }
 
 
+.disclaimer{
+    background-color: var(--secondary-color) !important;
+    color: rgb(255, 255, 255);
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 7% 1fr;
+    min-height: max-content !important;
+}
+
+.disclaimer > p{
+    text-align: start;
+    padding: 0.6rem 0.8em 0.6rem 0.8rem;
+    color: var(--dark-text);
+    border-radius:  0 0.5rem 0.5rem 0 ;
+    
+}   
+
+#infoTXT{background-color: #ace1f6;
+}
+
+#warnTXT{
+    background-color: #fff3e0;
+}
+
+#info{
+    background-color: var(--primary-light-color);
+    border: none;
+    align-self: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border-radius: 0.5em 0em  0em 0.5em;
+    position: relative;
+}
+
+#info::before{
+    width: 1rem;
+    height: 1rem;
+    content: "";
+    display: block;
+    width: 90%; 
+    height: 2rem;
+    opacity: 0.6;
+    background-image:url(/styling/images/info_ico.png);
+    background-size: contain; 
+    background-position: center;
+    background-repeat:no-repeat;
+    align-self: center;
+    margin-left: 5%;
+}
+
+#warn{
+    background-color: #ffb74d;
+    border: none;
+    align-self: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border-radius: 0.5em 0em  0em 0.5em;
+    position: relative;
+}
+
+#warn::before{
+    width: 1rem;
+    height: 1rem;
+    content: "";
+    display: block;
+    width: 80%; 
+    height: 2rem;
+    opacity: 0.6;
+    background-image:url(/styling/images/warning_ico.png);
+    background-size: contain; 
+    background-position: center;
+    background-repeat:no-repeat;
+    align-self: center;
+    margin-left: 10%;
+}
+
+
+
 /*logo sectie in de header*/
 .branding {
     display: flex;
