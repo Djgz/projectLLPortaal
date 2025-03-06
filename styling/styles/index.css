@@ -73,20 +73,20 @@
 
 /* aangepaste styles van de shortcuts */
 #its{
-    background-color: #FF4D01;
+    background-color: #f06937;
 }
 
 #bully {
-    background-color: var(--dark-text);
+    background-color: #fac846;
 }
 
 
 #aura {
-    background-color: #A941D2;
+    background-color: #64508c;
 }
 
 #onedrive {
-    background-color: #0078D4;
+    background-color: #5096c3;
 }
 
 #helpdesk{
@@ -94,15 +94,15 @@
 }
 
 #intergrip{
-    background-color: #FF4D01;
+    background-color: #f06937;
 }
 
 #printen{
-    background-color: #f74141 ;
+    background-color: var(--dark-text) ;
 }
 
 #tijden{
-    background-color:  var(--dark-text);
+    background-color:  #fac846;
 
 }
 
@@ -111,11 +111,11 @@
 }
 
 #mentoraat{
-    background-color: #0078D4;
+    background-color: #64508c;
 }
 
 #office{
-    background-color:  #0078D4;
+    background-color:  #5096c3;
 }
 
 #zerm{
