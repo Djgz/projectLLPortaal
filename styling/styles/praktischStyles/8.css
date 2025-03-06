@@ -1,5 +1,5 @@
 .InfoMenu::before{
-    content: "Praktisch";
+    content: 'Praktisch';
     position: absolute;
     padding: 0.6rem 1.0rem;
     border-radius: 0.5rem;
