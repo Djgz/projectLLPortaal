@@ -67,7 +67,7 @@
 
 
 .InfoMenu::before{
-    content: 'Mijn info';
+    content: "Mijn info";
     position: absolute;
     padding: 0.6rem 1.0rem;
     border-radius: 0.5rem;

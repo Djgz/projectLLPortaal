@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"> 
     <link href="/styling/styles/baseStyle.css" rel="stylesheet">
-    <link href="" rel="stylesheet"> <!--place css stylesheet here-->
+    <link href="/styling/styles/basestyle-data.css" rel="stylesheet"> <!--place css stylesheet here-->
 </head>
 <body>
     <header >
@@ -87,7 +87,79 @@
             <a class="menuLink lastlink" href="/aanvullendeinfo/">Aanvullende bestanden</a>
         </li>
     </div>
-    <div class="wrapper"><!--plaats hier de elementen voor de page--></div>
+    <div class="wrapper">
+        <div class="InfoMenu" style="grid-area:sideMenu;">
+            <ul>
+                <li id="thispage">
+                    <a href="/praktisch/8.html">8+</a>
+                </li>
+                <li>
+                    <a href="/praktisch/decanaat.html">Decanaat</a>
+                </li>
+                <li>
+                    <a href="/praktisch/huiswerkklas.html">Huiswerklas</a>
+                </li>
+                <li>
+                    <a href="/praktisch/privacy.html">Privacy</a>
+                </li>
+                <li>
+                    <a href="vertrouwenspersoonen.html">Vertrouwenspersonen</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mainContent" style="grid-area: maincontent;">
+            <form>
+                <div class="formParts" id="personalInfo">
+                    <label>Naam*</label>
+                    <input type="text">
+                    <br>
+                    <label>Klas*</label>
+                    <input type="text">
+                    <br>
+                    <label>E-mail*</label>
+                    <input type="text"><br>
+                </div>
+                <div class="formParts" id="whatToDo">
+                    <input type="radio" id="doen" name="inschrijving" value="Een inschrijving doen">
+                    <label for="doen">Een inschrijving doen</label><br>
+                    <input type="radio" id="wijzigen" name="inschrijving" value="Een eerdere inschrijving wijzigen">
+                    <label for="wijzigen">Een eerdere inschrijving wijzigen</label><br>
+                    <input type="radio" id="annuleren" name="inschrijving" value="Een eerdere inschrijving annuleren">
+                    <label for="annuleren">Een eerdere inschrijving annuleren</label><br>
+                    <input type="radio" id="bijles" name="inschrijving" value="Bijles geven in vrije tijd">
+                    <label for="bijles">Bijles geven in vrije tijd</label><br>
+                </div>
+                <div class="formParts" id="dateInput">
+                    <label for="datum">Dit geldt voor de volgende datum:</label>
+                    <input type=date id=datum><br>
+                    <script>
+                        document.getElementById('datum').value = new Date().toISOString().substring(0, 10);
+                    </script>
+                </div>
+                <div class="formParts" id="lesurenInput">
+                    <label for="lesuren">Dit geldt voor de volgende lesuren: </label>
+                    <input type="checkbox" id="1e" >
+                    <label for="1">1e</label>
+                    <input type="checkbox" id="2e">
+                    <label for="2e">2e</label>
+                    <input type="checkbox" id="3e">
+                    <label for="3e">3e</label>
+                    <input type="checkbox" id="4e">
+                    <label for="4e">4e</label>
+                    <input type="checkbox" id="5e">
+                    <label for="5e">5e</label>
+                    <input type="checkbox" id="6e">
+                    <label for="6e">6e</label>
+                    <input type="checkbox" id="7e">
+                    <label for="7e">7e</label>
+                    <input type="checkbox" id="8e">
+                    <label for="8e">8e</label>
+                    <input type="checkbox" id="9e">
+                    <label for="9e">9e</label>
+                </div>
+            </form>
+        </div>
+    </div>
     <section> 
         <a id="copyright" href="/copyright/#"></a>
     </section>

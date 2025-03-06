@@ -1,0 +1,15 @@
+.InfoMenu::before{
+    content: "Praktisch";
+    position: absolute;
+    padding: 0.6rem 1.0rem;
+    border-radius: 0.5rem;
+    background-color: var(--dark-text);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    top: -1rem;
+    left: -0.75rem;
+    transform: rotate(-7deg);
+    text-align: center;
+    z-index: 4;
+}
