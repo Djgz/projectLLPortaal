@@ -212,6 +212,7 @@
     left: -1.4em;
     transform: rotate(-16.0deg);
     margin: 0;
+    z-index: 10;
 }
 
  
@@ -254,8 +255,43 @@
 #news{
     border-radius: var(--small-radius);
     background-color: var(--background-color);
+    overflow: hidden;
+    position: relative;
+
+}
+.news-img{
+    width: 100%;
+    max-width: 320px;
 }
 
+#news > span{
+}
+
+.news-item{
+    max-height:0;
+    position: relative;
+
+}
+
+.news-titel{
+    padding: 0.6rem;
+    background-color: var(--dark-text);
+    color: var(--light-text);
+    border-radius: 0.5rem 0.75rem  0.75rem 0.5rem ;
+    left: -0.25rem;
+    max-width: 90%;
+    position: relative;
+    display: inline-block;
+    top: -1.5rem;
+}
+
+.news-text{
+    font-size: 0.8rem;
+    margin-top: -1.35rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.2rem;
+}
 
 @media screen and (max-width: 1610px) { /*  gewenste breedte voor wijziging */
     .newsElements {
@@ -403,6 +439,12 @@
 
     }
 
+
+    .news1{
+        display: block;
+    }
+    
+    
     .shortcut > img{
         width:40%;
         margin-bottom: -0.8em;
