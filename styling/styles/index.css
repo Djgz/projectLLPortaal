@@ -286,13 +286,14 @@
 
 .news-text{
     font-size: 0.8rem;
+    font-weight: 500;
     margin-top: -1.35rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     margin-bottom: 0.2rem;
 }
 .newsfooter{
-    background-image: url(decal-banner.svg);
+    background-color:#ebe6e3 ;
     width: 100%;
     height: 1.2rem;
     background-size: cover;
