@@ -56,6 +56,11 @@
     padding-top: 0.5vh;
 }
 
+.shortcut svg{
+    fill: white;
+    width: 20rem;
+}
+
 .shortcut > p {
     padding: 1vw;
     width: 100%;
@@ -73,20 +78,20 @@
 
 /* aangepaste styles van de shortcuts */
 #its{
-    background-color: #f06937;
+    background-color: #FA6900;
 }
 
 #bully {
-    background-color: #fac846;
+    background-color: #FFDD30;
 }
 
 
 #aura {
-    background-color: #64508c;
+    background-color: #9B59B6;
 }
 
 #onedrive {
-    background-color: #5096c3;
+    background-color: #09A3E2;
 }
 
 #helpdesk{
@@ -94,7 +99,7 @@
 }
 
 #intergrip{
-    background-color: #f06937;
+    background-color: #FA6900;
 }
 
 #printen{
@@ -102,24 +107,23 @@
 }
 
 #tijden{
-    background-color:  #fac846;
-
+    background-color:  #FFDD30;
 }
 
 #mail{
-    background-color: #f74141;
+    background-color: #EF2F2C;
 }
 
 #mentoraat{
-    background-color: #64508c;
+    background-color: #9B59B6;
 }
 
 #office{
-    background-color:  #5096c3;
+    background-color:  #09A3E2;
 }
 
 #zerm{
-    background-color: #f74141;
+    background-color: #EF2F2C;
 }
 
 
