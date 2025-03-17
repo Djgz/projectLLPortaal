@@ -4,7 +4,7 @@
     padding: 0.3rem 1.0rem;
     border-radius: 0.5rem;
     background-color: var(--dark-text);
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--secondary-color);
     top: -1rem;
@@ -16,26 +16,24 @@
 
 .mainWrap{
     display: grid;
-    grid-template-columns: 30% 30%;
+    grid-template-columns: 1fr 1fr 1fr ;
     position: relative;
-    gap: 2em;
-    margin-top: 2rem;
+    gap: 1em;
+    margin-top: 1rem;
     justify-content: center;
+    max-width: calc(600px + 3em);
+    justify-self: center;
 }
 
-.mainContent{
- 
-    
-}
 
 .mainContent::before{
     content: "Nieuws overzicht";
     position: absolute;
-    padding: 1rem;
-    font-size: 2rem;
+    padding: 0.4rem 1rem;
+    font-size: 1.5rem;
     background-color: var(--highlight-color);
     color: var(--light-text);
-    border-radius: 1rem;
+    border-radius: 0.7rem;
     transform: rotate(-8deg);
     top: -1rem;
     left: -1rem;
@@ -61,7 +59,15 @@
     right: -0.3rem;
 }
 
-
+@media screen and (max-width: 1000px) {
+    .mainWrap{
+        grid-template-columns: 1fr;
+    }
+    
+    #news{
+        width: 100% !important;
+    }
+}
 
 
 
@@ -73,7 +79,7 @@
     height: 100%;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-
+    max-width: 200px;
 }   
 .news-img{
     width: 100%;
@@ -141,4 +147,66 @@
     background-size: cover;
     position: absolute;
     bottom: 0;
+}
+
+
+.newsMenu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+
+.newsMenu > *:hover{
+ background-color:rgb(235, 230, 227) ; 
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+   
+}
+
+.pijltjes{
+    padding: 0.5rem;
+    background-color: var(--background-color);
+    border-radius: 0.25rem;
+    width: min-content;
+    display: flex;
+}
+
+
+.terug {
+    width: 1.5rem;
+    transform: rotate(90deg);
+}
+
+.verder{
+    width: 1.5rem;
+    transform: rotate(270deg);
+}
+
+.columNumber{
+    padding:0rem  0.8rem;
+    color: var(--dark-text);
+    font-weight: bold;
+    font-size: 1.5625rem;
+    display: inline-block;
+    background-color: var(--background-color);
+    border-radius: 0.25rem;
+
+}
+
+.thisColum{
+    position: relative;
+}
+
+.streepje{
+    position: absolute;
+    width: 75%;
+    height: 3px;
+    background-color: var(--dark-text);
+    bottom: 6%;
+    left: 12.5%;
+    border-radius: 50rem;
 }
