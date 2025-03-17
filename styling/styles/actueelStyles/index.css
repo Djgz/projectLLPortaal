@@ -14,8 +14,131 @@
     z-index: 4;
 }
 
-.mainContent{
+.mainWrap{
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 30% 30%;
+    position: relative;
+    gap: 2em;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.mainContent{
+ 
+    
+}
+
+.mainContent::before{
+    content: "Nieuws overzicht";
+    position: absolute;
+    padding: 1rem;
+    font-size: 2rem;
+    background-color: var(--highlight-color);
+    color: var(--light-text);
+    border-radius: 1rem;
+    transform: rotate(-8deg);
+    top: -1rem;
+    left: -1rem;
+    z-index: 1;
+    
+}
+
+ 
+.newsLink {
+    display: flex;
+    justify-content: center;
+    gap: 0.5vw;
+    padding: var(--padding);
+    font-weight: bold;
+    width: 21ch;
+    color: #ffffff;
+    position: absolute;
+    background-color: var(--highlight-color);
+    color: var(--light-text);
+    border-radius:var(--small-radius);
+    font-size: var(--small-font-size);
+    bottom: -0.5rem;
+    right: -0.3rem;
+}
+
+
+
+
+
+#news{
+    border-radius: var(--small-radius);
+    background-color: var(--background-color);
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+
+}   
+.news-img{
+    width: 100%;
+    margin-top: -0.4rem;
+}
+
+.newsLinkOut{
+    width: 1%;
+    position: absolute;
+    right: 0.25rem;
+    top: 0.25rem;
+    opacity: 0;
+    transition: all ease-in-out 0.2s;
+    z-index: 10;
+
+}
+
+.news-item:hover >.smallwrap > .newsLinkOut{
+    width: 11%;
+    opacity: 1;
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+.news-item:hover{
+    box-shadow: 4px 2px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+.news-item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    gap: 0.5rem;
+    height: calc(100% - 1.2rem);
+    transition: all ease 0.2s;
+
+}
+
+.news-titel{
+    padding: 0.6rem;
+    background-color: #09A3E2;
+    color: var(--light-text);
+    border-radius: 0.5rem 0.75rem  0.75rem 0.5rem ;
+    left: -0.25rem;
+    max-width: 90%;
+    position: relative;
+    display: inline-block;
+    top: -1.5rem;
+}
+
+.news-text{
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: -1.35rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.2rem;
+    color: rgba(11, 51, 76, 0.594);
+}
+.newsfooter{
+    background-color:#ebe6e3 ;
+    width: 100%;
+    height: 1.2rem;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
 }

@@ -307,7 +307,7 @@
 
 .news-titel{
     padding: 0.6rem;
-    background-color: var(--dark-text);
+    background-color: #09A3E2;
     color: var(--light-text);
     border-radius: 0.5rem 0.75rem  0.75rem 0.5rem ;
     left: -0.25rem;
