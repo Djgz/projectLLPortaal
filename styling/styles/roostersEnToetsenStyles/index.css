@@ -36,7 +36,59 @@
 
 .mainContent{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    
 }
+
+
+.contentWrap{
+    border-radius: 100em;
+
+}
+#dagrooster::before{
+    content: "Maandag";
+    padding: 0.3rem 1rem;
+    background-color: var(--highlight-color);
+    position: absolute;
+    top: -2rem;
+    left: -1rem;
+    border-radius: 0.75rem;
+    font-size: 1.2rem;
+    color: var(--light-text);
+    font-weight: 600;
+    transform: rotate(-7deg);
+    z-index: 4
+}
+
+#dagrooster {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    position: relative;
+    margin-top: 2rem;
+
+
+  }
+  
+  #dagrooster td, #dagrooster th {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #dagrooster tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #dagrooster tr:hover {background-color: #ddd;}
+  
+  #dagrooster th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #09A3E2;
+    color: white;
+    
+  }
 
 @media  screen and (max-width:1400px ) {
     .InfoMenu::before{

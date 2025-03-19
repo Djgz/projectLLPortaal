@@ -202,6 +202,14 @@ header {
     
 }   
 
+@media (max-width: 1060px) {
+    .disclaimer{
+        grid-template-columns: 4rem 1fr;
+
+    }
+    
+}
+
 #infoTXT{background-color: #ace1f6;
 }
 
