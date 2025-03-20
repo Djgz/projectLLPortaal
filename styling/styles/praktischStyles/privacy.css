@@ -23,6 +23,12 @@ h2{
     text-decoration: underline;
 }
 
-iframe{
-    margin: 5rem 0;
+div iframe{
+    margin: 2rem auto;
+    aspect-ratio: 16 /9;
+    width: 100%;
+}
+
+h1{
+    text-align: center;
 }
