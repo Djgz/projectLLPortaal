@@ -37,18 +37,12 @@
 .mainContent{
     position: relative;
     display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    
+    flex-direction: column;    
 }
 
 
-.contentWrap{
-    border-radius: 100em;
-
-}
 #dagrooster::before{
-    content: "Maandag";
+    content: "";
     padding: 0.3rem 1rem;
     background-color: var(--highlight-color);
     position: absolute;
@@ -62,13 +56,33 @@
     z-index: 4
 }
 
+.ma::before{
+    content: "Maandag" !important;
+}
+
+.di::before{
+    content: "Dinsdag"  !important;
+}
+
+.wo::before{
+    content: "Woensdag"  !important;
+}
+
+.do::before{
+    content: "Donderdag"  !important;
+}
+
+.vr::before{
+    content: "Vrijdag"  !important;
+}
+
 #dagrooster {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
     position: relative;
-    margin-top: 2rem;
-
+    margin-top: 3rem;
+    
 
   }
   
