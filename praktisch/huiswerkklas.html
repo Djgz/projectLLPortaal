@@ -112,7 +112,7 @@
             <h1>Huiswerkklas</h1>
             <h6>Meld je aan voor de huiswerkklas door middel van het onderstaande formulier.</h6><br>
             <p>De huiswerkklas vindt plaats in ruimte A1.54 (stiltelokaal leercentrum).</p><br>
-            <form>
+            <form onsubmit="return false">
             <label for="naam">Naam</label><br>
             <input id="naam" type="text" value="Naam van database" readonly><br><br>
             <label for="klas">Klas</label><br>
@@ -134,6 +134,7 @@
             <p>
                 Ik ontvang een stempelkaart bij deelname aan de huiswerkklas. Het aantal lesuren per week kan ik bij opgave zelf bepalen. Ik kan op elk gewenst moment deelnemen aan de huiswerkklas. Ik zorg ervoor dat ik minimaal het opgegeven aantal uren per week maak. Ik weet dat er een maximum van 2 lesuren per dag geldt. Ik ben zelf verantwoordelijk voor de stempelkaart en het laten afstempelen bij de balie van het Opvanglokaal. Ik laat de stempelkaart wekelijks ondertekenen door mijn mentor en ouder(s)/verzorger(s). Het is mij bekend dat er tijdens toets weken en verkorte lestijden geen huiswerkklas is.
             </p>
+            <input type="submit" value="Aanmelden" id="submit1" class="submit">
         </form>
         </div>
     </div>
@@ -141,5 +142,6 @@
         <a id="copyright" href="/copyright/#"></a>
     </section>
     <script src="/header.js"></script>
+    <script src="/js/submit.js"></script>
 </body>
 </html>

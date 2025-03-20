@@ -109,7 +109,9 @@
             </ul>
         </div>
         <div class="mainContent" style="grid-area: maincontent;">
-            <form>
+            <form onsubmit="setTimeout(function()){
+                return false;
+                }, 1500">
                 <div class="formParts" id="personalInfo">
                     <label>Naam*</label>
                     <input type="text">
@@ -158,6 +160,7 @@
                     <input type="checkbox" id="9e">
                     <label for="9e">9e</label>
                 </div>
+                <input type="submit" value="Aanmelden" id="submit1" class="submit">
             </form>
         </div>
     </div>
@@ -165,5 +168,6 @@
         <a id="copyright" href="/copyright/#"></a>
     </section>
     <script src="/header.js"></script>
+    <script src="/js/submit.js"></script>
 </body>
 </html>

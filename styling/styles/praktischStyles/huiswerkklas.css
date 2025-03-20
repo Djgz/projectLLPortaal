@@ -74,3 +74,26 @@ input[type="checkbox"]::after {
 input:checked[type="checkbox"]::after {
     left: 50%;
 }
+
+.submit {
+    background: #2da0d4;
+    color: #fff;
+    width: 10rem;
+    height: 50px;
+    border: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    transition: all 600ms;
+    margin: 3rem auto;
+    box-sizing: border-box
+}
+  
+.submit:focus {
+    outline: none;
+}
+
+.submit:hover {
+    cursor: pointer;
+}
+  
