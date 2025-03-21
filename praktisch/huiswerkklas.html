@@ -112,7 +112,7 @@
             <h1>Huiswerkklas</h1>
             <h6>Meld je aan voor de huiswerkklas door middel van het onderstaande formulier.</h6><br>
             <p>De huiswerkklas vindt plaats in ruimte A1.54 (stiltelokaal leercentrum).</p><br>
-            <form onsubmit="return false">
+            <form onsubmit="handleSubmit(event)">
             <label for="naam">Naam</label><br>
             <input id="naam" type="text" value="Naam van database" readonly><br><br>
             <label for="klas">Klas</label><br>
@@ -122,7 +122,7 @@
             <label for="lesurenpweek">Aantal lesuren per week</label><br>
             <input id="lesurenpweek" type="number" min="0" max="40" placeholder="0"><br><br>
             <label for="mentor">Mentor</label><br>
-            <input id="mentor" type="text" placeholder="bijv.: Jan van den Brink" ><br><br>
+            <input id="mentor" type="text" placeholder="bijv.: Jan van den Brink"><br><br>
             <div class="disclaimer">
                 <div id="info"></div>
                 <p id = "infoTXT">Je mentor dient op de hoogte te zijn van je aanmelding!</p>
@@ -143,5 +143,6 @@
     </section>
     <script src="/header.js"></script>
     <script src="/js/submit.js"></script>
+    <script src="/js/form_checker.js"></script>
 </body>
 </html>

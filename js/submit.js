@@ -19,11 +19,4 @@ submit1.onclick = function(){
     setTimeout(function(){
       that.value = '✓';
     }, 1500);
-  };
-
-  document.querySelector("form").onsubmit = function(event) {
-    event.preventDefault(); // Voorkomt direct versturen
-    setTimeout(function() {
-        alert("Formulier verwerkt na 3 seconden!");
-    }, 3000);
 };

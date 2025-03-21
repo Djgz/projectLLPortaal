@@ -109,9 +109,7 @@
             </ul>
         </div>
         <div class="mainContent" style="grid-area: maincontent;">
-            <form onsubmit="setTimeout(function()){
-                return false;
-                }, 1500">
+            <form onsubmit="handleSubmit(event)">
                 <div class="formParts" id="personalInfo">
                     <label>Naam*</label>
                     <input type="text">
@@ -168,6 +166,6 @@
         <a id="copyright" href="/copyright/#"></a>
     </section>
     <script src="/header.js"></script>
-    <script src="/js/submit.js"></script>
+    <script src="/js/form_checker.js"></script>
 </body>
 </html>
