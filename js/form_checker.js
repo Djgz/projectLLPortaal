@@ -22,22 +22,34 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function formChecker() {
-        let inputs = document.getElementsByTagName("input");
+        let inputs = document.querySelectorAll("input:not([type='submit']):not([type='checkbox'])");
         let checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        let isCheckboxChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
-
-        for (let i = 0; i < inputs.length; i++) {
-            if (inputs[i].type !== "submit" && inputs[i].type !== "checkbox" && inputs[i].value.trim() === "") { 
-                alert("Er zijn velden niet ingevuld");
-                return false;
+        let isValid = true;
+    
+        inputs.forEach(input => {
+            if (input.value.trim() === "") {
+                input.style.border = "2px solid red";
+                isValid = false;
+            } else {
+                input.style.border = "2px solid #ccc";
+            }
+        });
+    
+        if (checkboxes.length === 1) {
+            if (!checkboxes[0].checked) {
+                alert("Accepteer alstublieft de voorwaarden.");
+                isValid = false;
+            }
+        } else if (checkboxes.length > 1) {
+            let isCheckboxChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+            if (!isCheckboxChecked) {
+                alert("Selecteer alstublieft hoeveel uren u wilt volgen.");
+                isValid = false;
             }
         }
-
-        if (checkboxes.length > 0 && !isCheckboxChecked) {
-            alert("Accepteer de voorwaarden alstublieft :)");
-            return false;
-        }
-
+    
+        if (!isValid) return false;
+    
         return new Promise((resolve) => {
             setTimeout(() => {
                 resolve(true);
