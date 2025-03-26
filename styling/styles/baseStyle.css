@@ -546,7 +546,6 @@ section {
     }
     .mainMenu.open > li{
         display: block;
-        
     }
 
     .mainMenu > li {

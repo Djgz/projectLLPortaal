@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"> 
     <link href="/styling/styles/baseStyle.css" rel="stylesheet">
-    <link href="/styling/styles/basestyle-data.css" rel="stylesheet">
-    <link href="/styling/styles/aanvullendebestanden/index.css" rel="stylesheet"> <!--place css stylesheet here-->
+    <link href="/styling/styles/basestyle-data.css" rel="stylesheet"> 
+    <link href="/styling/styles/aanvullendebestanden/index.css" rel="stylesheet">
 </head>
 <body>
     <header >
@@ -22,7 +22,7 @@
                 <div class="userProfile">
                     <img class="profilePicture" src="/styling/images/header/no-image.png" alt="profile Picture">
              </div>
-             <a class="userName" href="/mijnInfo/index.html">
+            <a class="userName" href="/mijnInfo/index.html">
                 Username
             </a>
             <div class="userOptionsWrap">
@@ -88,7 +88,8 @@
             <a class="menuLink lastlink" href="/aanvullendeinfo/">Aanvullende bestanden</a>
         </li>
     </div>
-    <div class="mainContent">
+    <div class="wrapper">
+        <div class="mainContent" style="grid-area: maincontent;">
             <div class="file-manager">
                 <h2>Bestanden en Mappen</h2>
                 <button id="back-button">⬅ Terug</button>
@@ -96,15 +97,13 @@
                     <!-- Bestanden en mappen worden hier dynamisch geladen -->
                 </ul>
             </div>
-    
+        </div>
     </div>
     <section> 
         <a id="copyright" href="/copyright/#"></a>
     </section>
-    <script src="/js/file_manager.js"></script>
     <script src="/header.js"></script>
+    <script src="/js/file_manager.js"></script>
 </body>
 </html>
-
-
 

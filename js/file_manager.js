@@ -48,10 +48,12 @@ document.addEventListener("DOMContentLoaded", function () {
             const li = document.createElement("li");
             if (typeof folder[item] === "object") {
                 // Map
+                li.classList.add("secondListStyle");
                 li.innerHTML = `📁 <strong>${item}</strong>`;
                 li.addEventListener("click", () => openFolder(item));
             } else {
                 // Bestand
+                li.classList.add("secondListStyle");
                 li.innerHTML = `📄 <a href="#" download>${item}</a>`;
             }
             fileList.appendChild(li);

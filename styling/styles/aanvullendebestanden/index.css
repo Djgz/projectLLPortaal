@@ -1,43 +1,21 @@
-
-.wrapper{
-    margin: 6vh auto  6vh auto ;
-    font-size: 1rem;
-    display: grid ;
-    justify-content: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    width: 75%;
-   /* prevalue*/ height: 500px;
-}
-
-.wrapper > div{
-    background-color: var(--secondary-color);
-    padding: 1rem;
-    border-radius: 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
-}
-
-.mainContent{
-    position: relative;
-
-}
-
-
-
-.mainContent::before{
+.InfoMenu::before{
     content: 'Aanvullende bestanden';
     position: absolute;
     padding: 0.6rem 1.0rem;
     border-radius: 0.5rem;
-    background-color: var(--highlight-color);
+    background-color: var(--dark-text);
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--secondary-color);
     top: -1rem;
-    left: -1rem;
+    left: -0.75rem;
     transform: rotate(-7deg);
     text-align: center;
     z-index: 4;
+}
+
+.mainContent{
+    min-width: 100%;
 }
 
 .file-manager {
@@ -61,12 +39,12 @@ button:hover {
     background: #0056b3;
 }
 
-ul {
+#file-list {
     list-style-type: none;
     padding: 0;
 }
 
-li {
+.secondListStyle {
     padding: 10px;
     border-bottom: 1px solid #ddd;
     display: flex;
@@ -74,12 +52,12 @@ li {
     cursor: pointer;
 }
 
-li a {
+.secondListStyle a {
     text-decoration: none;
     color: #007bff;
 }
 
-li a:hover {
+.secondListStyle a:hover {
     text-decoration: underline;
 }
 
