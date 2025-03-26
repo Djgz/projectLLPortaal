@@ -28,7 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             "Roosters, dossiertoetsweek, herkansingen en uitgestelde toetsen":{
                 "Rooster DT-1 2024-2025	(156 KB)": "file"
-            }
+            },
+            "Zo werkt het Ichthus": "file"
         }
     };
 
