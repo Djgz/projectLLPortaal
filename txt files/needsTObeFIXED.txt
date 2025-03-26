@@ -1,9 +1,0 @@
-
-
--font-size: clamp(1rem, 2.5vw, 2rem);
-
-Dit betekent:
-
-    Minimaal 1rem
-    Idealiter 2.5vw (2.5% van de viewport-breedte)
-    Maximaal 2rem
