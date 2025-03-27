@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 // Bestand
                 li.classList.add("secondListStyle");
-                li.innerHTML = `📄 <a href="/media/placeholder.pdf" download>${item}</a>`;
+                li.innerHTML = `📄 <a href="/media/Dit_is_een_placeholder.pdf" download>${item}</a>`;
             }
             fileList.appendChild(li);
         }
