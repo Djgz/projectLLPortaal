@@ -14,6 +14,11 @@
     z-index: 4;
 }
 
+.mainContent::before{
+    content: 'Decanaat';
+}
+
+
 h2{
     margin-top: 1rem;
 }

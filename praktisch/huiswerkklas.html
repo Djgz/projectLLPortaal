@@ -109,20 +109,38 @@
             </ul>
         </div>
         <div class="mainContent" style="grid-area: maincontent;">
-            <h1>Huiswerkklas</h1>
-            <h6>Meld je aan voor de huiswerkklas door middel van het onderstaande formulier.</h6><br>
-            <p>De huiswerkklas vindt plaats in ruimte A1.54 (stiltelokaal leercentrum).</p><br>
+            
+            <div class="wrap">
+            <div class="disclaimer">
+                <div id="info"></div>
+                <p id = "infoTXT"> Meld je aan voor de huiswerkklas door middel van het onderstaande formulier.</p>
+            </div>
+            <br>
+            
             <form onsubmit="handleSubmit(event)">
-            <label for="naam">Naam</label><br>
-            <input id="naam" type="text" value="Naam van database" readonly><br><br>
-            <label for="klas">Klas</label><br>
-            <input id="klas" type="text" value="Klas van database" readonly><br><br>
-            <label for="email">E-mail</label><br>
-            <input id="emial" type="email" value="Email van database" readonly><br><br>
-            <label for="lesurenpweek">Aantal lesuren per week</label><br>
-            <input id="lesurenpweek" type="number" min="0" max="40" placeholder="0"><br><br>
-            <label for="mentor">Mentor</label><br>
-            <input id="mentor" type="text" placeholder="bijv.: Jan van den Brink"><br><br>
+            <div class="formWrap">
+                <div>
+                    <label for="naam">Naam</label><br>
+                    <input id="naam" type="text" value="Naam van database" readonly>
+                </div>
+                <div>
+                    <label for="klas">Klas</label><br>
+                    <input id="klas" type="text" value="Klas van database" readonly>
+                </div>
+                <div>
+                    <label for="email">E-mail</label><br>
+                    <input id="emial" type="email" value="Email van database" readonly>
+                </div>
+                <div>
+                    <label for="lesurenpweek">Aantal lesuren per week</label><br>
+                    <input id="lesurenpweek" type="number" min="0" max="40" placeholder="0">
+                </div>
+                <div>
+                    <label for="mentor">Mentor</label><br>
+                    <input id="mentor" type="text" placeholder="bijv.: Jan van den Brink"></div>   
+                </div>
+                <br>
+                <p>De huiswerkklas vindt plaats in ruimte A1.54 (stiltelokaal leercentrum).</p>
             <div class="disclaimer">
                 <div id="info"></div>
                 <p id = "infoTXT">Je mentor dient op de hoogte te zijn van je aanmelding!</p>
@@ -136,6 +154,7 @@
             </p>
             <input type="submit" value="Aanmelden" id="submit1" class="submit">
         </form>
+            </div>
         </div>
     </div>
     <section> 
