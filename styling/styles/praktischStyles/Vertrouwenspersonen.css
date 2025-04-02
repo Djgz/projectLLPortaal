@@ -22,14 +22,11 @@ h2{
     margin-top: 1rem;
 }
 
-.mainContent a, .mainContent a:visited{
-    color: blue;
-    text-decoration: underline;
-}
 
 iframe{
     margin: 2rem auto;
     aspect-ratio: 16 /9;
+    border-radius: 1.5rem;
 }
 
 .mainContent img{
@@ -48,4 +45,57 @@ table{
 
 .vertrouwenspersonenInfo p{
     margin: 2rem auto;
+}
+
+.wrap{
+    padding: 1rem;
+}
+
+.linkOut{
+    display: inline-flex;
+    text-decoration: none;
+    align-items: center;
+    gap: 0.2em;
+    text-decoration: none;
+    font-weight: 600;
+    word-break: break-all;
+}
+
+.linkOut:hover{
+ color: #09A3E2;
+}
+
+.linkOut:hover > img{
+    filter: sepia(1) saturate(1000%) hue-rotate(180deg) brightness(2.5);
+}
+   
+.linkOut > img{
+    height: 1rem;
+    width: 1rem;
+    aspect-ratio: 1/1;
+    justify-content: start;
+}
+
+.persImg{
+    border-radius: 1.5rem;
+}
+
+.element{
+    border-top: solid rgba(0, 0, 0, 0.123) 2px;
+  
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    hyphens:  auto;
+}
+
+.disclaimer{
+    min-height: 4rem !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.disclaimer > p {
+    padding: 1.3rem;
+    font-size: large;
 }

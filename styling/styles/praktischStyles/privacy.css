@@ -22,17 +22,60 @@ h2{
     margin-top: 1rem;
 }
 
-.mainContent a, .mainContent a:visited{
-    color: blue;
-    text-decoration: underline;
-}
+
 
 div iframe{
     margin: 2rem auto;
     aspect-ratio: 16 /9;
     width: 100%;
-}
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 0px;
+    border-radius: 1rem;
+}   
 
 h1{
     text-align: center;
+}
+
+.linkOut{
+    display: inline-flex;
+    text-decoration: none;
+    align-items: center;
+    gap: 0.2em;
+    text-decoration: none;
+    font-weight: 600;
+    word-break: break-all;
+    width: 100%;
+}
+
+.linkOut:hover{
+ color: #09A3E2;
+}
+
+.linkOut:hover > img{
+ filter: sepia(1) saturate(1000%) hue-rotate(180deg) brightness(2.5);
+}
+
+.linkOut > img{
+    height: 1rem;
+}
+
+.wrap{
+    padding: 1rem;
+    margin-top: -1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+
+
+.element{
+    border-top: solid rgba(0, 0, 0, 0.123) 2px;
+  
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    hyphens:  auto;
 }
