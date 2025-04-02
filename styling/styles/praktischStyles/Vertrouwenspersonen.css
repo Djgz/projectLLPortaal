@@ -29,10 +29,7 @@ iframe{
     border-radius: 1.5rem;
 }
 
-.mainContent img{
-    width: 100%;
-    margin: 2rem auto;
-}
+
 
 h1{
     text-align: center;
@@ -41,11 +38,19 @@ h1{
 table{
     width: 100%;
     margin: auto auto;
+    
 }
 
-.vertrouwenspersonenInfo p{
-    margin: 2rem auto;
+
+.persPicture{
+    max-width: 6rem !important;
+    width: 100%;
+    border-radius: 50%;
+    margin: 0;
+    margin: 1em auto;
 }
+
+
 
 .wrap{
     padding: 1rem;
@@ -98,4 +103,69 @@ table{
 .disclaimer > p {
     padding: 1.3rem;
     font-size: large;
+}
+
+
+@media screen and (max-width : 600px) {
+    .mainContent::before{
+        font-size: 1.5rem;
+    }
+
+    iframe{
+        margin: 1em auto;
+    }
+    
+    .wrap{
+        padding: 0;
+        margin-top: 1rem;
+    }
+    
+    .tablink{font-size: 0.9rem;}
+  
+    .persPicture{
+        width: 10rem;
+        margin: 0 !important;
+    }
+
+    .element{
+        padding: 0.5rem!important;
+    }
+
+    
+    .vertrouwenspersonenInfo table,
+    .vertrouwenspersonenInfo thead,
+    .vertrouwenspersonenInfo tbody,
+    .vertrouwenspersonenInfo th,
+    .vertrouwenspersonenInfo td,
+    .vertrouwenspersonenInfo tr {
+        display: block;
+        width: 100%;
+    }
+
+    .vertrouwenspersonenInfo tr {
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .vertrouwenspersonenInfo td {
+        text-align: left;
+        position: relative;
+    }
+
+    .vertrouwenspersonenInfo td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .vertrouwenspersonenInfo th {
+        display: none;
+    
+
+
+
+}
+
 }
