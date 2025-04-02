@@ -1,0 +1,131 @@
+.InfoMenu::before{
+    content: "Praktisch";
+    position: absolute;
+    padding: 0.6rem 1.0rem;
+    border-radius: 0.5rem;
+    background-color: var(--dark-text);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    top: -1rem;
+    left: -0.75rem;
+    transform: rotate(-7deg);
+    text-align: center;
+    z-index: 4;
+}
+
+.mainContent::before{
+    content: 'Stop pesten knop';
+}
+
+.wrap{
+    margin-top: 3rem;
+}
+
+.formWrap{
+    position: relative;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    width: max-content;
+    padding: 2rem 1rem 1rem 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 0px;
+    border-radius: 1rem;
+    margin: 1rem auto;
+    gap: 0.5em;
+}
+
+.formWrap::before{
+    position: absolute;
+
+    top: 5px;
+    padding: 0.25rem;
+    margin: 1rem auto;
+}
+
+input[type=text], input[type=number], input[type=email]{
+    border: 1px solid #cccccc;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border linear .2s, box-shadow linear .2s;
+    border-radius: 6px;
+    width: 15rem;
+    padding: 0.3rem 0;
+    text-align: center;
+}
+
+#akkoord{
+    margin: 0;
+    padding: 0;
+}
+
+span{
+    font-weight: bold;
+    font-size: 1.3rem;
+    display: inline-block;
+}
+
+#checkboxDiv {
+    display: flex;
+    align-items: center; /* Zorgt ervoor dat de checkbox en tekst op één lijn staan */
+    gap: 10px; /* Ruimte tussen checkbox en tekst */
+}
+
+input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    width: 50px; /* Kleinere breedte */
+    height: 25px; /* Kleinere hoogte */
+    background: #ccc;
+    border-radius: 25px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+input:checked[type="checkbox"] {
+    background: #7da6ff;
+}
+
+input[type="checkbox"]::after {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+input:checked[type="checkbox"]::after {
+    left: 50%;
+}
+
+.submit {
+    background: #2da0d4;
+    color: #fff;
+    width: 10rem;
+    height: 50px;
+    border: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    transition: all 600ms;
+    margin: 3rem auto;
+    box-sizing: border-box
+}
+  
+.submit:focus {
+    outline: none;
+}
+
+.submit:hover {
+    cursor: pointer;
+}
+  
