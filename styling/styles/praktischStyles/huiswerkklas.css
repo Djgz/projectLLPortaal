@@ -18,9 +18,7 @@
     content: 'Huiswerk klas';
 }
 
-.wrap{
-    margin-top: 3rem;
-}
+
 
 .formWrap{
     position: relative;
@@ -67,7 +65,8 @@ span{
 }
 
 #checkboxDiv {
-    display: flex;
+    display: grid;
+    grid-template-columns: 50px 1fr;
     align-items: center; /* Zorgt ervoor dat de checkbox en tekst op één lijn staan */
     gap: 10px; /* Ruimte tussen checkbox en tekst */
 }
@@ -128,3 +127,86 @@ input:checked[type="checkbox"]::after {
     cursor: pointer;
 }
   
+.element{
+    border-top: solid rgba(0, 0, 0, 0.123) 2px;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    hyphens:  auto;
+    position: relative;
+}
+
+.submit{
+    margin:0 ;
+    margin-top: 0.5rem;
+}
+
+.right{
+    display: flex;
+    justify-content: end;
+}
+
+
+#form::before{
+    content: "Aanmelden voor Huiswerk klas";
+    display: inline-block;
+    top: -2rem;
+    left: -0rem;
+    position: absolute;
+    margin:0.75rem ;
+    margin-left: -1rem;
+    padding: 0.2rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    border-radius: 0 1rem 1rem 0;
+    color: var(--light-text);
+    background-color: var(--primary-color);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+
+.disclaimer > #warnTXT{
+    min-height: 3rem;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#terInfo::before{
+    content: "Ter informatie";
+    display: inline-block;
+    top: -2rem;
+    left: -0rem;
+    position: absolute;
+    margin:0.75rem ;
+    margin-left: -1rem;
+    padding: 0.2rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    border-radius: 0 1rem 1rem 0;
+    color: var(--light-text);
+    background-color: var(--highlight-color);
+}
+
+.formOrder{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem 4rem;
+    gap: 1em;
+}
+
+
+
+.formOrder> div {
+    border-radius: 0.5rem;
+    border-right: solid 1px rgba(0, 0, 0, 0.324);
+    padding: 0.5rem;
+}
