@@ -258,12 +258,14 @@
 /*nieuws element*/
 #news{
     border-radius: var(--small-radius);
-    background-color: var(--background-color);
     overflow: hidden;
     position: relative;
     height: 100%;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: solid rgba(0, 0, 0, 0.123) 2px;
+
 
 }   
 .news-img{
@@ -326,13 +328,17 @@
     margin-bottom: 0.2rem;
     color: rgba(11, 51, 76, 0.594);
 }
+
+
+
 .newsfooter{
-    background-color:#ebe6e3 ;
+    background-color:rgba(0, 0, 0, 0.185) ;
     width: 100%;
     height: 1.2rem;
     background-size: cover;
     position: absolute;
     bottom: 0;
+    
 }
 
 @media screen and (max-width: 1610px) { /*  gewenste breedte voor wijziging */

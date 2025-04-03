@@ -52,12 +52,16 @@
 
 #news{
     border-radius: var(--small-radius);
-    background-color: var(--background-color);
     overflow: hidden;
     position: relative;
     height: calc(100% + 1.5em);   
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    border: solid rgba(0, 0, 0, 0.123) 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    hyphens:  auto;
+
 }   
 
 .news-img{
@@ -127,7 +131,7 @@
 }
 
 .newsfooter{
-    background-color:#ebe6e3 ;
+    background-color:rgba(0, 0, 0, 0.192) ;
     width: 100%;
     height: 1.2rem;
     background-size: cover;
