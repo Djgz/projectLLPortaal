@@ -114,15 +114,16 @@
         </div>
         <div class="mainContent" style="grid-area: maincontent;">
             
-            <div class="wrap">
-            <div class="disclaimer">
-                <div id="info"></div>
-                <p id = "infoTXT"> Meld je aan voor de huiswerkklas door middel van het onderstaande formulier.</p>
+            
+            <div class="disclaimer" style="margin-top: 2rem;">
+                <div id="warn"></div>
+                <p id = "warnTXT">Je mentor dient op de hoogte te zijn van je aanmelding!</p>
             </div>
             <br>
-            
+ 
             <form onsubmit="handleSubmit(event)">
-            <div class="formWrap">
+            <div class="element" id="form">
+               <div class="formOrder">
                 <div>
                     <label for="naam">Naam</label><br>
                     <input id="naam" type="text" value="Naam van database" readonly>
@@ -141,22 +142,27 @@
                 </div>
                 <div>
                     <label for="mentor">Mentor</label><br>
-                    <input id="mentor" type="text" placeholder="bijv.: Jan van den Brink"></div>   
+                    <input id="mentor" type="text" placeholder="bijv.: Jan van den Brink">
+                </div>  
+            </div>
+                <div style="margin-top: 1rem;"> 
+                    <p>De huiswerkklas vindt plaats in ruimte A1.54 (stiltelokaal leercentrum).</p>
                 </div>
-                <br>
-                <p>De huiswerkklas vindt plaats in ruimte A1.54 (stiltelokaal leercentrum).</p>
-            <div class="disclaimer">
-                <div id="info"></div>
-                <p id = "infoTXT">Je mentor dient op de hoogte te zijn van je aanmelding!</p>
-            </div><br>
-            <div id="checkboxDiv">
+            </div>          
+           
+            <div id="checkboxDiv" class="element">
                 <input type="checkbox" id="checkbox" name="akkoord" value="akkoord">
-                <label for="checkbox"><span>Ik heb het onderstaande goed gelezen, begrepen en ik ga hier mee akkoord.</span></label><br><br>
-            </div><br>
-            <p>
-                Ik ontvang een stempelkaart bij deelname aan de huiswerkklas. Het aantal lesuren per week kan ik bij opgave zelf bepalen. Ik kan op elk gewenst moment deelnemen aan de huiswerkklas. Ik zorg ervoor dat ik minimaal het opgegeven aantal uren per week maak. Ik weet dat er een maximum van 2 lesuren per dag geldt. Ik ben zelf verantwoordelijk voor de stempelkaart en het laten afstempelen bij de balie van het Opvanglokaal. Ik laat de stempelkaart wekelijks ondertekenen door mijn mentor en ouder(s)/verzorger(s). Het is mij bekend dat er tijdens toets weken en verkorte lestijden geen huiswerkklas is.
-            </p>
-            <input type="submit" value="Aanmelden" id="submit1" class="submit">
+                <label for="checkbox"><span>Ik heb het onderstaande goed gelezen, begrepen en ik ga hier mee akkoord.</span></label>
+            </div>
+           <div class="element" id="terInfo">
+                <p>
+                    Ik ontvang een stempelkaart bij deelname aan de huiswerkklas. Het aantal lesuren per week kan ik bij opgave zelf bepalen. Ik kan op elk gewenst moment deelnemen aan de huiswerkklas. Ik zorg ervoor dat ik minimaal het opgegeven aantal uren per week maak. Ik weet dat er een maximum van 2 lesuren per dag geldt. Ik ben zelf verantwoordelijk voor de stempelkaart en het laten afstempelen bij de balie van het Opvanglokaal. Ik laat de stempelkaart wekelijks ondertekenen door mijn mentor en ouder(s)/verzorger(s). Het is mij bekend dat er tijdens toets weken en verkorte lestijden geen huiswerkklas is.
+                </p>
+                <div class="right">
+                    <input type="submit" value="Aanmelden" id="submit1" class="submit">
+                </div>
+           </div>
+           
         </form>
             </div>
         </div>
