@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function submitAnimation(button) {
         button.style.transform = "scale(0)";
         button.style.color = "#2dce53";
-        button.style.padding = "0";
 
         setTimeout(function () {
             button.value = "";

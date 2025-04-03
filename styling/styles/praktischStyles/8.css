@@ -46,7 +46,10 @@ input[type=text], input[type=number], input[type=email]{
     border-radius: 25px;
     transition: all 600ms;
     margin: 3rem auto;
-    box-sizing: border-box
+    box-sizing: border-box;
+    margin-top: 0.5rem;
+    position: absolute;
+    right: 1rem;
 }
   
 .submit:focus {
@@ -61,8 +64,6 @@ input[type=text], input[type=number], input[type=email]{
     justify-content: center;
     justify-self: center;
     font-size: 1.2rem;
-  
-
 }
 
 .mainContent{
@@ -80,11 +81,4 @@ form{
 
 #personalInfo{
     display: grid;
-}
-
-.submit{
-    margin:0 ;
-    margin-top: 0.5rem;
-    position: absolute;
-    right: 1rem;
 }

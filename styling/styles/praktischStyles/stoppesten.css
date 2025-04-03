@@ -22,31 +22,45 @@
     margin-top: 3rem;
 }
 
-.formWrap{
+.main-div-container{
     position: relative;
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-items: center;
     justify-content: center;
     align-self: center;
     justify-self: center;
-    width: max-content;
+    width: 90%;
     padding: 2rem 1rem 1rem 1rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 0px;
     border-radius: 1rem;
-    margin: 1rem auto;
     gap: 0.5em;
+}
+
+textarea{
+    min-width: 3rem;
+    padding: 1rem 1rem;
+}
+
+.main-div-container div{
+    border-right: 2px solid rgba(0, 0, 0, 0.281);
+    margin: 0.3rem;
+    border-radius: 6px;
+    padding: 1rem;
+    height: 5rem;
+    width: 15rem;
+    padding-top: 0;
+    padding-left: 5rem;
+    float: right;
 }
 
 .formWrap::before{
     position: absolute;
-
     top: 5px;
     padding: 0.25rem;
     margin: 1rem auto;
 }
 
-input[type=text], input[type=number], input[type=email]{
+input[type=text], input[type=number], input[type=email], input[type=tel]{
     border: 1px solid #cccccc;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
     transition: border linear .2s, box-shadow linear .2s;
@@ -117,8 +131,10 @@ input:checked[type="checkbox"]::after {
     letter-spacing: 1px;
     border-radius: 25px;
     transition: all 600ms;
-    margin: 3rem auto;
-    box-sizing: border-box
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: 0.5rem;
+    right: 1rem;
 }
   
 .submit:focus {
@@ -128,4 +144,16 @@ input:checked[type="checkbox"]::after {
 .submit:hover {
     cursor: pointer;
 }
+
+#infoTXT{
+    padding: 1rem;
+}
   
+legend{
+    margin-top: 3rem;
+}
+
+.submit-container{
+    display: flex;
+    justify-content: end;
+}

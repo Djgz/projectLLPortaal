@@ -51,6 +51,7 @@
                 <a href="/praktisch/huiswerkklas.html">Huiswerkklas</a>
                 <a href="/praktisch/privacy.html">Privacy</a>
                 <a href="/praktisch/vertrouwenspersoonen.html">Vertrouwenspersonen</a>
+                <a href="/praktisch/stoppesten.html">Stop pesten knop</a>
             </div>
         </li> 
         <li class="dropmenuwrap">
@@ -97,7 +98,7 @@
                 <li>
                     <a href="/praktisch/decanaat.html">Decanaat</a>
                 </li>
-                <li id="thispage">
+                <li>
                     <a href="/praktisch/huiswerkklas.html">Huiswerklas</a>
                 </li>
                 <li>
@@ -106,50 +107,56 @@
                 <li>
                     <a href="vertrouwenspersoonen.html">Vertrouwenspersonen</a>
                 </li>
+                <li  id="thispage">
+                    <a href="/praktisch/stoppesten.html">Stop pesten knop</a>
+                </li>
             </ul>
         </div>
         <div class="mainContent" style="grid-area: maincontent;">
-            
-            <div class="wrap">
-            <div class="disclaimer">
-                <div id="info"></div>
-                <p id="infoTXT">
-                    Word je (op school) steeds lastiggevallen door één of meerdere kinderen? Zie je dat iemand uit je klas last heeft van anderen? Zeg: STOP hiermee!
-                    <br><br>
-                    Stoppen ze niet als je dat aan hen vraagt? Vraag je mentor of de leraar om hulp.
-                    <br><br>
-                    Wil je een melding doen van pesten? Neem contact op met het Anti-Pest-team door het formulier hieronder in te vullen.
-                </p>
-            </div>
-            <br>
-            
+            <legend>Formulier voor het indienen van een pest-gerelateerde klacht: </legend>
             <form onsubmit="handleSubmit(event)">
             <div class="formWrap">
-                <div>
-                    <label for="naam">Naam</label><br>
-                    <input id="naam" type="text" value="Naam van database" readonly>
+                <div class="main-div-container">
+                    <div>
+                        <label for="naam">Naam</label><br>
+                        <input id="naam" type="text" value="Naam van database" readonly>
+                    </div>
+                    <div>
+                        <label for="klas">Klas</label><br>
+                        <input id="klas" type="text" value="Klas van database" readonly>
+                    </div>
+                    <div>
+                        <label for="email">E-mail</label><br>
+                        <input id="email" type="email" value="Email van database" readonly>
+                    </div>
+                    <div>
+                        <label for="tel-number">Telefoonnummer</label><br>
+                        <input type="tel" id="tel-number" value="Telefoonnummer van database" readonly>
+                    </div>
+                    <div>
+                        <input id="pest-optie1" type="radio">
+                        <label for="pest-optie1">Ik word gepest</label><br>
+                        <input id="pest-optie2" type="radio">
+                        <label id="pest-optie2">Iemand anders word gepest</label>
+                    </div>
+                    <div>
+                        <label for="whatswrong">Leg uit wat er aan de hand is</label><br>
+                        <textarea id="whatswrong" name="whatswrong" placeholder="Je mag het ook persoonlijk vertellen!"></textarea>
+                    </div>
                 </div>
-                <div>
-                    <label for="klas">Klas</label><br>
-                    <input id="klas" type="text" value="Klas van database" readonly>
+                <div class="submit-container">
+                    <input type="submit" value="Melden" id="submit1" class="submit">
                 </div>
-                <div>
-                    <label for="email">E-mail</label><br>
-                    <input id="emial" type="email" value="Email van database" readonly>
-                </div>
-                <div>
-                    <label for="lesurenpweek">Naam</label><br>
-                    <input id="lesurenpweek" type="number" min="0" max="40" placeholder="0">
-                </div>
-                <div>
-                    <input id="pest-optie1" type="radio">
-                    <label for="pest-optie1">Ik word gepest</label><br>
-                    <input id="pest-optie2" type="radio">
-                    <label id="pest-optie2">Iemand anders word gepest</label><br>
-                </div>
-                <input type="submit" value="Melden" id="submit1" class="submit">
-                
         </form>
+            </div>
+            <div class="disclaimer">
+                <div id="info"></div>
+                <p id="infoTXT">Na insturen nemen we zo snel mogelijk contact met je op.</p>
+            </div>
+            
+            <div class="disclaimer">
+                <div id="warn"></div>
+                <p id = "warnTXT">‘We nemen elke melding die binnenkomt serieus. We verwachten dan ook dat jij alleen een melding doet als er echt iets aan de hand is. Een melding doen als grap wordt niet op prijs gesteld!’</p>
             </div>
         </div>
     </div>
