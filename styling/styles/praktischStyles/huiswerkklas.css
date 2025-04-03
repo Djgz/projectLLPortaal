@@ -128,6 +128,7 @@ input:checked[type="checkbox"]::after {
     border-radius: 1rem;
     hyphens:  auto;
     position: relative;
+    margin: 0 1rem;
 }
 
 .submit{
@@ -148,7 +149,7 @@ input:checked[type="checkbox"]::after {
     left: -0rem;
     position: absolute;
     margin:0.75rem ;
-    margin-left: -1rem;
+    margin-left: -2rem;
     padding: 0.2rem;
     padding-left: 2rem;
     padding-right: 1rem;
@@ -165,6 +166,9 @@ form{
     gap: 2em;
 }
 
+.disclaimer{
+    margin: 0 1rem;
+}
 
 .disclaimer > #warnTXT{
     min-height: 3rem;
@@ -183,7 +187,7 @@ form{
     left: -0rem;
     position: absolute;
     margin:0.75rem ;
-    margin-left: -1rem;
+    margin-left: -2rem;
     padding: 0.2rem;
     padding-left: 2rem;
     padding-right: 1rem;
