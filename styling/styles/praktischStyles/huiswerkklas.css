@@ -199,7 +199,6 @@ form{
 .formOrder{
     display:grid;
     grid-template-columns: 1fr 1fr;
-    padding: 1rem 4rem;
     gap: 1em;
 }
 
@@ -209,4 +208,38 @@ form{
     border-radius: 0.5rem;
     border-right: solid 1px rgba(0, 0, 0, 0.324);
     padding: 0.5rem;
+}
+
+@media screen and (max-width: 800px){
+    .formOrder{
+        display:grid;
+        grid-template-columns:  1fr;
+        gap: 1em;
+        align-items: center;
+        justify-content: center;
+    
+    }
+
+    .formOrder> div {
+        border-radius: 0.5rem;
+        border-right: solid 1px rgba(0, 0, 0, 0.324);
+        padding: 0.5rem;
+        width: min-content;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .element{
+        padding: 1rem 0.2rem;
+
+    }
+
+    span{
+        font-size: 1rem;
+    }
+
+    .formOrder{
+        margin-top: 1.3rem;
+    }
 }
