@@ -113,41 +113,40 @@
             </ul>
         </div>
         <div class="mainContent" style="grid-area: maincontent;">
-            <legend>Formulier voor het indienen van een pest-gerelateerde klacht: </legend>
-            <form onsubmit="handleSubmit(event)">
             <div class="formWrap">
-                <div class="main-div-container">
-                    <div>
-                        <label for="naam">Naam</label><br>
-                        <input id="naam" type="text" value="Naam van database" readonly>
-                    </div>
-                    <div>
-                        <label for="klas">Klas</label><br>
-                        <input id="klas" type="text" value="Klas van database" readonly>
-                    </div>
-                    <div>
-                        <label for="email">E-mail</label><br>
-                        <input id="email" type="email" value="Email van database" readonly>
-                    </div>
-                    <div>
-                        <label for="tel-number">Telefoonnummer</label><br>
-                        <input type="tel" id="tel-number" value="Telefoonnummer van database" readonly>
-                    </div>
-                    <div>
-                        <input id="pest-optie1" type="radio">
-                        <label for="pest-optie1">Ik word gepest</label><br>
-                        <input id="pest-optie2" type="radio">
-                        <label id="pest-optie2">Iemand anders word gepest</label>
-                    </div>
-                    <div>
-                        <label for="whatswrong">Leg uit wat er aan de hand is</label><br>
-                        <textarea id="whatswrong" name="whatswrong" placeholder="Je mag het ook persoonlijk vertellen!"></textarea>
-                    </div>
-                </div>
+                <form onsubmit="handleSubmit(event)">
+                    <div class="main-div-container">
+                        <div>
+                            <label for="naam">Naam</label><br>
+                            <input id="naam" type="text" value="Naam van database" readonly>
+                        </div>
+                        <div>
+                            <label for="klas">Klas</label><br>
+                            <input id="klas" type="text" value="Klas van database" readonly>
+                        </div>
+                        <div>
+                            <label for="email">E-mail</label><br>
+                            <input id="email" type="email" value="Email van database" readonly>
+                        </div>
+                        <div>
+                            <label for="tel-number">Telefoonnummer</label><br>
+                            <input type="tel" id="tel-number" value="Telefoonnummer van database" readonly>
+                        </div>
+                        <div>
+                            <input id="pest-optie1" type="radio">
+                            <label for="pest-optie1">Ik word gepest</label><br>
+                            <input id="pest-optie2" type="radio">
+                            <label id="pest-optie2">Iemand anders word gepest</label>
+                        </div>
+                        <div>
+                            <label for="whatswrong">Leg uit wat er aan de hand is</label><br>
+                            <textarea id="whatswrong" name="whatswrong" placeholder="Je mag het ook persoonlijk vertellen!"></textarea>
+                        </div>
+                        </div>
+                </form>
                 <div class="submit-container">
                     <input type="submit" value="Melden" id="submit1" class="submit">
                 </div>
-        </form>
             </div>
             <div class="disclaimer">
                 <div id="info"></div>
@@ -156,7 +155,7 @@
             
             <div class="disclaimer">
                 <div id="warn"></div>
-                <p id = "warnTXT">‘We nemen elke melding die binnenkomt serieus. We verwachten dan ook dat jij alleen een melding doet als er echt iets aan de hand is. Een melding doen als grap wordt niet op prijs gesteld!’</p>
+                <p id = "warnTXT">We nemen elke melding die binnenkomt serieus. We verwachten dan ook dat jij alleen een melding doet als er echt iets aan de hand is. Een melding doen als grap wordt niet op prijs gesteld!</p>
             </div>
         </div>
     </div>
