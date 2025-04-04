@@ -424,6 +424,31 @@ section {
 
 }
 
+#blue{
+    background-color: var(--primary-color);
+    display: inline-block;
+    margin:0.75rem ;
+    margin-left: -2rem;
+    padding: 0.2rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    border-radius: 0 1rem 1rem 0;
+    color: var(--light-text);
+}
+
+#orange{
+    background-color: var(--highlight-color);
+    display: inline-block;
+    margin:0.75rem;
+    margin-left: -2rem;
+    padding: 0.2rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    border-radius: 0 1rem 1rem 0;
+    color: var(--light-text);
+}
+
+
 /*desktop Mainmenu behavior*/
 @media screen and (min-width: 866px) {
     .dropmenuwrap > .menuLinkDrop{

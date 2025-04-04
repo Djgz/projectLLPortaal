@@ -12,5 +12,35 @@
     text-align: center;
     font-weight: 600;
     z-index: 4;
-   }
+}
 
+.vak {
+    background: #f4f4f4;
+    padding: 1rem;
+    border-bottom: 0.0625rem solid #ddd;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+.dropdown {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 1rem;
+    background: #e9e9e9;
+    user-select: none;
+}
+
+.vak:hover{
+    background-color: #ccc;
+}
+
+span{
+    background-color: var(--primary-light-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.25;
+}   

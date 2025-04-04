@@ -122,15 +122,104 @@
         <div class="mainContent" style="grid-area: maincontent;">
                 
             <div class="contentWrap"> 
-                <h1>PTA van database</h1>
-                <h1>PTO van database</h1>
+                <h1 id="blue">PTA van (naam van database)</h1>
+                <h2>Vakken</h2>
+
+                <div class="vak" onclick="toggleDropdown('pta_nl')">Nederlandse taal en literatuur <span>+</span></div>
+                <div id="pta_nl" class="dropdown">Meer informatie over Nederlandse taal en literatuur.</div>
+                
+                <div class="vak" onclick="toggleDropdown('pta_eng')">Engelse taal en literatuur <span>+</span></div>
+                <div id="pta_eng" class="dropdown">Meer informatie over Engelse taal en literatuur.</div>
+                
+                <div class="vak" onclick="toggleDropdown('pta_ma')">Maatschappijleer <span>+</span></div>
+                <div id="pta_ma" class="dropdown">Meer informatie over Maatschappijleer.</div>
+                
+                <div class="vak" onclick="toggleDropdown('pta_be')">Bewegingsonderwijs <span>+</span></div>
+                <div id="pta_be" class="dropdown">Meer informatie over Bewegingsonderwijs.</div>
+                
+                <div class="vak" onclick="toggleDropdown('pta_ckv')">Culturele en kunstzinnige vorming <span>+</span></div>
+                <div id="pta_ckv" class="dropdown">Meer informatie over Culturele en kunstzinnige vorming.</div>
+                
+                <div class="vak" onclick="toggleDropdown('pta_combi')">Combinatiecijfer HAVO <span>+</span></div>
+                <div id="pta_combi" class="dropdown">Meer informatie over Combinatiecijfer HAVO.</div>
+                
+                <div class="vak" onclick="toggleDropdown('pta_wb')">Wiskunde B <span>+</span></div>
+                <div id="pta_wb" class="dropdown">Meer informatie over Wiskunde B.</div>
+                
+                <div class="vak" onclick="toggleDropdown('pta_na')">Natuurkunde <span>+</span></div>
+                <div id="pta_na" class="dropdown">Meer informatie over Natuurkunde.</div>
+                
+                <div class="vak" onclick="toggleDropdown('pta_sk')">Scheikunde <span>+</span></div>
+                <div id="pta_sk" class="dropdown">Meer informatie over Scheikunde.</div>
+                
+                <div class="vak" onclick="toggleDropdown('pta_bio')">Biologie <span>+</span></div>
+                <div id="pta_bio" class="dropdown">Meer informatie over Biologie.</div>
+                
+                <div class="vak" onclick="toggleDropdown('pta_gd')">Godsdienst <span>+</span></div>
+                <div id="pta_gd" class="dropdown">Meer informatie over Godsdienst.</div>
+                
+                <div class="vak" onclick="toggleDropdown('pta_tv')">Toerusting en vorming <span>+</span></div>
+                <div id="pta_tv" class="dropdown">Meer informatie over Toerusting en vorming.</div>
+                
+                <div class="vak" onclick="toggleDropdown('pta_bs')">Bewegen sport en maatschappij <span>+</span></div>
+                <div id="pta_bs" class="dropdown">Meer informatie over Bewegen sport en maatschappij.</div>
+                
+                <div class="vak" onclick="toggleDropdown('pta_inf')">Informatica <span>+</span></div>
+                <div id="pta_inf" class="dropdown">Meer informatie over Informatica.</div>
             </div>         
+
+            <div class="contentWrap">
+                <h1 id="orange">PTO van (naam van database)</h1>
+                <h2>Vakken</h2>
+                <div class="vak" onclick="toggleDropdown('pto_nl')">Nederlandse taal en literatuur <span>+</span></div>
+                <div id="pto_nl" class="dropdown">Meer informatie over Nederlandse taal en literatuur.</div>
+
+                <div class="vak" onclick="toggleDropdown('pto_eng')">Engelse taal en literatuur <span>+</span></div>
+                <div id="pto_eng" class="dropdown">Meer informatie over Engelse taal en literatuur.</div>
+
+                <div class="vak" onclick="toggleDropdown('pto_ma')">Maatschappijleer <span>+</span></div>
+                <div id="pto_ma" class="dropdown">Meer informatie over Maatschappijleer.</div>
+
+                <div class="vak" onclick="toggleDropdown('pto_be')">Bewegingsonderwijs <span>+</span></div>
+                <div id="pto_be" class="dropdown">Meer informatie over Bewegingsonderwijs.</div>
+
+                <div class="vak" onclick="toggleDropdown('pto_ckv')">Culturele en kunstzinnige vorming <span>+</span></div>
+                <div id="pto_ckv" class="dropdown">Meer informatie over Culturele en kunstzinnige vorming.</div>
+
+                <div class="vak" onclick="toggleDropdown('pto_combi')">Combinatiecijfer HAVO <span>+</span></div>
+                <div id="pto_combi" class="dropdown">Meer informatie over Combinatiecijfer HAVO.</div>
+
+                <div class="vak" onclick="toggleDropdown('pto_wb')">Wiskunde B <span>+</span></div>
+                <div id="pto_wb" class="dropdown">Meer informatie over Wiskunde B.</div>
+
+                <div class="vak" onclick="toggleDropdown('pto_na')">Natuurkunde <span>+</span></div>
+                <div id="pto_na" class="dropdown">Meer informatie over Natuurkunde.</div>
+
+                <div class="vak" onclick="toggleDropdown('pto_sk')">Scheikunde <span>+</span></div>
+                <div id="pto_sk" class="dropdown">Meer informatie over Scheikunde.</div>
+
+                <div class="vak" onclick="toggleDropdown('pto_bio')">Biologie <span>+</span></div>
+                <div id="pto_bio" class="dropdown">Meer informatie over Biologie.</div>
+
+                <div class="vak" onclick="toggleDropdown('pto_gd')">Godsdienst <span>+</span></div>
+                <div id="pto_gd" class="dropdown">Meer informatie over Godsdienst.</div>
+
+                <div class="vak" onclick="toggleDropdown('pto_tv')">Toerusting en vorming <span>+</span></div>
+                <div id="pto_tv" class="dropdown">Meer informatie over Toerusting en vorming.</div>
+
+                <div class="vak" onclick="toggleDropdown('pto_bs')">Bewegen sport en maatschappij <span>+</span></div>
+                <div id="pto_bs" class="dropdown">Meer informatie over Bewegen sport en maatschappij.</div>
+
+                <div class="vak" onclick="toggleDropdown('pto_inf')">Informatica <span>+</span></div>
+                <div id="pto_inf" class="dropdown">Meer informatie over Informatica.</div>
+            </div>
         </div>
     </div>
 <section> 
     <a id="copyright" href="/copyright/#"></a>
 </section>
 <script src="/header.js"></script>
+<script src="/js/pta_dropdown.js"></script>
 </body>
 </html>
 
