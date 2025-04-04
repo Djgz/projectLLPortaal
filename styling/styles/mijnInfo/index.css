@@ -116,6 +116,7 @@ h3{
         display: grid;    
         grid-template-columns: 10rem 1fr;
         gap: 1rem;
+        grid-template-areas: "pic rest";
 }
 
 
@@ -192,7 +193,50 @@ h3{
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+@media screen and (max-width : 1200px) {
+    .profileBox{
+      grid-template-areas:
+      "pers "
+      "pers "
+      "pers "
+      "home"
+      "home"
+      "kluis"
+      'kluis'
+      "con "
+      'con'
+      "ex " 
+      'ex'
+     ; 
+     grid-template-columns: 1fr;
+    }
 
+    .double{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .persWrap{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        
+        gap: 0.5rem;
+        grid-template-areas:'pic'
+        'rest' ;
+    }
+
+    
+
+    #personal-picture{
+        background-size: cover;
+        width: 15%;
+        aspect-ratio: 1/1.2;
+        justify-self: end;
+        margin-bottom: -3rem;
+    }
+}
 
 
 @media screen and (max-width : 600px) {
@@ -248,6 +292,9 @@ h3{
         width: 50%;
         aspect-ratio: 1/1.5;
         margin: 0 auto;
+        position: relative;
+        top: 0;
+        right: 0;
     }
     
 
