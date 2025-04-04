@@ -14,13 +14,59 @@
     z-index: 4;
    }
 
-
-
-
-
-.mainContent:nth-child(2)> div{
+.disclaimer{
     margin-top: 4rem;
 }
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cijfer-container {
+    display: flex;
+    gap: 5px; /* Ruimte tussen cijfers */
+    flex-wrap: wrap;
+}
+
+.cijfer {
+    background-color: #e8e8e8;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.gemiddelde, .rapport-cijfer {
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.element{
+    border-top: solid rgba(0, 0, 0, 0.123) 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    hyphens:  auto;
+    position: relative;
+    margin: 1rem;
+    padding-bottom: 1rem;
+}
+
 
 @media screen and (max-width: 530px) {
     .mainContent::before {
