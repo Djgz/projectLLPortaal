@@ -1,5 +1,5 @@
 .mainContent::before {
-    content: 'Docenten';
+    content: 'Docentenlijst';
     position: absolute;
     padding: 0.4rem 1.0rem 0.6rem 1rem;
     border-radius: 0.5rem;
