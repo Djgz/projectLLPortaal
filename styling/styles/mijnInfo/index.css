@@ -19,6 +19,41 @@
 }
 
 
+input[type=tel], input[type=e-mail]{
+    border: none;
+    transition: border linear .2s, box-shadow linear .2s;
+    padding:0.5rem;
+    text-align: center;
+    width: 90%;
+    border-right: solid rgba(0, 0, 0, 0.15) 4px;
+    border-radius: 0.75rem;
+    text-align: center;
+    font-weight: 100;
+    display: inline-block;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+}
+
+input[type=checkbox ]{
+    border: none;
+    transition: border linear .2s, box-shadow linear .2s;
+    padding:0.5rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 0.75rem;
+    font-weight: 100;
+    display: inline-block;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    position: absolute;
+}
+
+.center{
+ position: relative;
+ margin: 0 auto;
+}
+
+
 
 .home-container, .kluis-container{
     margin: 1rem 0 1rem 0;
@@ -47,6 +82,7 @@ h2{
     border-radius: 1rem;
     border-right: solid rgba(0, 0, 0, 0.15) 4px;
     display: inline-block;
+    overflow: hidden;
 }
 
 h4{
@@ -72,6 +108,7 @@ h3{
     background-repeat: no-repeat;
     background-attachment:local;  
     background-size: cover;
+    width: 100%;
 }
 
 
@@ -102,6 +139,18 @@ h3{
     
 }
 
+.double{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 0.5em;
+}
+
+
+
+.double > h3{
+    width: 95%;
+}
+
 .contentWrap{
     margin: 0 1rem;
 }
@@ -115,11 +164,16 @@ h3{
     grid-auto-rows: 1fr;
     grid-template-areas:
      "pers pers"
+     "pers pers"
+     "pers pers"
+     "home kluis"
      "home kluis"
      "con con"
+     "con con"
+     "ex ex" 
      "ex ex" 
     ;
-    gap: 2rem;
+    gap: 2.5rem;
   
 }
 
@@ -136,4 +190,77 @@ h3{
 .dataWrap{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
+
+@media screen and (max-width : 600px) {
+    .persWrap{
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+        gap: 0.5rem;
+    }
+    
+    .profileBox{
+        display: flex;
+        flex-direction: column;
+    }
+
+    h2, h3 {
+        font-size: 1rem;
+        padding: 0.3rem 0rem ;
+        width: 97.5% !important;
+    }
+
+    .orderWrap{
+        display: grid;
+        grid-template-columns: 1fr ;
+        gap: 0.2em 0.5em;
+        justify-content:start ;
+        align-items: start;
+        justify-content: start;
+        justify-items: start;
+        position: relative;
+        
+    }
+    
+  
+
+    .double{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    input[type=tel], input[type=e-mail]{
+        width: 93.5%; 
+    }
+
+    .contact-gegevens{
+        padding-bottom: 3rem !important;
+    }
+
+
+    #personal-picture{
+        background-size: contain;
+        width: 50%;
+        aspect-ratio: 1/1.5;
+        margin: 0 auto;
+    }
+    
+
+}
+
+@media screen and (max-width : 400px) {
+    h1{
+        font-size: 1.5rem;
+        width: 90%;
+    }
+    
+    .element{
+        padding: 1rem 0.5rem;
+        justify-content: center;
+    }
 }
