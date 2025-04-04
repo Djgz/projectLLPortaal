@@ -119,18 +119,24 @@
                 </li>
             </ul>
         </div>
-        <div class="mainContent" style="grid-area: maincontent;">
-                
+        <div class="mainContent" style="grid-area: maincontent;">   
             <div class="contentWrap"> 
-                <h1>Klassenlijst van database</h1>
+                <h1 id="blue">Leerlingen</h1>
+                <ul id="studentList"></ul>
+                
+                <div class="pagination">
+                    <button id="prevBtn" onclick="previousPage()" disabled>Vorige</button>
+                    <span id="pageInfo"></span>
+                    <button id="nextBtn" onclick="nextPage()">Volgende</button>
+                </div>
             </div>
-           
         </div>
     </div>
 <section> 
     <a id="copyright" href="/copyright/#"></a>
 </section>
 <script src="/header.js"></script>
+<script src="/js/namenlijst.js"></script>
 </body>
 </html>
 
