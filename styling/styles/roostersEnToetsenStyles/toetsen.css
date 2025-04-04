@@ -1,0 +1,74 @@
+.InfoMenu::before{
+    content: 'Roosters en toetsen';
+    position: absolute;
+    padding: 0.5rem 1.0rem;
+    border-radius: 0.5rem;
+    background-color: var(--dark-text);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    top: -1.3rem;
+    left: -0.75rem;
+    width: 90%;
+    transform: rotate(-7deg);
+    text-align: center;
+    z-index: 4;
+}
+
+@media  screen and (max-width:1400px ) {
+    .InfoMenu::before{
+        padding: 0.3rem 1.0rem;
+        font-size: 1.2rem;
+        top: -1.5rem;
+        left: -0.75rem;
+        width: 80%;
+        line-height: 1.3rem;
+    }
+}
+
+.mainContent::before{
+    content: 'Toetsrooster';
+    position: absolute;
+    top: -1.5rem;
+    left: -1rem;
+    padding: 0.3rem 1rem;
+    background-color: var(--highlight-color);
+    color: var(--light-text);
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    transform: rotate(-7deg);
+    z-index: 4;
+}
+
+.disclaimer{
+    margin-top: 2rem;
+}
+
+.mainContent{
+    position: relative;
+}
+
+.contentWrap{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.contentWrap a{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.3em;
+    font-size: 1.5rem;
+    border-bottom: solid 1px #39596c67;
+    font-weight: 600;
+    opacity: 0.8;
+    padding:  0.2em 0.4em;
+}
+
+.linkOut{
+    height: 1.5rem;
+    aspect-ratio: 1/1;
+}

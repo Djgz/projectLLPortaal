@@ -1,0 +1,557 @@
+/* complete herschrijving van de css , zelfde classes enz. maar nu 90% responsive*/
+/* Written by: David Zijlstra, Bart van Beusekom*/
+
+
+/* Wrapper van de pagina */
+.wrapper {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-auto-columns: 1fr;
+    margin: 2rem 0 2rem 0;
+    max-height: 705vh;
+    gap: var(--bigbig-gap);
+    justify-content: center;
+    grid-template-areas: 
+    "MainShortcut MainShortcut MainShortcut MainShortcut snelNaar snelNaar" 
+    "MainShortcut MainShortcut MainShortcut MainShortcut News News";
+}
+
+/*Shortcut Panel */
+.shortcutWrapper{
+    display: grid;
+    grid-template-columns:  minmax(160px, 1fr)  minmax(160px, 1fr)  minmax(160px, 1fr)  minmax(160px, 1fr) ;
+    padding: var(--padding);
+    gap: 0.75rem;
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: var(--medium-radius);
+    will-change: transform;
+    justify-content: center;
+    align-items: center;
+}
+
+/* selectie element in de shortcut panel*/
+.shortcut {
+    justify-content: center;
+    background-color: rgb(255, 115, 0);
+    border-radius: var(--medium-radius);
+    text-align: center;
+    min-width: 10vw;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: 100%;
+}
+
+.shortcut:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.shortcut img {
+    width: 100%;
+    min-width: 100px;
+    padding-top: 0.5vh;
+}
+
+.shortcut svg{
+    fill: white;
+    width: 20rem;
+}
+
+.shortcut > p {
+    padding: 1vw;
+    width: 100%;
+    min-height: 25px;
+    line-height: normal;
+    background-color: rgba(83, 83, 83, 0.158);
+    border-radius: var(--small-radius);
+    font-weight: bold;
+    color: var(--light-text);
+    align-self: center;
+    margin-top: auto;
+}
+
+
+
+/* aangepaste styles van de shortcuts */
+#its{
+    background-color: #FA6900;
+}
+
+#bully {
+    background-color: #ffce1b;
+}
+
+
+#aura {
+    background-color: #9B59B6;
+}
+
+#onedrive {
+    background-color: #09A3E2;
+}
+
+#helpdesk{
+    background-color: var(--dark-text);
+}
+
+#intergrip{
+    background-color: #FA6900;
+}
+
+#printen{
+    background-color: var(--dark-text) ;
+}
+
+#tijden{
+    background-color:  #ffce1b;
+}
+
+#mail{
+    background-color: #EF2F2C;
+}
+
+#mentoraat{
+    background-color: #9B59B6;
+}
+
+#office{
+    background-color:  #09A3E2;
+}
+
+#zerm{
+    background-color: #EF2F2C;
+}
+
+
+
+
+/* Internal Links */
+.snelNaarSection {
+    background-color: var(--secondary-color);
+    padding: var(--small-gap);
+    border-radius: var(--medium-radius);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.snelNaarSection::before{
+    content: 'Snel naar';
+    display: inline-block;
+    padding: var(--padding);
+    width: 9.3ch;
+    background-color: var(--highlight-color);
+    color: var(--light-text);
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: var(--small-radius);
+    position: absolute;
+    top: -1.5em;
+    left: -1.3em;
+    transform: rotate(-15.0deg);
+    z-index: 4;
+    text-align: center;
+}
+
+/*link styling*/
+.snellinks{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    display: grid;
+    gap: var(--small-gap);
+    justify-self: flex-end;
+    flex: 1;
+}
+
+.snellinks > a:hover{
+    transform: scale(102%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.095);
+    background-color: #ebe6e3;
+    cursor: pointer;
+}
+
+.snellinks > a {
+    display: flex;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 0.5vw;
+    border-radius: var(--small-radius);
+    color: var(--dark-text);
+    font-size: var(--medium-font-size);
+    border:  white;
+    transition: transform 0.3s ease-in-out ;
+    padding-left: 1rem;
+}
+
+/* News Section */
+.nieuwsSectie {
+    background-color: var(--secondary-color);
+    padding: var(--padding);
+    border-radius: var(--medium-radius);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.nieuwsSectie::before{
+    will-change: transform;
+    content:'Mededelingen';
+    display: inline-block;
+    background-color: var(--primary-color);
+    padding: var(--padding);
+    width: 13ch;
+    font-weight: bold;
+    color: #ffffff;
+    position: absolute;
+    text-align: center;
+    border-radius: var(--medium-radius);
+    font-size: 1rem;
+    top: -0.5em;
+    left: -1.4em;
+    transform: rotate(-16.0deg);
+    margin: 0;
+    z-index: 10;
+}
+
+ 
+.newsLink {
+    display: flex;
+    justify-content: center;
+    gap: 0.5vw;
+    padding: var(--padding);
+    font-weight: bold;
+    width: 21ch;
+    color: #ffffff;
+    position: absolute;
+    background-color: var(--highlight-color);
+    color: var(--light-text);
+    border-radius:var(--small-radius);
+    font-size: var(--small-font-size);
+    bottom: -0.5rem;
+    right: -0.3rem;
+}
+
+.newslinkWrapper{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.newsLink > img{
+    width: 12%;
+}
+
+/*nieuws wrapper*/
+.newsElements{
+ flex: 1;
+ display: grid;
+ gap: var(--small-gap);
+ grid-template-columns: 1fr 1fr;
+ grid-template-rows: 1fr;
+}
+
+/*nieuws element*/
+#news{
+    border-radius: var(--small-radius);
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: solid rgba(0, 0, 0, 0.123) 2px;
+
+
+}   
+.news-img{
+    width: 100%;
+    margin-top: -0.4rem;
+}
+
+.newsLinkOut{
+    width: 1%;
+    position: absolute;
+    right: 0.25rem;
+    top: 0.25rem;
+    opacity: 0;
+    transition: all ease-in-out 0.2s;
+    z-index: 10;
+
+}
+
+.news-item:hover >.smallwrap > .newsLinkOut{
+    width: 11%;
+    opacity: 1;
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+.news-item:hover{
+    box-shadow: 4px 2px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.news-item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    gap: 0.5rem;
+    height: calc(100% - 1.2rem);
+    transition: all ease 0.2s;
+
+}
+
+.news-titel{
+    padding: 0.6rem;
+    background-color: #09A3E2;
+    color: var(--light-text);
+    border-radius: 0.5rem 0.75rem  0.75rem 0.5rem ;
+    left: -0.25rem;
+    max-width: 90%;
+    position: relative;
+    display: inline-block;
+    top: -1.5rem;
+}
+
+.news-text{
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: -1.35rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.2rem;
+    color: rgba(11, 51, 76, 0.594);
+}
+
+
+
+.newsfooter{
+    background-color:rgba(0, 0, 0, 0.185) ;
+    width: 100%;
+    height: 1.2rem;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+@media screen and (max-width: 1610px) { /*  gewenste breedte voor wijziging */
+    .newsElements {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Verandert naar 1 kolom */
+    }
+
+    .news1{
+        display: none
+    }
+}
+
+@media screen and (max-width: 1630px)  {
+    .wrapper{
+        grid-template-areas: 
+        "MainShortcut MainShortcut MainShortcut snelNaar snelNaar " 
+        "MainShortcut MainShortcut MainShortcut News News"
+    }
+
+    .shortcutWrapper{
+        grid-template-columns:1fr 1fr 1fr ;
+    }
+}
+
+
+@media screen and (max-width: 1330px)  {
+    .wrapper{
+        grid-template-areas: 
+        "MainShortcut MainShortcut MainShortcut MainShortcut  "
+        "MainShortcut MainShortcut MainShortcut MainShortcut  "
+        "MainShortcut MainShortcut MainShortcut MainShortcut  "
+        
+        "News News snelNaar snelNaar "
+        "News News snelNaar snelNaar "
+        ;
+        margin-top: 1em;
+    }
+
+    .shortcutWrapper{
+        grid-template-columns:1fr 1fr 1fr 1fr ;
+    }
+    
+    .snelNaarSection, .nieuwsSectie{
+        margin-top: 1rem;
+    }
+
+    .snelNaarSection::before{
+        top: -1em;
+        left: -1em;
+    }
+
+    .nieuwsSectie::before{
+        top: -0.7em;
+        left: -1em;
+    }
+
+    .wrapper > div{
+        padding: 1em;
+    }
+    :root{
+        --main-margin:5vw;
+    }
+
+    .newsLink{
+        font-size: 0.9rem;
+        padding: 0.4em;
+    }
+}
+
+@media screen and (min-width: 4000px){
+    *{font-size: 2rem !important;
+
+    }
+
+    .snelNaarSection::before{
+        font-size: 1.5rem ;
+    }
+
+    .nieuwsSectie::before{
+        font-size: 1.5rem;
+    }
+
+    .newsLink{
+        font-size: 1.5rem !important;
+    }
+    
+    
+}
+
+
+
+@media  screen and (max-width:1200px){
+    .wrapper{
+        gap: 1.25em;
+        grid-template-areas: 
+        "MainShortcut MainShortcut" 
+        "MainShortcut MainShortcut"
+        "MainShortcut MainShortcut"
+        "MainShortcut MainShortcut"
+        "MainShortcut MainShortcut"
+        "News snelNaar"
+        "News snelNaar"
+        "News snelNaar";
+
+        margin-top: 1.2em;
+        max-height: 85rem;
+
+    }
+
+    
+
+    .shortcutWrapper{
+        grid-template-columns: 1fr 1fr 1fr ;
+        gap: 0.5rem;
+   }
+
+
+   .shortcut > img {
+    width: 60%;
+    padding-bottom: 10px;
+   }
+   .wrapper > div{
+    padding: 0.5em;
+}
+}
+
+@media  screen and (max-width:752px) {
+    .wrapper{
+        gap: 1.25em;
+        grid-template-areas: 
+        "snelNaar"
+        "snelNaar"
+        "MainShortcut" 
+        "MainShortcut" 
+        "MainShortcut" 
+        "MainShortcut"
+        "MainShortcut"
+        "MainShortcut"
+        "News"
+        "News"
+        "News"
+        "News"
+        "News"
+        "News";
+        margin-top: 2em;
+        max-height: 220rem;
+    }
+   
+
+    .news-img{
+        width: 100%;
+        margin-top: -2.35rem;
+    }
+
+    .shortcutWrapper{
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .newsLinkOut{
+        opacity: 1;
+        width: 8% !important;
+        filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+    }
+
+    .news1{
+        display: block;
+    }
+    
+    
+    .shortcut > img{
+        width:40%;
+        margin-bottom: -0.8em;
+    }
+
+    #bully{
+        font-size: 0.8rem !important;
+
+    }
+    .snelNaarSection::before{
+        left: -1em;
+        top: -1.4em;
+        width: 9ch;
+        text-align: center;
+        padding: 0.4em;
+        font-size: 1rem;
+
+    }
+
+    .snellinks > a{
+        padding: 0.5rem 0.75rem  ;
+        font-size: 1rem;
+        font-weight: 500;
+        transition:all ease-in-out 0.3s ;
+
+    }
+
+    .snellinks > a:hover{
+        transform: scale(100.5%);
+    }
+
+    .nieuwsSectie::before{
+        top: -0.2em;
+        left: -0.9em;
+        padding: 0.4em;
+        font-size: 1rem;
+    }
+
+    :root{
+        --main-margin: 0.6em;
+    }
+
+}
+

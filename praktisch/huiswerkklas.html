@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leerlingenportaal - Ichtus College Venendaal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"> 
+    <link href="../styling/styles/baseStyle.css" type="text/css" rel="stylesheet">
+    <link href="../styling/styles/basestyle-data.css" type="text/css" rel="stylesheet"> <!--place css stylesheet here-->
+    <link href="../styling/styles/praktischStyles/huiswerkklas.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header >
+        <a class="branding" href="../index.html">
+            <img src="../styling/images/header/logo-ichthuscollege.png" alt="ichthuslogo" class="logo">
+            <p>Leerlingenportaal</p>
+        </a>
+        <div class="userContent" id="header">
+            <div class="userWrap">
+                <div class="userProfile">
+                    <img class="profilePicture" src="../styling/images/header/no-image.png" alt="profile Picture">
+             </div>
+            <a class="userName" href="../mijnInfo/index.html">
+                Username
+            </a>
+            <div class="userOptionsWrap">
+                <img class="userOptions" src="../styling/images/dropdownMenu.png" alt="dropDownArrow">
+             </div>
+         </div>
+         <div class="userMenu">
+            <a href="https://www.ichthuscollege.nl/">Ichthuscollege.nl</a>
+            <a href="uitloggen...">Uitloggen</a>
+         </div>
+        </div>
+    </header>
+<div class="mainMenu" >
+    <div class="burger-menu" id="burgerMenu">
+        <img src="../styling/images/burger.png" alt="Hamburger Menu">
+        <p> Menu</p>
+    </div>
+    
+        <li class="dropmenuwrap">
+            <a class="menuLink" href="./index.html">Praktisch   
+             <div class="Wdrop"><img src="../styling/images/dropdownWitMenu.png"></div>
+            </a>
+            <div class="menuLinkDrop">
+                <a href="./index.html">8+</a>
+                <a href="./decanaat.html">Decanaat</a>
+                <a href="./huiswerkklas.html">Huiswerkklas</a>
+                <a href="./privacy.html">Privacy</a>
+                <a href="./vertrouwenspersoonen.html">Vertrouwenspersonen</a>
+                <a href="./stoppesten.html">Stop pesten knop</a>
+            </div>
+        </li> 
+        <li class="dropmenuwrap">
+            <a  class="menuLink" href="../mijnInfo/index.html">Mijn info
+                <div class="Wdrop"><img src="../styling/images/dropdownWitMenu.png"></div>
+            </a>
+            <div class="menuLinkDrop" >
+                <a href="../mijnInfo/index.html">Mijn profiel</a>
+                <a href="../mijnInfo/cijfers.html">Cijfers</a>
+                <a href="../mijnInfo/huiswerk.html">Huiswerk</a>
+                <a href="../mijnInfo/klassenlijst.html">Klassenlijst</a>
+                <a href="../mijnInfo/Pta-Pto.html">PTA en PTO</a>
+                <a href="../mijnInfo/docenten.html">Docenten</a>
+                <a href="../mijnInfo/absentsie.html">Absentie</a>
+                <a href="https://leerlingen.ichthuscollege.nl/portaal/mijn_info/toestemmingen_privacy">Toestemming en privacy</a>
+            </div>
+        </li>
+        <li class="dropmenuwrap">
+            <a class="menuLink" href="../actueel/index.html">Actuele Informatie           
+                <div class="Wdrop"><img src="../styling/images/dropdownWitMenu.png"></div>            </a>    
+            <div class="menuLinkDrop">
+                <a href="../actueel/index.html">Nieuwsoverzicht</a>
+                <a href="../actueel/index.html">Jaaragenda</a>
+            </div>
+        </li>
+        <li class="dropmenuwrap">
+            <a class="menuLink" href="../roostersEnToetsen/index.html">Roosters en toetsen
+                <div class="Wdrop"><img src="../styling/images/dropdownWitMenu.png"></div>            </a>
+            <div class="menuLinkDrop">
+                <a href="../roostersEnToetsen/index.html">Lesrooster</a>
+                <a href="../roostersEnToetsen/toetsen.html">Toetsrooster</a>
+            </div>
+        </li>
+        <li class="dropmenuwrap">
+            <a class="menuLink lastlink" href="../aanvullendeinfo/index.html">Aanvullende bestanden</a>
+        </li>
+    </div>
+    <div class="wrapper">
+        <div class="InfoMenu" style="grid-area:sideMenu;">
+            <ul>
+                <li>
+                    <a href="./index.html">8+</a>
+                </li>
+                <li>
+                    <a href="./decanaat.html">Decanaat</a>
+                </li>
+                <li id="thispage">
+                    <a href="./huiswerkklas.html">Huiswerklas</a>
+                </li>
+                <li>
+                    <a href="./privacy.html">Privacy</a>
+                </li>
+                <li>
+                    <a href="vertrouwenspersoonen.html">Vertrouwenspersonen</a>
+                </li>
+                <li>
+                    <a href="./stoppesten.html">Stop pesten knop</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mainContent" style="grid-area: maincontent;">
+            
+            
+            <div class="disclaimer" style="margin-top: 2rem;">
+                <div id="warn"></div>
+                <p id = "warnTXT">Je mentor dient op de hoogte te zijn van je aanmelding!</p>
+            </div>
+            <br>
+ 
+            <form onsubmit="handleSubmit(event)">
+            <div class="element" id="form">
+               <div class="formOrder">
+                <div>
+                    <label for="naam">Naam</label><br>
+                    <input id="naam" type="text" value="Naam van database" readonly>
+                </div>
+                <div>
+                    <label for="klas">Klas</label><br>
+                    <input id="klas" type="text" value="Klas van database" readonly>
+                </div>
+                <div>
+                    <label for="email">E-mail</label><br>
+                    <input id="email" type="email" value="Email van database" readonly>
+                </div>
+                <div>
+                    <label for="lesurenpweek">Aantal lesuren per week</label><br>
+                    <input id="lesurenpweek" type="number" min="0" max="14" placeholder="0">
+                </div>
+                <div>
+                    <label for="mentor">Mentor</label><br>
+                    <input id="mentor" type="text" placeholder="bijv.: Jan van den Brink">
+                </div>  
+            </div>
+                <div style="margin-top: 1rem;"> 
+                    <p>De huiswerkklas vindt plaats in ruimte A1.54 (stiltelokaal leercentrum).</p>
+                </div>
+            </div>          
+           
+            <div id="checkboxDiv" class="element">
+                <input type="checkbox" id="checkbox" name="akkoord" value="akkoord">
+                <label for="checkbox"><span>Ik heb het onderstaande goed gelezen, begrepen en ik ga hier mee akkoord.</span></label>
+            </div>
+           <div class="element" id="terInfo">
+                <p>
+                    Ik ontvang een stempelkaart bij deelname aan de huiswerkklas. Het aantal lesuren per week kan ik bij opgave zelf bepalen. Ik kan op elk gewenst moment deelnemen aan de huiswerkklas. Ik zorg ervoor dat ik minimaal het opgegeven aantal uren per week maak. Ik weet dat er een maximum van 2 lesuren per dag geldt. Ik ben zelf verantwoordelijk voor de stempelkaart en het laten afstempelen bij de balie van het Opvanglokaal. Ik laat de stempelkaart wekelijks ondertekenen door mijn mentor en ouder(s)/verzorger(s). Het is mij bekend dat er tijdens toets weken en verkorte lestijden geen huiswerkklas is.
+                </p>
+                <div class="right">
+                    <input type="submit" value="Aanmelden" id="submit1" class="submit">
+                </div>
+           </div>
+           
+        </form>
+            </div>
+        </div>
+    </div>
+    <section> 
+        <a id="copyright" href="../copyright/#"></a>
+    </section>
+    <script src="../header.js"></script>
+    <script src="../js/form_checker.js"></script>
+</body>
+</html>

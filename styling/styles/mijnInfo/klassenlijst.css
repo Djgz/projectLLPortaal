@@ -1,0 +1,65 @@
+.mainContent::before {
+    content: 'Klassenlijst';
+    position: absolute;
+    padding: 0.4rem 1.0rem 0.6rem 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--highlight-color);
+    font-size: 2rem;
+    color: var(--secondary-color);
+    top: -1rem;
+    left: -1rem;
+    transform: rotate(-5deg);
+    text-align: center;
+    font-weight: 600;
+    z-index: 4;
+   }
+
+#studentList li{
+    background-color: var(--background-color);
+    padding: 0.75rem;
+    border-radius: 10px;
+    transform: scale(1);
+    transition: all 0.3s ease;
+    list-style-type: none;
+    margin: 1rem 0;
+    user-select: none;   
+    border-right: solid rgba(0, 0, 0, 0.15) 3px;
+    border-bottom: solid rgba(0, 0, 0, 0.15) 3px;   
+}
+
+#studentList li:hover{
+    transform: scale(1.025);
+    transition: all 0.3s ease;
+}
+
+h1{
+    position: relative;
+    left: 0.75rem;
+}
+
+h2{
+    text-align: start;
+    left: 0.75rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+button {
+    background-color: #f4a000;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}

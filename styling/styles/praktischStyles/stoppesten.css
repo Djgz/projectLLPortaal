@@ -1,0 +1,230 @@
+.InfoMenu::before{
+    content: "Praktisch";
+    position: absolute;
+    padding: 0.6rem 1.0rem;
+    border-radius: 0.5rem;
+    background-color: var(--dark-text);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    top: -1rem;
+    left: -0.75rem;
+    transform: rotate(-7deg);
+    text-align: center;
+    z-index: 4;
+}
+
+.mainContent::before{
+    content: 'Stop pesten knop';
+}
+
+.mainContent > div{
+    padding:  0 1rem;
+}
+
+.wrap{
+    margin-top: 3rem;
+}
+
+.formWrap{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px 0px;
+    padding: 0 0 0.5rem 0 !important;
+    margin: 0 1rem;
+    border-radius: 1rem;
+    border-top: solid 3px rgba(0, 0, 0, 0.12);
+    position: relative;
+    margin-top: 3.5rem;
+}
+
+.main-div-container{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    justify-items: center;
+    width: 90%;
+    padding: 2rem 1rem 1rem 1rem;
+    border-radius: 1rem;
+    gap: 0.5em;
+}
+
+textarea{
+    min-width: 3rem;
+    padding: 1rem 1rem;
+}
+
+.main-div-container div{
+    border-right: 2px solid rgba(0, 0, 0, 0.281);
+    margin: 0.3rem;
+    border-radius: 6px;
+    padding: 1rem;
+    height: 5rem;
+    padding-top: 0;
+    width: 60%;
+    min-width: 15rem;
+}
+
+.formWrap::before{
+    content: "Indienen van een pest-gerelateerde klacht";
+    position: absolute;
+    display: inline-block;
+    margin:0.75rem ;
+    margin-left: -1rem;
+    padding: 0.2rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    border-radius: 0 1rem 1rem 0;
+    color: var(--light-text);
+    background-color: var(--primary-color);
+    top: -2rem;
+    font-size: 1.5rem;
+    left: -1rem;
+    font-weight: 700;
+ 
+}
+
+input[type=text], input[type=number], input[type=email], input[type=tel]{
+    border: 1px solid #cccccc;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border linear .2s, box-shadow linear .2s;
+    border-radius: 6px;
+    width: 15rem;
+    padding: 0.3rem 0;
+    text-align: center;
+}
+
+#akkoord{
+    margin: 0;
+    padding: 0;
+}
+
+span{
+    font-weight: bold;
+    font-size: 1.3rem;
+    display: inline-block;
+}
+
+#checkboxDiv {
+    display: flex;
+    align-items: center; /* Zorgt ervoor dat de checkbox en tekst op één lijn staan */
+    gap: 10px; /* Ruimte tussen checkbox en tekst */
+}
+
+input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    width: 50px; /* Kleinere breedte */
+    height: 25px; /* Kleinere hoogte */
+    background: #ccc;
+    border-radius: 25px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+input:checked[type="checkbox"] {
+    background: #7da6ff;
+}
+
+input[type="checkbox"]::after {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+input:checked[type="checkbox"]::after {
+    left: 50%;
+}
+
+.submit {
+    background: #2da0d4;
+    color: #fff;
+    width: 10rem;
+    height: 50px;
+    border: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    transition: all 600ms;
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: 0.5rem;
+    right: 1rem;
+}
+  
+.submit:focus {
+    outline: none;
+}
+
+.submit:hover {
+    cursor: pointer;
+}
+
+#infoTXT{
+    padding: 1rem;
+}
+  
+legend{
+    margin-top: 3rem;
+}
+
+.submit-container{
+    display: flex;
+    justify-content: end;
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 650px ) {
+    .main-div-container{
+        display: flex;
+        margin-top: 3rem;
+        flex-direction: column;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
+    .main-div-container div{
+        min-width: 1rem;
+        width: 98%;
+        padding: 0;
+        margin-top: 1rem;
+    }
+
+   
+    .mainContent::before{
+        font-size: 1.5rem;
+        
+    }
+
+    .formWrap{
+        margin: 0;
+        margin-top: 3rem;
+    }
+
+    .mainContent > div{
+        padding: 0rem;
+    }
+
+    .formWrap::before{
+        font-size: 1rem;
+        left: 0;
+    }
+
+    .disclaimer > p {
+        font-size: 0.8rem;
+    }
+
+    #naam, #klas, #email, #tel-number{
+        width: 95% !important;
+    }
+}
