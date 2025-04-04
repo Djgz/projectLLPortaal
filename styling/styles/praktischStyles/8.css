@@ -35,6 +35,10 @@ input[type=text], input[type=number], input[type=email]{
     margin: 0.2rem 0;
 }
 
+input[type=checkbox]{
+    margin: 0.3rem;
+}
+
 .submit {
     background: #2da0d4;
     color: #fff;
