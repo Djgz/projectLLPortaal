@@ -236,7 +236,7 @@ header {
     width: 90%; 
     height: 2rem;
     opacity: 0.6;
-    background-image:url(/styling/images/info_ico.png);
+    background-image: url(../images/info_ico.png);
     background-size: contain; 
     background-position: center;
     background-repeat:no-repeat;
@@ -263,7 +263,7 @@ header {
     width: 80%; 
     height: 2rem;
     opacity: 0.6;
-    background-image:url(/styling/images/warning_ico.png);
+    background-image: url(../images/warning_ico.png);
     background-size: contain; 
     background-position: center;
     background-repeat:no-repeat;
