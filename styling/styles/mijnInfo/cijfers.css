@@ -27,13 +27,18 @@ table {
 th, td {
     padding: 10px;
     text-align: left;
-    border: 1px solid #ddd;
 }
 
+td{
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    border-left:  1px solid rgba(0, 0, 0, 0.15);
+}
 th {
-    background-color: #f4f4f4;
+    background-color: var(--primary-color);
     font-weight: bold;
     text-align: center;
+    border: 1px solid var(--primary-color);
+    color: var(--light-text);
 }
 
 .cijfer-container {
@@ -42,12 +47,28 @@ th {
     flex-wrap: wrap;
 }
 
-.cijfer {
-    background-color: #e8e8e8;
+.cijfer, .gem, .raport {
+    background-color: var(--background-color);
     padding: 5px 10px;
     border-radius: 5px;
     font-weight: bold;
     display: inline-block;
+      border-right: solid rgba(0, 0, 0, 0.15) 2px;
+    border-bottom: solid rgba(0, 0, 0, 0.15) 2px;
+
+}
+
+.vak{
+    background-color: rgb(251, 153, 66);
+    color: var(--light-text);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    border-right: solid rgba(0, 0, 0, 0.15) 3px;
+    border-bottom: solid rgba(0, 0, 0, 0.15) 3px;
+    width: 85%;
+
 }
 
 .gemiddelde, .rapport-cijfer {
