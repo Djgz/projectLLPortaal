@@ -1,8 +1,0 @@
-!labels maken presets 
-in de htlm structuur
-
-
-<div class="disclaimer">
-                    <div id="info of warn"></div>
-                    <p id = "infoTXT of warnTXT"> /place disclaimer text here/</p>
-                </div>
