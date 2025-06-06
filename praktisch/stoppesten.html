@@ -113,50 +113,54 @@
             </ul>
         </div>
         <div class="mainContent" style="grid-area: maincontent;">
-            <div class="formWrap">
-                <form onsubmit="handleSubmit(event)">
-                    <div class="main-div-container">
-                        <div>
-                            <label for="naam">Naam</label><br>
-                            <input id="naam" type="text" value="Naam van database" readonly>
-                        </div>
-                        <div>
-                            <label for="klas">Klas</label><br>
-                            <input id="klas" type="text" value="Klas van database" readonly>
-                        </div>
-                        <div>
-                            <label for="email">E-mail</label><br>
-                            <input id="email" type="email" value="Email van database" readonly>
-                        </div>
-                        <div>
-                            <label for="tel-number">Telefoonnummer</label><br>
-                            <input type="tel" id="tel-number" value="Telefoonnummer van database" readonly>
-                        </div>
-                        <div>
-                            <input id="pest-optie1" type="radio">
-                            <label for="pest-optie1">Ik word gepest</label><br>
-                            <input id="pest-optie2" type="radio">
-                            <label id="pest-optie2">Iemand anders word gepest</label>
-                        </div>
-                        <div>
-                            <label for="whatswrong">Leg uit wat er aan de hand is</label><br>
-                            <textarea id="whatswrong" name="whatswrong" placeholder="Je mag het ook persoonlijk vertellen!"></textarea>
-                        </div>
-                        </div>
-                </form>
-                <div class="submit-container">
-                    <input type="submit" value="Melden" id="submit1" class="submit">
-                </div>
-            </div>
-            <div class="disclaimer">
-                <div id="info"></div>
-                <p id="infoTXT">Na insturen nemen we zo snel mogelijk contact met je op.</p>
-            </div>
-            
-            <div class="disclaimer">
+                 <div class="disclaimer" id="inContent">
                 <div id="warn"></div>
                 <p id = "warnTXT">We nemen elke melding die binnenkomt serieus. We verwachten dan ook dat jij alleen een melding doet als er echt iets aan de hand is. Een melding doen als grap wordt niet op prijs gesteld!</p>
             </div>
+            
+            <div class="formWrap">
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-grid">
+                    <div class="form-group">
+                        <label for="naam">Naam</label>
+                        <input type="text" id="naam" name="naam" placeholder="Naam van database" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="klas">Klas</label>
+                        <input type="text" id="klas" name="klas" placeholder="Klas van database" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Email van database" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefoon">Telefoonnummer</label>
+                        <input type="tel" id="telefoon" name="telefoon" placeholder="Telefoonnummer van database">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="beschrijving">Leg uit wat er aan de hand is</label>
+                        <textarea id="beschrijving" name="beschrijving" rows="4" placeholder="Je mag het ook persoonlijk vertellen!" required></textarea>
+                    </div>
+                    </div>
+
+                    <div class="radio-group">
+                    <label><input type="radio" name="gepest" value="ik" required> Ik word gepest</label>
+                    <label><input type="radio" name="gepest" value="ander"> Iemand anders wordt gepest</label>
+                    </div>
+
+                       <div class="submit-container">
+                    <input type="submit" value="Melden" id="submit1" class="submit-btn">
+                </div>
+                       <div class="disclaimer">
+                <div id="info"></div>
+                <p id="infoTXT">Na het insturen nemen we zo snel mogelijk contact met je op.</p>
+            </div>
+            
+                </form>
+             
+            </div>
+         
+       
         </div>
     </div>
     <section> 
