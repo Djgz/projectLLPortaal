@@ -415,11 +415,11 @@ section {
 #copyright::after {
     content: '©2024 Ichthus College';
     font-weight: bold;
-    font-size: 0.75rem;
+    font-size: 0.75rem !important;
     color: var(--dark-text);
     border-radius: 5px;
     position: absolute;
-    bottom: 1.5vh;
+    bottom: 25%;
     right: var(--small-gap);
 
 }
